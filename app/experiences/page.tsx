@@ -12,12 +12,12 @@ export default function ExperiencesPage() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white p-8 relative">
+    <section className="min-h-screen bg-dark text-white p-8 relative">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-serif text-[#d4af37] mb-12 text-center"
+        className="text-4xl font-serif neon-text mb-12 text-center"
       >
         Experiences
       </motion.h1>
@@ -31,21 +31,21 @@ export default function ExperiencesPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
-            className="relative bg-[#2b0f18]/90 rounded-2xl border border-[#d4af37]/20 shadow-lg hover:shadow-[#d4af37]/30 hover:scale-[1.02] transition-transform p-6 flex flex-col justify-between"
+            className="relative bg-dark/90 rounded-2xl border border-neonBlue/40 shadow-neon hover:shadow-[0_0_30px_rgba(255,46,190,0.5)] hover:scale-[1.02] transition-all p-6 flex flex-col justify-between"
           >
             <div>
-              <h2 className="text-2xl font-serif text-[#d4af37] mb-2">
+              <h2 className="text-2xl font-serif text-neonPink mb-2">
                 {event.name}
               </h2>
-              <p className="italic text-[#e8b6a9] mb-4">{event.tagline}</p>
-              <p className="text-sm mb-4 leading-relaxed">{event.description}</p>
+              <p className="italic text-neonBlue mb-4">{event.tagline}</p>
+              <p className="text-sm mb-4 leading-relaxed text-gray-300">{event.description}</p>
             </div>
 
             <div className="mt-auto">
-              <p className="text-xs text-gray-400 mb-2">
+              <p className="text-xs text-gray-500 mb-2">
                 {event.date} • {event.location}
               </p>
-              <button className="w-full border border-[#d4af37] px-4 py-2 rounded text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition">
+              <button className="w-full neon-btn">
                 Reserve
               </button>
             </div>
@@ -54,7 +54,7 @@ export default function ExperiencesPage() {
       </div>
 
       {/* Decorative background glow */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#2b0f18]/20 to-black opacity-40" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-neonPink/10 via-dark to-neonBlue/10 opacity-40" />
     </section>
   );
 }

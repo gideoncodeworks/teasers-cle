@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 const images = [
   { src: "/brand/gallery1.jpg", alt: "Velvet Ember Event" },
@@ -17,12 +16,12 @@ export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="min-h-screen bg-black text-white p-8">
+    <section className="min-h-screen bg-dark text-white p-8">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-serif text-[#d4af37] mb-8 text-center"
+        className="text-4xl font-serif neon-text mb-8 text-center"
       >
         Gallery
       </motion.h1>
@@ -40,14 +39,14 @@ export default function GalleryPage() {
             key={index}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.3 }}
-            className="relative cursor-pointer overflow-hidden rounded-xl bg-[#2b0f18] aspect-square"
+            className="relative cursor-pointer overflow-hidden rounded-xl bg-dark border border-neonBlue/30 aspect-square hover:border-neonPink/50 hover:shadow-neon"
             onClick={() => setSelectedImage(image.src)}
           >
-            <div className="absolute inset-0 flex items-center justify-center text-6xl font-serif text-[#d4af37]/20">
+            <div className="absolute inset-0 flex items-center justify-center text-6xl font-serif text-neonPink/20">
               {image.alt.charAt(0)}
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition flex items-end p-3">
-              <p className="text-sm text-[#e8b6a9]">{image.alt}</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition flex items-end p-3">
+              <p className="text-sm text-neonBlue">{image.alt}</p>
             </div>
           </motion.div>
         ))}
@@ -69,13 +68,13 @@ export default function GalleryPage() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-5xl max-h-[90vh] bg-[#2b0f18] rounded-lg border border-[#d4af37] p-4"
+              className="relative max-w-5xl max-h-[90vh] bg-dark rounded-lg border border-neonBlue shadow-neon p-4"
             >
               <div className="text-center text-white">Image placeholder</div>
             </motion.div>
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 text-white text-3xl font-bold hover:text-[#d4af37]"
+              className="absolute top-8 right-8 text-white text-3xl font-bold hover:text-neonPink"
             >
               ×
             </button>
