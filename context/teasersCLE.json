@@ -1,0 +1,216 @@
+{
+  "brand": {
+    "name": "Teasers Cleveland",
+    "tagline": "Where anticipation is the main course.",
+    "palette": {
+      "primary": "#d4af37",
+      "secondary": "#e8b6a9",
+      "accent": "#2b0f18",
+      "background": "#0a0a0a",
+      "text": "#ffffff"
+    },
+    "mission": "To redefine Cleveland's nightlife and dining scene by creating immersive, multi-sensory experiences that blend exquisite cuisine, curated art, and theatrical performance into unforgettable moments of anticipation and discovery.",
+    "tone": "Teasers CLE embodies elegance with an edge—intimate yet electric, refined yet daring. Every detail is intentional, every moment curated to evoke wonder."
+  },
+  "story": {
+    "origin": "Born from a vision to transform Cleveland's cultural landscape, Teasers CLE emerged as more than a venue—it's a movement. Founded by a collective of artists, chefs, and experience designers who believed that dining and nightlife could transcend the ordinary, Teasers was conceived as a space where every visit feels like opening night.",
+    "evolution": "What began as intimate pop-up dinners in converted warehouses has evolved into Cleveland's premier experiential destination. Each event is meticulously crafted, blending culinary artistry with immersive theater, ambient design, and unexpected moments that linger long after the last course.",
+    "philosophy": "We don't just serve food—we architect emotions. Every experience at Teasers is designed to engage all senses, challenge expectations, and create memories that transcend the meal itself. Anticipation is our secret ingredient."
+  },
+  "events": [
+    {
+      "id": "velvet-ember",
+      "name": "Velvet Ember",
+      "theme": "Fire & Elegance",
+      "date": "First Saturday Monthly",
+      "description": "An intoxicating evening where flame-kissed cuisine meets sultry jazz and flickering candlelight. Guests are immersed in a world of warm amber tones, live fire cooking demonstrations, and a menu that celebrates the alchemy of heat and flavor.",
+      "location": "Main Dining Hall",
+      "tagline": "Let the flames draw you closer.",
+      "image": "/images/velvet-ember.jpg",
+      "capacity": 60,
+      "duration": "4 hours",
+      "priceRange": "$$$"
+    },
+    {
+      "id": "tasting-room",
+      "name": "The Tasting Room",
+      "theme": "Sommelier's Journey",
+      "date": "Every Thursday",
+      "description": "An intimate exploration of rare vintages and artisanal spirits, paired with small plates designed to elevate each pour. Guided by expert sommeliers, guests discover unexpected flavor profiles in an atmosphere of refined curiosity.",
+      "location": "Private Wine Cellar",
+      "tagline": "Sip. Savor. Discover.",
+      "image": "/images/tasting-room.jpg",
+      "capacity": 24,
+      "duration": "2.5 hours",
+      "priceRange": "$$$$"
+    },
+    {
+      "id": "mirror-dinner",
+      "name": "Mirror Dinner",
+      "theme": "Reflection & Duality",
+      "date": "Third Friday Monthly",
+      "description": "A visually stunning experience where mirrored surfaces multiply the beauty of each course. Synchronized plate presentations, symmetrical plating, and paired dishes that echo and contrast create a dining experience that's both artistic and philosophical.",
+      "location": "Gallery Space",
+      "tagline": "See yourself differently.",
+      "image": "/images/mirror-dinner.jpg",
+      "capacity": 40,
+      "duration": "3.5 hours",
+      "priceRange": "$$$"
+    },
+    {
+      "id": "noir-nights",
+      "name": "Noir Nights",
+      "theme": "Mystery & Intrigue",
+      "date": "Second Saturday Monthly",
+      "description": "Step into a 1940s film noir fantasy with shadowy lighting, jazz standards, and a speakeasy atmosphere. Guests receive cryptic menu clues, hidden courses appear unexpectedly, and the evening unfolds like a delicious mystery waiting to be solved.",
+      "location": "The Vault",
+      "tagline": "Every night has secrets.",
+      "image": "/images/noir-nights.jpg",
+      "capacity": 50,
+      "duration": "4 hours",
+      "priceRange": "$$$"
+    },
+    {
+      "id": "whisper-wine",
+      "name": "Whisper & Wine",
+      "theme": "Intimacy & Conversation",
+      "date": "Select Sundays",
+      "description": "An exclusive gathering designed for connection. Soft ambient soundscapes, dimmed lighting, and a menu crafted for sharing encourage guests to slow down, lean in, and truly engage. Limited to couples and small groups seeking meaningful moments.",
+      "location": "Private Parlor",
+      "tagline": "Sometimes the best courses are unspoken.",
+      "image": "/images/whisper-wine.jpg",
+      "capacity": 30,
+      "duration": "3 hours",
+      "priceRange": "$$$$"
+    },
+    {
+      "id": "eclipse-supper",
+      "name": "Eclipse Supper",
+      "theme": "Darkness & Revelation",
+      "date": "Quarterly Events",
+      "description": "A transformative dining experience that begins in complete darkness and gradually reveals itself through carefully orchestrated lighting shifts. Each course coincides with a new phase of illumination, symbolizing discovery, surprise, and the beauty of emergence.",
+      "location": "Main Dining Hall (Transformed)",
+      "tagline": "What you can't see, you'll never forget.",
+      "image": "/images/eclipse-supper.jpg",
+      "capacity": 80,
+      "duration": "4.5 hours",
+      "priceRange": "$$$$"
+    }
+  ],
+  "menu": [
+    {
+      "id": "amuse-noir",
+      "title": "Amuse Noir",
+      "description": "Blackened beet tartare with caviar, edible gold leaf, and micro herbs atop charcoal crisps.",
+      "type": "appetizer",
+      "category": "signature",
+      "pairings": ["Champagne", "Sake"]
+    },
+    {
+      "id": "ember-oysters",
+      "title": "Ember Oysters",
+      "description": "Wood-fired oysters with smoked butter, pomegranate pearls, and a whisper of chili.",
+      "type": "appetizer",
+      "category": "signature",
+      "pairings": ["White Wine", "Vodka Martini"]
+    },
+    {
+      "id": "velvet-risotto",
+      "title": "Velvet Risotto",
+      "description": "Saffron-infused risotto with king crab, truffle foam, and crispy pancetta.",
+      "type": "main",
+      "category": "signature",
+      "pairings": ["Chardonnay", "Prosecco"]
+    },
+    {
+      "id": "midnight-wagyu",
+      "title": "Midnight Wagyu",
+      "description": "A5 wagyu beef with black garlic purée, roasted bone marrow, and heirloom vegetables.",
+      "type": "main",
+      "category": "signature",
+      "pairings": ["Cabernet", "Bourbon"]
+    },
+    {
+      "id": "eclipse-dessert",
+      "title": "Eclipse Dessert",
+      "description": "Dark chocolate sphere that melts to reveal passion fruit mousse, raspberry coulis, and gold dust.",
+      "type": "dessert",
+      "category": "signature",
+      "pairings": ["Port", "Espresso Martini"]
+    },
+    {
+      "id": "smoke-mirrors",
+      "title": "Smoke & Mirrors",
+      "description": "House-smoked old fashioned with hickory-infused bourbon, demerara, and torched orange peel.",
+      "type": "cocktail",
+      "category": "signature",
+      "pairings": []
+    },
+    {
+      "id": "blush-martini",
+      "title": "Blush Martini",
+      "description": "Vodka, elderflower, rose water, and a hint of grapefruit, served with a crystallized rose petal.",
+      "type": "cocktail",
+      "category": "signature",
+      "pairings": []
+    },
+    {
+      "id": "velvet-noir",
+      "title": "Velvet Noir",
+      "description": "Espresso vodka, coffee liqueur, cream, and activated charcoal for a dramatic black finish.",
+      "type": "cocktail",
+      "category": "signature",
+      "pairings": []
+    }
+  ],
+  "press": [
+    {
+      "quote": "Teasers CLE doesn't just serve dinner—it stages a revelation. Every course is a carefully orchestrated act in a performance you'll never forget.",
+      "source": "Cleveland Scene",
+      "author": "Dana Morrison",
+      "date": "2024"
+    },
+    {
+      "quote": "Where culinary artistry meets theatrical brilliance. Teasers has redefined what it means to dine out in Cleveland.",
+      "source": "Ohio Magazine",
+      "author": "Marcus Chen",
+      "date": "2024"
+    },
+    {
+      "quote": "A feast for all senses. This is experiential dining at its most refined and daring.",
+      "source": "Cleveland.com",
+      "author": "Samantha Rivers",
+      "date": "2024"
+    },
+    {
+      "quote": "Teasers CLE proves that anticipation can be just as satisfying as indulgence. A must-visit destination.",
+      "source": "Eater Cleveland",
+      "author": "Jordan Blake",
+      "date": "2024"
+    }
+  ],
+  "socials": {
+    "instagram": "https://instagram.com/teaserscle",
+    "tiktok": "https://tiktok.com/@teaserscle",
+    "eventbrite": "https://eventbrite.com/o/teasers-cle",
+    "email": "hello@teaserscle.com"
+  },
+  "voice": {
+    "adjectives": ["sensual", "cinematic", "exclusive", "artistic", "intimate", "theatrical", "refined", "mysterious", "elevated", "immersive"],
+    "tone": "Our voice is confident yet inviting, elegant without being pretentious. We speak to those who crave more than a meal—they seek an experience, a story, a memory in the making."
+  },
+  "contact": {
+    "email": "hello@teaserscle.com",
+    "phone": "+1 (216) 555-TEAS",
+    "address": "1234 Prospect Avenue, Cleveland, OH 44115",
+    "hours": {
+      "tuesday": "5:00 PM - 11:00 PM",
+      "wednesday": "5:00 PM - 11:00 PM",
+      "thursday": "5:00 PM - 12:00 AM",
+      "friday": "5:00 PM - 2:00 AM",
+      "saturday": "5:00 PM - 2:00 AM",
+      "sunday": "Select Events Only",
+      "monday": "Closed"
+    }
+  }
+}
