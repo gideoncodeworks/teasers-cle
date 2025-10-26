@@ -36,7 +36,7 @@ export default function NavBar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center group">
           <div className="relative h-10 w-28 md:h-12 md:w-40">
             <Image
               src="/brand/logo.png"
@@ -47,9 +47,6 @@ export default function NavBar() {
               sizes="(max-width: 768px) 8rem, 10rem"
             />
           </div>
-          <span className="hidden text-2xl font-serif neon-text tracking-wide md:block">
-            {brand.name}
-          </span>
         </Link>
 
         <div className="hidden flex-wrap items-center justify-end gap-2 text-[10px] uppercase tracking-[0.2em] text-emerald md:flex md:gap-3 lg:gap-4 lg:text-[11px] xl:text-sm">
