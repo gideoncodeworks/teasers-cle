@@ -25,7 +25,7 @@ export default function NavBar() {
     { href: "/press", label: "Press" },
     { href: "/takeover", label: "Takeover" },
     { href: "/collective", label: "Collective" },
-    { href: "/contact", label: "Join" },
+    { href: "/contact", label: "Join" }
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function NavBar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-10 w-32 md:h-12 md:w-40">
+          <div className="relative h-10 w-28 md:h-12 md:w-40">
             <Image
               src="/brand/logo.png"
               alt={`${brand.name} logo`}
@@ -52,7 +52,7 @@ export default function NavBar() {
           </span>
         </Link>
 
-        <div className="hidden gap-3 text-xs uppercase tracking-[0.25em] text-emerald lg:flex lg:gap-6 lg:text-sm">
+        <div className="hidden flex-wrap items-center justify-end gap-2 text-[10px] uppercase tracking-[0.2em] text-emerald md:flex md:gap-3 lg:gap-4 lg:text-[11px] xl:text-sm">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -67,7 +67,7 @@ export default function NavBar() {
         <button
           type="button"
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="inline-flex items-center gap-2 rounded-full border border-emerald/40 px-3 py-2 text-xs uppercase tracking-[0.25em] text-emerald transition-colors hover:border-roseGold/60 hover:text-roseGold lg:hidden"
+          className="inline-flex items-center gap-2 rounded-full border border-emerald/40 px-3 py-2 text-xs uppercase tracking-[0.25em] text-emerald transition-colors hover:border-roseGold/60 hover:text-roseGold md:hidden"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
         >
