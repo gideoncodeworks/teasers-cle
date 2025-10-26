@@ -57,7 +57,9 @@ export default function ExperiencesPage() {
             const detailSegments = [dateLabel, timeLabel, event.location].filter(Boolean);
             const details = detailSegments.join(" • ");
             const isOnSale = Boolean(event.ticketUrl && event.status === "onSale");
+            const statusLabel = isOnSale ? "On Sale Now" : "Join Waitlist";
             const notifyLink = `/contact?interest=${encodeURIComponent("VIP Invite List")}&event=${encodeURIComponent(event.name)}`;
+            const partnerLink = `/contact?interest=${encodeURIComponent("Teasers Takeover (Venue Inquiry)")}&event=${encodeURIComponent(event.name)}`;
 
             return (
               <motion.article
@@ -70,9 +72,16 @@ export default function ExperiencesPage() {
                 className="relative flex flex-col gap-6 rounded-3xl border border-emerald/45 bg-graphite/85 p-6 shadow-neon transition-all hover:shadow-[0_0_32px_rgba(213,155,246,0.45)] sm:p-8"
               >
                 <div>
-                  <span className="text-xs uppercase tracking-[0.35em] text-emerald">
-                    {event.theme}
-                  </span>
+                  <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs uppercase tracking-[0.35em] text-emerald">
+                      {event.theme}
+                    </span>
+                    <span
+                      className={`rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.25em] ${isOnSale ? "border-emerald/70 text-emerald" : "border-roseGold/70 text-roseGold"}`}
+                    >
+                      {statusLabel}
+                    </span>
+                  </div>
                   <h2 className="mt-3 text-2xl font-serif text-roseGold">{event.name}</h2>
                   <p className="mt-2 text-sm italic text-gray-300">{event.tagline}</p>
                 </div>
@@ -147,8 +156,8 @@ export default function ExperiencesPage() {
                       <Link href={notifyLink} className="neon-btn text-center">
                         Get Notified
                       </Link>
-                      <Link href="/contact" className="neon-btn text-center">
-                        Request Private Invite
+                      <Link href={partnerLink} className="neon-btn text-center">
+                        Partner With Us
                       </Link>
                     </>
                   )}
