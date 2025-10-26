@@ -129,7 +129,7 @@ export default function CollectivePage() {
               method="post"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              action="/contact?submitted=true"
+              action="/contact/success"
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="talent-form" />
