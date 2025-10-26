@@ -1,148 +1,60 @@
 "use client";
 
 import { motion } from "framer-motion";
-import HeroSection from "@/components/HeroSection";
-import EventCard from "@/components/EventCard";
 import data from "@/context/teasersCLE.json";
 
 export default function ExperiencesPage() {
+  const { events } = data;
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <HeroSection
-        title="Immersive Experiences"
-        subtitle="Beyond the Ordinary"
-        description="Each event is meticulously crafted to engage all senses, challenge expectations, and create memories that linger long after the final course."
-        height="medium"
-      />
+    <section className="min-h-screen bg-black text-white p-8 relative">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl font-serif text-[#d4af37] mb-12 text-center"
+      >
+        Experiences
+      </motion.h1>
 
-      {/* Events Grid */}
-      <section className="section-padding bg-black">
-        <div className="container-custom">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {events.map((event, index) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            key={event.name}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: index * 0.1 }}
+            className="relative bg-[#2b0f18]/90 rounded-2xl border border-[#d4af37]/20 shadow-lg hover:shadow-[#d4af37]/30 hover:scale-[1.02] transition-transform p-6 flex flex-col justify-between"
           >
-            <p className="text-gold uppercase tracking-[0.3em] text-sm mb-4">
-              Curated Moments
-            </p>
-            <h2 className="heading-md text-white mb-6">
-              All Experiences
-            </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              From intimate gatherings to theatrical spectacles, each experience
-              at Teasers CLE is designed to transport you beyond the ordinary.
-            </p>
+            <div>
+              <h2 className="text-2xl font-serif text-[#d4af37] mb-2">
+                {event.name}
+              </h2>
+              <p className="italic text-[#e8b6a9] mb-4">{event.tagline}</p>
+              <p className="text-sm mb-4 leading-relaxed">{event.description}</p>
+            </div>
+
+            <div className="mt-auto">
+              <p className="text-xs text-gray-400 mb-2">
+                {event.date} • {event.location}
+              </p>
+              <button className="w-full border border-[#d4af37] px-4 py-2 rounded text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition">
+                Reserve
+              </button>
+            </div>
           </motion.div>
+        ))}
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.events.map((event, index) => (
-              <EventCard key={event.id} event={event} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="section-padding bg-plum-dark">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="heading-md text-white mb-6">
-              How to Reserve
-            </h2>
-            <p className="text-white/70 max-w-2xl mx-auto mb-12">
-              Securing your spot for an unforgettable evening is simple.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Choose Your Experience",
-                description:
-                  "Browse our curated events and select the one that speaks to you.",
-              },
-              {
-                step: "02",
-                title: "Reserve Your Seat",
-                description:
-                  "Submit your reservation through our contact form or Eventbrite.",
-              },
-              {
-                step: "03",
-                title: "Anticipate the Moment",
-                description:
-                  "Receive confirmation and details. Then, let the anticipation build.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-6xl font-bold text-gold/20 mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <a href="/contact" className="btn-primary">
-              Reserve Now
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Private Events CTA */}
-      <section className="section-padding bg-gradient-to-br from-black via-plum-dark to-plum">
-        <div className="container-custom max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="heading-lg text-white mb-8">
-              Host a Private Event
-            </h2>
-            <p className="text-xl text-white/80 mb-12 leading-relaxed">
-              Looking to create a bespoke experience for your group? We specialize
-              in custom events tailored to your vision—from corporate gatherings to
-              milestone celebrations.
-            </p>
-            <a href="/contact" className="btn-secondary">
-              Inquire About Private Events
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+      {/* Decorative background glow */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#2b0f18]/20 to-black opacity-40" />
+    </section>
   );
 }
