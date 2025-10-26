@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import data from "@/context/teasersCLE.json";
 
 const interestOptions = [
@@ -15,7 +16,7 @@ const interestOptions = [
   "Collaboration or Partnership"
 ];
 
-export default function ContactPage() {
+function ContactForm() {
   const { contact, socials, brand } = data;
   const searchParams = useSearchParams();
   const preselectedInterest = searchParams.get("interest") ?? "";
@@ -179,5 +180,17 @@ export default function ContactPage() {
         </aside>
       </section>
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-hunter text-white px-6 py-24 flex items-center justify-center">
+        <div className="text-emerald text-lg">Loading...</div>
+      </div>
+    }>
+      <ContactForm />
+    </Suspense>
   );
 }
