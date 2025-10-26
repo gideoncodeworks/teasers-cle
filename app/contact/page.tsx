@@ -21,6 +21,7 @@ function ContactForm() {
   const searchParams = useSearchParams();
   const preselectedInterest = searchParams.get("interest") ?? "";
   const eventParam = searchParams.get("event");
+  const submitted = searchParams.get("submitted");
 
   return (
     <div className="min-h-screen bg-hunter text-white px-6 py-24">
@@ -33,21 +34,35 @@ function ContactForm() {
             <h1 className="text-4xl md:text-5xl font-serif neon-text mt-4">
               Reserve Your Place
             </h1>
-            <p className="mt-4 text-gray-300 leading-relaxed">
-              Tell us how you want to be part of Teasers CLE — from private tables and investment
-              opportunities to brand collaborations. Every message lands directly with our founding team.
-            </p>
-            <p className="text-sm text-gray-400 leading-relaxed mt-3">
-              Venues curious about a Teasers Takeover: include your location details and ideal dates so we can schedule a walkthrough.
-            </p>
+            {submitted ? (
+              <div className="mt-6 bg-emerald/10 border border-emerald/40 rounded-2xl p-6">
+                <p className="text-emerald font-semibold text-lg">✓ Message Received!</p>
+                <p className="mt-2 text-gray-300">
+                  We'll get back to you within 48 hours at the email you provided.
+                  Check your inbox for a confirmation.
+                </p>
+              </div>
+            ) : (
+              <>
+                <p className="mt-4 text-gray-300 leading-relaxed">
+                  Tell us how you want to be part of Teasers CLE — from private tables and investment
+                  opportunities to brand collaborations. Every message lands directly with our founding team.
+                </p>
+                <p className="text-sm text-gray-400 leading-relaxed mt-3">
+                  Venues curious about a Teasers Takeover: include your location details and ideal dates so we can schedule a walkthrough.
+                </p>
+              </>
+            )}
           </div>
 
-          <form
-            className="space-y-4 bg-graphite/80 border border-emerald/30 rounded-3xl p-8 shadow-neon"
-            name="guestlist-form"
-            data-netlify="true"
-            method="post"
-          >
+          {!submitted && (
+            <form
+              className="space-y-4 bg-graphite/80 border border-emerald/30 rounded-3xl p-8 shadow-neon"
+              name="guestlist-form"
+              data-netlify="true"
+              method="post"
+              action="/contact?submitted=true"
+            >
             <input type="hidden" name="form-name" value="guestlist-form" />
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm uppercase tracking-[0.25em] text-gray-400">
@@ -109,6 +124,7 @@ function ContactForm() {
               We respond within 48 hours. For urgent inquiries call {contact.phone}.
             </p>
           </form>
+          )}
         </div>
 
         <aside className="space-y-8 bg-graphite/80 border border-emerald/30 rounded-3xl p-8 shadow-neon">

@@ -128,6 +128,7 @@ export default function CollectivePage() {
               name="talent-form"
               method="post"
               data-netlify="true"
+              action="/contact?submitted=true"
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="talent-form" />
