@@ -5,10 +5,9 @@ import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 export default function HomePage() {
-  const { brand, events, press, voice } = data;
+  const { brand, events, voice } = data;
 
   const upcomingEvents = events.slice(0, 3);
-  const pressPulls = press.slice(0, 2);
 
   const differentiators = [
     "Premium but accessible — elevated nights without bottle-service pricing.",
@@ -278,35 +277,6 @@ export default function HomePage() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-20 bg-black/85 border-y border-neonBlue/20">
-        <div className="mx-auto max-w-5xl space-y-10 text-center">
-          <div className="space-y-4">
-            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
-              In The Spotlight
-            </p>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
-              What tastemakers are saying
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {pressPulls.map((item) => (
-              <blockquote
-                key={item.source}
-                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-8 text-left shadow-neon"
-              >
-                <span className="text-5xl text-neonBlue/30 leading-none">“</span>
-                <p className="mt-4 text-lg font-light text-gray-200 leading-relaxed">
-                  {item.quote}
-                </p>
-                <footer className="mt-6 text-xs uppercase tracking-[0.3em] text-neonBlue">
-                  {item.source}
-                </footer>
-              </blockquote>
             ))}
           </div>
         </div>
