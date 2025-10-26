@@ -6,12 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import data from "@/context/teasersCLE.json";
 
 const accentGradients = [
-  "from-neonPink/60 via-transparent to-black",
-  "from-neonBlue/60 via-transparent to-black",
-  "from-purple-500/40 via-transparent to-black",
-  "from-fuchsia-500/40 via-transparent to-black",
-  "from-sky-500/40 via-transparent to-black",
-  "from-rose-500/40 via-transparent to-black",
+  "from-roseGold/60 via-transparent to-hunter",
+  "from-emerald/60 via-transparent to-hunter",
+  "from-purple-500/40 via-transparent to-hunter",
+  "from-fuchsia-500/40 via-transparent to-hunter",
+  "from-sky-500/40 via-transparent to-hunter",
+  "from-rose-500/40 via-transparent to-hunter",
 ];
 
 const fallbackImage = "/brand/logo.png";
@@ -28,7 +28,7 @@ export default function GalleryPage() {
   const selectedItem = typeof selectedIndex === "number" ? galleryItems[selectedIndex] : null;
 
   return (
-    <section className="min-h-screen bg-dark text-white px-6 py-24">
+    <section className="min-h-screen bg-hunter text-white px-6 py-24">
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.header
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export default function GalleryPage() {
           transition={{ duration: 0.8 }}
           className="text-center space-y-4"
         >
-          <span className="tracking-[0.35em] uppercase text-sm text-neonBlue">
+          <span className="tracking-[0.35em] uppercase text-sm text-emerald">
             Visual Atmosphere
           </span>
           <h1 className="text-4xl font-serif neon-text">
@@ -61,7 +61,7 @@ export default function GalleryPage() {
               type="button"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
-              className="group relative aspect-square overflow-hidden rounded-3xl border border-neonBlue/30 bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-neonPink"
+              className="group relative aspect-square overflow-hidden rounded-3xl border border-emerald/30 bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-roseGold"
               onClick={() => setSelectedIndex(index)}
             >
               <Image
@@ -72,9 +72,9 @@ export default function GalleryPage() {
                 className="object-contain opacity-70 transition-all group-hover:opacity-90"
               />
               <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-70`} />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-graphite/80 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-x-0 bottom-0 p-4">
-                <p className="text-sm uppercase tracking-[0.35em] text-neonBlue">
+                <p className="text-sm uppercase tracking-[0.35em] text-emerald">
                   {item.event.theme}
                 </p>
                 <h2 className="mt-2 text-lg font-serif text-white">{item.event.name}</h2>
@@ -91,7 +91,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center px-4"
+            className="fixed inset-0 bg-graphite/75 backdrop-blur-sm z-50 flex items-center justify-center px-4"
             onClick={() => setSelectedIndex(null)}
           >
             <motion.div
@@ -99,10 +99,10 @@ export default function GalleryPage() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-4xl w-full bg-black border border-neonBlue/40 rounded-3xl p-8 shadow-neon text-left"
+              className="relative max-w-4xl w-full bg-black border border-emerald/40 rounded-3xl p-8 shadow-neon text-left"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="relative h-64 rounded-2xl overflow-hidden border border-neonBlue/30">
+              <div className="relative h-64 rounded-2xl overflow-hidden border border-emerald/30">
                 <Image
                   src={selectedItem.imageSrc}
                   alt={selectedItem.event.name}
@@ -113,10 +113,10 @@ export default function GalleryPage() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${selectedItem.gradient} opacity-60`} />
               </div>
               <div className="mt-6 space-y-3">
-                <span className="text-xs uppercase tracking-[0.35em] text-neonBlue">
+                <span className="text-xs uppercase tracking-[0.35em] text-emerald">
                   {selectedItem.event.theme}
                 </span>
-                <h3 className="text-2xl font-serif text-neonPink">
+                <h3 className="text-2xl font-serif text-roseGold">
                   {selectedItem.event.name}
                 </h3>
                 <p className="italic text-sm text-gray-300">{selectedItem.event.tagline}</p>
@@ -130,7 +130,7 @@ export default function GalleryPage() {
               <button
                 type="button"
                 onClick={() => setSelectedIndex(null)}
-                className="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-black text-white text-2xl leading-[2.5rem] text-center hover:text-neonPink border border-neonBlue/50"
+                className="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-black text-white text-2xl leading-[2.5rem] text-center hover:text-roseGold border border-emerald/50"
               >
                 ×
               </button>

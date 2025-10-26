@@ -14,16 +14,16 @@ const MenuSection = ({
 }) => (
   <section className="space-y-6">
     <header>
-      <h2 className="text-3xl font-serif text-neonPink">{title}</h2>
-      <p className="text-sm uppercase tracking-[0.3em] text-neonBlue mt-2">{subtitle}</p>
+      <h2 className="text-3xl font-serif text-roseGold">{title}</h2>
+      <p className="text-sm uppercase tracking-[0.3em] text-emerald mt-2">{subtitle}</p>
     </header>
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {items.map((item) => (
         <div
           key={item.title}
-          className="bg-black/70 border border-neonBlue/30 rounded-3xl p-6 shadow-neon hover:border-neonPink/50 transition-all"
+          className="bg-black/70 border border-emerald/30 rounded-3xl p-6 shadow-neon hover:border-roseGold/50 transition-all"
         >
-          <h3 className="text-xl font-serif text-neonBlue">{item.title}</h3>
+          <h3 className="text-xl font-serif text-emerald">{item.title}</h3>
           <p className="text-sm text-gray-300 mt-3 leading-relaxed">{item.description}</p>
         </div>
       ))}
@@ -39,9 +39,9 @@ export default function MenuPage() {
   const desserts = menu.filter(item => item.type === "dessert");
 
   return (
-    <div className="min-h-screen bg-dark text-white">
-      <section className="px-6 pt-24 pb-16 text-center bg-gradient-to-b from-neonPink/15 via-dark to-black">
-        <span className="tracking-[0.35em] uppercase text-sm text-neonBlue">
+    <div className="min-h-screen bg-hunter text-white">
+      <section className="px-6 pt-24 pb-16 text-center bg-gradient-to-b from-roseGold/15 via-hunter to-graphite">
+        <span className="tracking-[0.35em] uppercase text-sm text-emerald">
           Savor Every Tease
         </span>
         <h1 className="text-4xl md:text-5xl font-serif neon-text mt-6">
@@ -54,7 +54,7 @@ export default function MenuPage() {
       </section>
 
       <div className="relative px-6 pb-24">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-neonBlue/10 via-dark to-neonPink/10 opacity-50" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-emerald/10 via-hunter to-roseGold/10 opacity-50" />
         <div className="max-w-6xl mx-auto space-y-16">
           <MenuSection
             title="Bites"
@@ -77,8 +77,8 @@ export default function MenuPage() {
       </div>
 
       <section className="px-6 pb-24">
-        <div className="max-w-3xl mx-auto text-center space-y-8 bg-black/80 border border-neonPink/40 rounded-3xl p-12 shadow-neon">
-          <h2 className="text-3xl font-serif text-neonPink">
+        <div className="max-w-3xl mx-auto text-center space-y-8 bg-graphite/75 border border-roseGold/40 rounded-3xl p-12 shadow-neon">
+          <h2 className="text-3xl font-serif text-roseGold">
             Reserve A Tasting Flight
           </h2>
           <p className="text-gray-300 leading-relaxed">

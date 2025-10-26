@@ -67,19 +67,28 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="bg-dark text-white">
+    <div className="bg-hunter text-white">
       <section className="relative overflow-hidden px-6 pt-28 pb-24 text-center">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-[#130016] to-black" />
-        <div
-          className="absolute inset-0 -z-20 blur-[140px] opacity-50"
-          style={{ background: "radial-gradient(circle at center, rgba(0,184,255,0.35) 0%, transparent 65%)" }}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-hunter via-graphite to-hunter" />
+        <motion.div
+          className="absolute inset-0 -z-20 blur-[140px] opacity-40"
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 50%, rgba(0,255,157,0.25) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 50%, rgba(213,155,246,0.25) 0%, transparent 50%)",
+              "radial-gradient(circle at 50% 80%, rgba(0,255,157,0.25) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(0,255,157,0.25) 0%, transparent 50%)"
+            ]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 -z-30 h-full w-full object-cover opacity-20"
+          className="absolute inset-0 -z-30 h-full w-full object-cover opacity-15 mix-blend-screen"
+          style={{ filter: "hue-rotate(140deg) saturate(1.2)" }}
         >
           <source src="/brand/hero.mp4" type="video/mp4" />
         </video>
@@ -90,7 +99,7 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl space-y-6"
         >
-          <span className="tracking-[0.35em] text-xs uppercase text-neonBlue">
+          <span className="tracking-[0.35em] text-xs uppercase text-emerald">
             Cleveland Nightlife Promotions Company
           </span>
           <h1 className="text-5xl md:text-6xl font-serif neon-text">
@@ -119,7 +128,7 @@ export default function HomePage() {
           {voice.map((descriptor) => (
             <span
               key={descriptor}
-              className="rounded-full border border-neonBlue/40 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gray-300"
+              className="rounded-full border border-emerald/40 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gray-300"
             >
               {descriptor}
             </span>
@@ -130,10 +139,10 @@ export default function HomePage() {
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="tracking-[0.3em] text-xs uppercase text-neonBlue">
+            <span className="tracking-[0.3em] text-xs uppercase text-emerald">
               What We Do Right Now
             </span>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
               Pop-up nights that tease the future lounge
             </h2>
             <p className="text-gray-300 leading-relaxed">
@@ -145,21 +154,21 @@ export default function HomePage() {
             <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
               {differentiators.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-neonPink" />
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-roseGold" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="space-y-4 rounded-3xl border border-neonBlue/30 bg-black/75 p-8 shadow-neon">
-            <h3 className="text-xl font-serif text-neonBlue uppercase tracking-[0.3em]">
+          <div className="space-y-4 rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon">
+            <h3 className="text-xl font-serif text-emerald uppercase tracking-[0.3em]">
               How We Monetize Phase One
             </h3>
             <div className="space-y-5">
               {revenueStreams.map((stream) => (
                 <div key={stream.title}>
-                  <p className="text-sm uppercase tracking-[0.2em] text-neonPink">
+                  <p className="text-sm uppercase tracking-[0.2em] text-roseGold">
                     {stream.title}
                   </p>
                   <p className="text-sm text-gray-300 leading-relaxed">
@@ -173,11 +182,21 @@ export default function HomePage() {
       </section>
 
       <section className="relative px-6 py-20">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-neonBlue/10 via-dark to-neonPink/10 opacity-50" />
+        <motion.div
+          className="absolute inset-0 -z-10 opacity-30"
+          animate={{
+            background: [
+              "linear-gradient(135deg, rgba(0,255,157,0.12) 0%, rgba(2,31,26,1) 50%, rgba(213,155,246,0.12) 100%)",
+              "linear-gradient(135deg, rgba(213,155,246,0.12) 0%, rgba(2,31,26,1) 50%, rgba(0,255,157,0.12) 100%)",
+              "linear-gradient(135deg, rgba(0,255,157,0.12) 0%, rgba(2,31,26,1) 50%, rgba(213,155,246,0.12) 100%)"
+            ]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        />
         <div className="mx-auto max-w-6xl space-y-12">
           <header className="text-center space-y-4">
-            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">Upcoming Pop-Ups</p>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+            <p className="tracking-[0.3em] uppercase text-sm text-emerald">Upcoming Pop-Ups</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
               Limited-capacity nights that sell the vision
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
@@ -189,12 +208,12 @@ export default function HomePage() {
             {upcomingEvents.map((event) => (
               <article
                 key={event.name}
-                className="rounded-3xl border border-neonBlue/30 bg-black/80 p-8 shadow-neon"
+                className="rounded-3xl border border-emerald/30 bg-graphite/75 p-8 shadow-neon"
               >
-                <p className="text-xs uppercase tracking-[0.3em] text-neonBlue">
+                <p className="text-xs uppercase tracking-[0.3em] text-emerald">
                   {event.theme}
                 </p>
-                <h3 className="mt-3 text-2xl font-serif text-neonPink">
+                <h3 className="mt-3 text-2xl font-serif text-roseGold">
                   {event.name}
                 </h3>
                 <p className="mt-2 italic text-sm text-gray-300">
@@ -218,13 +237,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 bg-black/85 border-y border-neonBlue/20">
+      <section className="px-6 py-20 bg-graphite/50 border-y border-emerald/20">
         <div className="mx-auto max-w-6xl space-y-10">
           <header className="text-center space-y-4">
-            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
+            <p className="tracking-[0.3em] uppercase text-sm text-emerald">
               Why Cleveland
             </p>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
               The city that makes this vision possible
             </h2>
           </header>
@@ -232,7 +251,7 @@ export default function HomePage() {
             {whyCleveland.map((reason) => (
               <div
                 key={reason}
-                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-6 text-sm text-gray-300 leading-relaxed shadow-neon"
+                className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 text-sm text-gray-300 leading-relaxed shadow-neon"
               >
                 {reason}
               </div>
@@ -244,10 +263,10 @@ export default function HomePage() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl space-y-12">
           <header className="text-center space-y-4">
-            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
+            <p className="tracking-[0.3em] uppercase text-sm text-emerald">
               Roadmap
             </p>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
               From pop-up series to permanent lounge
             </h2>
           </header>
@@ -255,13 +274,13 @@ export default function HomePage() {
             {roadmap.map((stage) => (
               <div
                 key={stage.phase}
-                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-8 shadow-neon space-y-5"
+                className="rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon space-y-5"
               >
                 <div className="flex flex-col gap-1">
-                  <span className="text-xs uppercase tracking-[0.3em] text-neonBlue">
+                  <span className="text-xs uppercase tracking-[0.3em] text-emerald">
                     {stage.timeline}
                   </span>
-                  <h3 className="text-2xl font-serif text-neonPink">
+                  <h3 className="text-2xl font-serif text-roseGold">
                     {stage.phase}
                   </h3>
                   <p className="text-sm uppercase tracking-[0.25em] text-gray-400">
@@ -271,7 +290,7 @@ export default function HomePage() {
                 <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
                   {stage.bulletPoints.map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-neonBlue" />
+                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -283,11 +302,11 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-neonPink/30 bg-black/80 p-12 text-center shadow-neon space-y-7">
-          <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-roseGold/30 bg-graphite/75 p-12 text-center shadow-neon space-y-7">
+          <p className="tracking-[0.3em] uppercase text-sm text-emerald">
             Stay Ahead Of The Reveal
           </p>
-          <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+          <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
             Help us build the lounge Cleveland can&apos;t stop talking about
           </h2>
           <p className="text-gray-300 leading-relaxed">

@@ -8,14 +8,14 @@ export default function PressPage() {
   const { brand, contact, socials } = data;
 
   return (
-    <div className="min-h-screen bg-dark text-white overflow-hidden">
+    <div className="min-h-screen bg-hunter text-white overflow-hidden">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center px-6 pt-24 pb-16 bg-gradient-to-b from-neonBlue/15 via-dark to-black"
+        className="text-center px-6 pt-24 pb-16 bg-gradient-to-b from-emerald/15 via-hunter to-graphite"
       >
-        <span className="tracking-[0.35em] uppercase text-sm text-neonBlue">Press &amp; Media</span>
+        <span className="tracking-[0.35em] uppercase text-sm text-emerald">Press &amp; Media</span>
         <h1 className="text-4xl md:text-5xl font-serif neon-text mt-4">
           Teasers CLE Media Center
         </h1>
@@ -30,11 +30,11 @@ export default function PressPage() {
 
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6 bg-black/75 border border-neonBlue/30 rounded-3xl p-8 shadow-neon">
-            <h2 className="text-3xl font-serif text-neonPink">
+          <div className="space-y-6 bg-graphite/80 border border-emerald/30 rounded-3xl p-8 shadow-neon">
+            <h2 className="text-3xl font-serif text-roseGold">
               Phase One: Pop-Up Nightlife
             </h2>
-            <p className="text-sm uppercase tracking-[0.3em] text-neonBlue">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">
               Cleveland · {brand.city}
             </p>
             <p className="text-gray-300 leading-relaxed">
@@ -52,8 +52,8 @@ export default function PressPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-3xl border border-neonBlue/30 bg-black/70 p-8 shadow-neon space-y-4">
-              <h3 className="text-xl font-serif text-neonBlue uppercase tracking-[0.3em]">
+            <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon space-y-4">
+              <h3 className="text-xl font-serif text-emerald uppercase tracking-[0.3em]">
                 Assets Available Now
               </h3>
               <p className="text-sm text-gray-300 leading-relaxed">
@@ -67,8 +67,8 @@ export default function PressPage() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-neonPink/30 bg-black/70 p-8 shadow-neon space-y-4">
-              <h3 className="text-xl font-serif text-neonPink uppercase tracking-[0.3em]">
+            <div className="rounded-3xl border border-roseGold/30 bg-graphite/80 p-8 shadow-neon space-y-4">
+              <h3 className="text-xl font-serif text-roseGold uppercase tracking-[0.3em]">
                 Timeline &amp; Coverage Opportunities
               </h3>
               <p className="text-sm text-gray-300 leading-relaxed">
@@ -83,10 +83,10 @@ export default function PressPage() {
       </section>
 
       <section className="px-6 pb-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8 bg-black/80 border border-neonPink/40 rounded-3xl p-12 shadow-neon">
-          <h2 className="text-3xl font-serif text-neonPink">Connect With The Team</h2>
+        <div className="max-w-4xl mx-auto text-center space-y-8 bg-graphite/75 border border-roseGold/40 rounded-3xl p-12 shadow-neon">
+          <h2 className="text-3xl font-serif text-roseGold">Connect With The Team</h2>
           <p className="text-gray-300 leading-relaxed">
-            Email <a href={`mailto:${contact.email}`} className="text-neonBlue hover:text-neonPink transition-colors">{contact.email}</a> for press inquiries, media access, or collaboration ideas.
+            Email <a href={`mailto:${contact.email}`} className="text-emerald hover:text-roseGold transition-colors">{contact.email}</a> for press inquiries, media access, or collaboration ideas.
             We respond within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

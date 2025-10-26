@@ -4,10 +4,17 @@
 
 /* --- Root Theme Colors --- */
 :root {
-  --neon-pink: #ff2ebe;
-  --neon-blue: #00b8ff;
-  --dark-bg: #0a0a0a;
+  --emerald: #00FF9D;
+  --rose-gold: #D59BF6;
+  --hunter: #021F1A;
+  --champagne: #F4D8CD;
+  --graphite: #1B1B1B;
   --text-light: #f5f5f5;
+
+  /* Legacy aliases for compatibility */
+  --neon-pink: #D59BF6;
+  --neon-blue: #00FF9D;
+  --dark-bg: #021F1A;
 }
 
 /* --- Base Setup --- */
@@ -23,27 +30,36 @@ html, body {
 
 /* --- Neon Text Effects --- */
 .neon-text {
-  color: var(--neon-pink);
+  color: var(--rose-gold);
   text-shadow:
-    0 0 5px var(--neon-pink),
-    0 0 10px var(--neon-pink),
-    0 0 20px var(--neon-blue),
-    0 0 40px var(--neon-blue);
+    0 0 5px var(--rose-gold),
+    0 0 10px var(--rose-gold),
+    0 0 20px var(--emerald),
+    0 0 40px var(--emerald);
+}
+
+.neon-emerald-text {
+  color: var(--emerald);
+  text-shadow:
+    0 0 5px var(--emerald),
+    0 0 10px var(--emerald),
+    0 0 20px var(--rose-gold),
+    0 0 40px var(--rose-gold);
 }
 
 .neon-blue-text {
-  color: var(--neon-blue);
+  color: var(--emerald);
   text-shadow:
-    0 0 5px var(--neon-blue),
-    0 0 10px var(--neon-blue),
-    0 0 20px var(--neon-pink),
-    0 0 40px var(--neon-pink);
+    0 0 5px var(--emerald),
+    0 0 10px var(--emerald),
+    0 0 20px var(--rose-gold),
+    0 0 40px var(--rose-gold);
 }
 
 /* --- Glow Buttons --- */
 .neon-btn {
-  border: 2px solid var(--neon-blue);
-  color: var(--neon-blue);
+  border: 2px solid var(--emerald);
+  color: var(--emerald);
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -53,12 +69,12 @@ html, body {
   background: transparent;
 }
 .neon-btn:hover {
-  color: var(--neon-pink);
-  border-color: var(--neon-pink);
+  color: var(--rose-gold);
+  border-color: var(--rose-gold);
   box-shadow:
-    0 0 10px var(--neon-pink),
-    0 0 20px var(--neon-blue),
-    0 0 30px var(--neon-pink);
+    0 0 10px var(--rose-gold),
+    0 0 20px var(--emerald),
+    0 0 30px var(--rose-gold);
   transform: scale(1.05);
 }
 
@@ -70,7 +86,7 @@ section {
 }
 
 .bg-gradient {
-  background: radial-gradient(circle at center, var(--neon-blue) 0%, var(--dark-bg) 70%);
+  background: radial-gradient(circle at center, var(--emerald) 0%, var(--hunter) 70%);
 }
 
 /* --- Smooth Fade Animations --- */
@@ -89,14 +105,14 @@ section {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--hunter);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--neon-blue);
+  background: var(--emerald);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-pink);
+  background: var(--rose-gold);
 }
 
 /* --- Image Glow --- */
@@ -106,14 +122,14 @@ img {
 img:hover {
   filter: brightness(1.1) saturate(1.2);
   box-shadow:
-    0 0 15px var(--neon-blue),
-    0 0 25px var(--neon-pink);
+    0 0 15px var(--emerald),
+    0 0 25px var(--rose-gold);
 }
 
 /* --- Text Selection --- */
 ::selection {
-  background: var(--neon-pink);
-  color: #000;
+  background: var(--rose-gold);
+  color: var(--hunter);
 }
 
 /* --- Footer Glow Line --- */
@@ -132,8 +148,8 @@ footer::before {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
-  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink);
+  background: linear-gradient(90deg, var(--rose-gold), var(--emerald));
+  box-shadow: 0 0 10px var(--emerald), 0 0 20px var(--rose-gold);
 }
 
 /* --- Mobile Tweaks --- */

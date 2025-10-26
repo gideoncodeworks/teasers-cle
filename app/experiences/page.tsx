@@ -13,14 +13,14 @@ export default function ExperiencesPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-dark text-white overflow-hidden">
+    <div className="relative min-h-screen bg-hunter text-white overflow-hidden">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center px-6 pt-24 pb-16 bg-gradient-to-b from-neonBlue/10 via-dark to-black"
+        className="text-center px-6 pt-24 pb-16 bg-gradient-to-b from-emerald/10 via-hunter to-graphite"
       >
-        <span className="tracking-[0.35em] uppercase text-sm text-neonBlue">Exclusive Calendar</span>
+        <span className="tracking-[0.35em] uppercase text-sm text-emerald">Exclusive Calendar</span>
         <h1 className="text-4xl md:text-5xl font-serif neon-text mt-4 mb-6">
           Experiences
         </h1>
@@ -44,7 +44,7 @@ export default function ExperiencesPage() {
       </motion.section>
 
       <section className="relative px-6 py-20">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-neonPink/10 via-dark to-neonBlue/10 opacity-50" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-roseGold/10 via-hunter to-emerald/10 opacity-50" />
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {events.map((event, index) => (
             <motion.article
@@ -54,13 +54,13 @@ export default function ExperiencesPage() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative flex flex-col gap-6 rounded-3xl border border-neonBlue/40 bg-black/75 p-8 shadow-neon hover:shadow-[0_0_32px_rgba(255,46,190,0.45)] transition-all"
+              className="relative flex flex-col gap-6 rounded-3xl border border-emerald/40 bg-graphite/80 p-8 shadow-neon hover:shadow-[0_0_32px_rgba(213,155,246,0.45)] transition-all"
             >
               <div>
-                <span className="text-xs uppercase tracking-[0.35em] text-neonBlue">
+                <span className="text-xs uppercase tracking-[0.35em] text-emerald">
                   {event.theme}
                 </span>
-                <h2 className="text-2xl font-serif text-neonPink mt-3">{event.name}</h2>
+                <h2 className="text-2xl font-serif text-roseGold mt-3">{event.name}</h2>
                 <p className="italic text-sm text-gray-300 mt-2">{event.tagline}</p>
               </div>
               <p className="text-sm leading-relaxed text-gray-400 flex-1">
@@ -88,7 +88,7 @@ export default function ExperiencesPage() {
       </section>
 
       <motion.div
-        className="absolute inset-0 -z-20 bg-gradient-to-b from-black via-dark to-black"
+        className="absolute inset-0 -z-20 bg-gradient-to-b from-hunter via-graphite to-hunter"
         animate={{ opacity: [0.6, 0.9, 0.6] }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       />
