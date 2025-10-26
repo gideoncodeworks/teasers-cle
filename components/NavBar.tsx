@@ -31,62 +31,66 @@ export default function NavBar() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-emerald/30 bg-hunter/90 px-4 py-3 text-white backdrop-blur-md md:px-8 md:py-4"
+        className="fixed top-0 z-50 w-full border-b border-emerald/30 bg-hunter/90 px-4 py-3 text-white backdrop-blur-md md:px-8 md:py-4"
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <Link href="/" className="flex items-center group">
-          <div className="relative h-10 w-28 md:h-12 md:w-40">
-            <Image
-              src="/brand/logo.png"
-              alt={`${brand.name} logo`}
-              fill
-              className="object-contain drop-shadow-[0_0_12px_rgba(0,255,157,0.4)] transition-all group-hover:drop-shadow-[0_0_16px_rgba(213,155,246,0.45)]"
-              priority
-              sizes="(max-width: 768px) 8rem, 10rem"
-            />
+        <div className="flex items-center justify-between md:grid md:grid-cols-3">
+          <Link href="/" className="flex items-center group">
+            <div className="relative h-10 w-28 md:h-12 md:w-40">
+              <Image
+                src="/brand/logo.png"
+                alt={`${brand.name} logo`}
+                fill
+                className="object-contain drop-shadow-[0_0_12px_rgba(0,255,157,0.4)] transition-all group-hover:drop-shadow-[0_0_16px_rgba(213,155,246,0.45)]"
+                priority
+                sizes="(max-width: 768px) 8rem, 10rem"
+              />
+            </div>
+          </Link>
+
+          <div className="hidden items-center justify-center gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="whitespace-nowrap transition-colors duration-300 hover:text-roseGold"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
-        </Link>
 
-        <div className="hidden items-center justify-end gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="whitespace-nowrap transition-colors duration-300 hover:text-roseGold"
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              className="inline-flex items-center gap-2 rounded-full border border-emerald/40 px-3 py-2 text-xs uppercase tracking-[0.25em] text-emerald transition-colors hover:border-roseGold/60 hover:text-roseGold md:hidden"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
-              {link.label}
-            </Link>
-          ))}
+              <span>Menu</span>
+              <span className="relative h-3 w-4">
+                <span
+                  className={`absolute left-0 top-0 block h-0.5 w-full bg-emerald transition-transform duration-300 ${
+                    isMenuOpen ? "translate-y-1.5 rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-1.5 block h-0.5 w-full bg-emerald transition-opacity duration-300 ${
+                    isMenuOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-3 block h-0.5 w-full bg-emerald transition-transform duration-300 ${
+                    isMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
+                  }`}
+                />
+              </span>
+            </button>
+          </div>
         </div>
-
-        <button
-          type="button"
-          onClick={() => setIsMenuOpen((open) => !open)}
-          className="inline-flex items-center gap-2 rounded-full border border-emerald/40 px-3 py-2 text-xs uppercase tracking-[0.25em] text-emerald transition-colors hover:border-roseGold/60 hover:text-roseGold md:hidden"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          <span>Menu</span>
-          <span className="relative h-3 w-4">
-            <span
-              className={`absolute left-0 top-0 block h-0.5 w-full bg-emerald transition-transform duration-300 ${
-                isMenuOpen ? "translate-y-1.5 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-1.5 block h-0.5 w-full bg-emerald transition-opacity duration-300 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-3 block h-0.5 w-full bg-emerald transition-transform duration-300 ${
-                isMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
-              }`}
-            />
-          </span>
-        </button>
       </motion.nav>
 
       <AnimatePresence>
