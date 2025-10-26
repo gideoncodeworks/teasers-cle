@@ -5,8 +5,26 @@ import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 type Event = (typeof data.events)[number];
+type MenuItem = (typeof data.menu)[number];
+
+// Helper to find full menu description by matching item names
+const findMenuDescription = (itemName: string, menuItems: MenuItem[]): string | null => {
+  // Try exact title match first
+  const exactMatch = menuItems.find(m => m.title.toLowerCase() === itemName.toLowerCase());
+  if (exactMatch) return exactMatch.description;
+
+  // Try partial match (handles variations like "Doubles shooters" vs "Doubles Shooters")
+  const partialMatch = menuItems.find(m =>
+    m.title.toLowerCase().includes(itemName.toLowerCase()) ||
+    itemName.toLowerCase().includes(m.title.toLowerCase())
+  );
+  if (partialMatch) return partialMatch.description;
+
+  return null;
+};
 
 const EventMenu = ({ event }: { event: Event }) => {
+  const { menu } = data;
   const hasFood = event.passed && event.passed.length > 0;
   const hasRoaming = event.roaming && event.roaming.length > 0;
   const hasBar = event.bar && event.bar.length > 0;
@@ -26,37 +44,67 @@ const EventMenu = ({ event }: { event: Event }) => {
         <p className="text-sm text-gray-300 mt-3 italic">{event.tagline}</p>
       </header>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="space-y-6">
         {hasFood && (
-          <div className="space-y-3">
-            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold">Passed Bites</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              {event.passed!.map((item) => (
-                <li key={item} className="leading-relaxed">• {item}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {hasRoaming && (
-          <div className="space-y-3">
-            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold">Roaming Service</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              {event.roaming!.map((item) => (
-                <li key={item} className="leading-relaxed">• {item}</li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold border-b border-emerald/20 pb-2">
+              Passed Bites
+            </h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              {event.passed!.map((item) => {
+                const description = findMenuDescription(item, menu);
+                return (
+                  <div key={item} className="bg-black/50 rounded-2xl p-4 border border-emerald/20">
+                    <h4 className="text-emerald font-semibold text-sm mb-2">{item}</h4>
+                    {description && (
+                      <p className="text-xs text-gray-300 leading-relaxed">{description}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
 
         {hasBar && (
-          <div className="space-y-3">
-            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold">Featured Cocktails</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              {event.bar!.map((item) => (
-                <li key={item} className="leading-relaxed">• {item}</li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold border-b border-emerald/20 pb-2">
+              Featured Cocktails
+            </h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              {event.bar!.map((item) => {
+                const description = findMenuDescription(item, menu);
+                return (
+                  <div key={item} className="bg-black/50 rounded-2xl p-4 border border-roseGold/20">
+                    <h4 className="text-roseGold font-semibold text-sm mb-2">{item}</h4>
+                    {description && (
+                      <p className="text-xs text-gray-300 leading-relaxed">{description}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {hasRoaming && (
+          <div className="space-y-4">
+            <h3 className="text-sm uppercase tracking-[0.3em] text-emerald font-semibold border-b border-emerald/20 pb-2">
+              Roaming Service
+            </h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              {event.roaming!.map((item) => {
+                const description = findMenuDescription(item, menu);
+                return (
+                  <div key={item} className="bg-black/50 rounded-2xl p-4 border border-emerald/20">
+                    <h4 className="text-emerald font-semibold text-sm mb-2">{item}</h4>
+                    {description && (
+                      <p className="text-xs text-gray-300 leading-relaxed">{description}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
