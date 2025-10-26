@@ -5,50 +5,113 @@ import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 export default function HomePage() {
-  const { brand, events, menu, press, voice } = data;
+  const { brand, events, press, voice } = data;
+
   const upcomingEvents = events.slice(0, 3);
-  const menuHighlights = menu.slice(0, 3);
   const pressPulls = press.slice(0, 2);
+
+  const differentiators = [
+    "Premium but accessible — elevated nights without bottle-service pricing.",
+    "Mystery & anticipation — limited drops with surprise locations revealed late.",
+    "Immersive design — cinematic lighting, curated music, and sensory staging.",
+    "Insider community — every guest feels like part of the Teasers inner circle."
+  ];
+
+  const revenueStreams = [
+    {
+      title: "Ticketed Pop-Ups",
+      description: "Limited-capacity nightlife experiences that preview the future Teasers lounge."
+    },
+    {
+      title: "Brand Sponsorships",
+      description: "Strategic partnerships with spirits, lifestyle, and culture brands featured at each event."
+    },
+    {
+      title: "Merch & Collabs",
+      description: "Limited apparel drops that double as marketing and community badges."
+    },
+    {
+      title: "Private Events (Future)",
+      description: "Corporate nights, milestone celebrations, and VIP gatherings tailored to clients."
+    }
+  ];
+
+  const whyCleveland = [
+    "Neighborhoods like Ohio City, Tremont, and Downtown are ready for elevated nightlife concepts.",
+    "Operating costs stay lean, letting us reinvest into production and the eventual lounge buildout.",
+    "Cleveland backs its own — a loyal audience is eager to champion homegrown brands."
+  ];
+
+  const roadmap = [
+    {
+      phase: "Phase One",
+      timeline: "Now – Next 18 Months",
+      focus: "Run Teasers as a nightlife promotions company.",
+      bulletPoints: [
+        "Host one to two immersive pop-up events every month.",
+        "Grow our community through social, SMS, and email.",
+        "Reinvest profits into production value and the lounge fund.",
+        "Prove demand with consistent sell-outs and partner interest."
+      ]
+    },
+    {
+      phase: "Phase Two",
+      timeline: "Future",
+      focus: "Open the Teasers Lounge & Restaurant.",
+      bulletPoints: [
+        "Modern lounge with elevated small plates and signature cocktails.",
+        "Live entertainment and private event programming.",
+        "Design aesthetic that matches the pop-up experiences guests love.",
+        "A permanent home base for the Teasers community."
+      ]
+    }
+  ];
 
   return (
     <div className="bg-dark text-white">
-      <section className="relative overflow-hidden px-6 pt-28 pb-20 text-center">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-[#140019] to-black" />
-        <div className="absolute inset-0 -z-20 blur-[120px] opacity-40" style={{ background: "radial-gradient(circle at center, rgba(0,184,255,0.35) 0%, transparent 60%)" }} />
+      <section className="relative overflow-hidden px-6 pt-28 pb-24 text-center">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-[#130016] to-black" />
+        <div
+          className="absolute inset-0 -z-20 blur-[140px] opacity-50"
+          style={{ background: "radial-gradient(circle at center, rgba(0,184,255,0.35) 0%, transparent 65%)" }}
+        />
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 -z-30 h-full w-full object-cover opacity-25"
+          className="absolute inset-0 -z-30 h-full w-full object-cover opacity-20"
         >
           <source src="/brand/hero.mp4" type="video/mp4" />
         </video>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl space-y-6"
         >
-          <span className="tracking-[0.4em] text-xs uppercase text-neonBlue">
-            Immersive Dining &amp; Nightlife
+          <span className="tracking-[0.35em] text-xs uppercase text-neonBlue">
+            Cleveland Nightlife Promotions Company
           </span>
           <h1 className="text-5xl md:text-6xl font-serif neon-text">
             {brand.name}
           </h1>
           <p className="text-lg md:text-2xl text-gray-200 leading-relaxed">
-            {brand.tagline}
+            Pop-up experiences that build anticipation for Cleveland&apos;s future immersive lounge.
           </p>
-          <p className="text-sm text-gray-400 uppercase tracking-[0.35em]">
-            {brand.city}
+          <p className="text-sm text-gray-400 uppercase tracking-[0.3em]">
+            Phase One · Pop-Up Series · {brand.city}
+          </p>
+          <p className="text-sm text-gray-400">
+            Each event is a teaser — a preview of the permanent lounge we&apos;re manifesting together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
             <Link href="/experiences" className="neon-btn">
-              Upcoming Experiences
+              Upcoming Pop-Ups
             </Link>
             <Link href="/contact" className="neon-btn">
-              Request Private Table
+              Sponsor Or Partner
             </Link>
           </div>
         </motion.div>
@@ -66,68 +129,46 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="mx-auto flex max-w-6xl flex-col gap-12 lg:flex-row">
-          <div className="flex-1 space-y-6">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-6">
+            <span className="tracking-[0.3em] text-xs uppercase text-neonBlue">
+              What We Do Right Now
+            </span>
             <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
-              Nights curated to tease every sense
+              Pop-up nights that tease the future lounge
             </h2>
             <p className="text-gray-300 leading-relaxed">
+              {brand.mission}
+            </p>
+            <p className="text-gray-400 leading-relaxed">
               {brand.positioning}
             </p>
-            <div className="rounded-3xl border border-neonBlue/30 bg-black/70 p-8 shadow-neon space-y-4">
-              <h3 className="text-xl font-serif text-neonBlue uppercase tracking-[0.3em]">
-                Mission
-              </h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                {brand.mission}
-              </p>
-              <div className="flex gap-4">
-                {Object.entries(brand.palette).map(([key, value]) => (
-                  <div key={key} className="flex flex-col items-center gap-2">
-                    <span
-                      className="h-10 w-10 rounded-full border border-white/10"
-                      style={{ backgroundColor: value }}
-                    />
-                    <span className="text-[10px] uppercase tracking-[0.25em] text-gray-400">
-                      {key}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+              {differentiators.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-neonPink" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="flex-1 space-y-6">
-            <div className="text-sm uppercase tracking-[0.3em] text-neonBlue">
-              The Upcoming Series
-            </div>
-            <div className="space-y-6">
-              {upcomingEvents.map((event) => (
-                <article
-                  key={event.name}
-                  className="rounded-3xl border border-neonBlue/30 bg-black/80 p-8 shadow-neon"
-                >
-                  <p className="text-xs uppercase tracking-[0.3em] text-neonBlue">
-                    {event.theme}
+          <div className="space-y-4 rounded-3xl border border-neonBlue/30 bg-black/75 p-8 shadow-neon">
+            <h3 className="text-xl font-serif text-neonBlue uppercase tracking-[0.3em]">
+              How We Monetize Phase One
+            </h3>
+            <div className="space-y-5">
+              {revenueStreams.map((stream) => (
+                <div key={stream.title}>
+                  <p className="text-sm uppercase tracking-[0.2em] text-neonPink">
+                    {stream.title}
                   </p>
-                  <h3 className="mt-3 text-2xl font-serif text-neonPink">
-                    {event.name}
-                  </h3>
-                  <p className="mt-2 italic text-sm text-gray-300">
-                    {event.tagline}
+                  <p className="text-sm text-gray-300 leading-relaxed">
+                    {stream.description}
                   </p>
-                  <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-                    {event.description}
-                  </p>
-                  <p className="mt-4 text-xs uppercase tracking-[0.3em] text-gray-500">
-                    {event.date} • {event.location}
-                  </p>
-                </article>
+                </div>
               ))}
             </div>
-            <Link href="/experiences" className="neon-btn inline-block">
-              Explore Full Calendar
-            </Link>
           </div>
         </div>
       </section>
@@ -136,33 +177,108 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-neonBlue/10 via-dark to-neonPink/10 opacity-50" />
         <div className="mx-auto max-w-6xl space-y-12">
           <header className="text-center space-y-4">
-            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">Signature Menu</p>
-            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">Highlights from the tasting room</h2>
+            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">Upcoming Pop-Ups</p>
+            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+              Limited-capacity nights that sell the vision
+            </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              The menu shifts with each performance. These are the moments guests ask for again.
+              Each immersive event is a proof point — demonstrating the demand, the design language, and the community for Teasers CLE.
             </p>
           </header>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {menuHighlights.map((item) => (
+            {upcomingEvents.map((event) => (
               <article
-                key={item.title}
-                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-8 shadow-neon"
+                key={event.name}
+                className="rounded-3xl border border-neonBlue/30 bg-black/80 p-8 shadow-neon"
               >
-                <h3 className="text-xl font-serif text-neonBlue">
-                  {item.title}
+                <p className="text-xs uppercase tracking-[0.3em] text-neonBlue">
+                  {event.theme}
+                </p>
+                <h3 className="mt-3 text-2xl font-serif text-neonPink">
+                  {event.name}
                 </h3>
-                <p className="mt-3 text-sm text-gray-300 leading-relaxed">
-                  {item.description}
+                <p className="mt-2 italic text-sm text-gray-300">
+                  {event.tagline}
+                </p>
+                <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+                  {event.description}
+                </p>
+                <p className="mt-4 text-xs uppercase tracking-[0.3em] text-gray-500">
+                  {event.date} • {event.location}
                 </p>
               </article>
             ))}
           </div>
 
           <div className="text-center">
-            <Link href="/menu" className="neon-btn inline-block">
-              View Full Menu Journey
+            <Link href="/experiences" className="neon-btn inline-block">
+              View Full Calendar
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20 bg-black/85 border-y border-neonBlue/20">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <header className="text-center space-y-4">
+            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
+              Why Cleveland
+            </p>
+            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+              The city that makes this vision possible
+            </h2>
+          </header>
+          <div className="grid gap-6 md:grid-cols-3">
+            {whyCleveland.map((reason) => (
+              <div
+                key={reason}
+                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-6 text-sm text-gray-300 leading-relaxed shadow-neon"
+              >
+                {reason}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl space-y-12">
+          <header className="text-center space-y-4">
+            <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
+              Roadmap
+            </p>
+            <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
+              From pop-up series to permanent lounge
+            </h2>
+          </header>
+          <div className="grid gap-8 lg:grid-cols-2">
+            {roadmap.map((stage) => (
+              <div
+                key={stage.phase}
+                className="rounded-3xl border border-neonBlue/30 bg-black/75 p-8 shadow-neon space-y-5"
+              >
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs uppercase tracking-[0.3em] text-neonBlue">
+                    {stage.timeline}
+                  </span>
+                  <h3 className="text-2xl font-serif text-neonPink">
+                    {stage.phase}
+                  </h3>
+                  <p className="text-sm uppercase tracking-[0.25em] text-gray-400">
+                    {stage.focus}
+                  </p>
+                </div>
+                <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+                  {stage.bulletPoints.map((point) => (
+                    <li key={point} className="flex items-start gap-3">
+                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-neonBlue" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -197,23 +313,23 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-neonPink/30 bg-black/80 p-12 text-center shadow-neon space-y-6">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-neonPink/30 bg-black/80 p-12 text-center shadow-neon space-y-7">
           <p className="tracking-[0.3em] uppercase text-sm text-neonBlue">
-            Reserve Your Night
+            Stay Ahead Of The Reveal
           </p>
           <h2 className="text-3xl font-serif text-neonPink md:text-4xl">
-            Join the Teasers CLE guestlist
+            Help us build the lounge Cleveland can&apos;t stop talking about
           </h2>
           <p className="text-gray-300 leading-relaxed">
-            Private invitations, launch announcements, and secret supper clubs go out to our inner circle first.
-            Step inside and we&apos;ll make sure you never miss the next reveal.
+            Sign up for insider drops, sponsor an upcoming night, or bring your crew to the next pop-up.
+            Every ticket, share, and partnership moves Teasers CLE closer to its permanent home.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="neon-btn">
               Join The Guestlist
             </Link>
-            <Link href="/about" className="neon-btn">
-              Learn Our Story
+            <Link href="/contact" className="neon-btn">
+              Sponsor An Event
             </Link>
           </div>
         </div>
