@@ -50,9 +50,9 @@ export default function CollectivePage() {
             <Link href="#talent-form" className="neon-btn">
               {collective.ctaButtons[0]}
             </Link>
-            <a href={`mailto:${contact.email}`} className="neon-btn">
+            <Link href="/contact?interest=Performer%20%2F%20Talent%20Roster" className="neon-btn">
               {collective.ctaButtons[1]}
-            </a>
+            </Link>
             <Link href="/experiences" className="neon-btn">
               See Upcoming Nights
             </Link>
