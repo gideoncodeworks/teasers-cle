@@ -353,6 +353,40 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-6xl space-y-12">
+          <header className="text-center space-y-4">
+            <p className="tracking-[0.3em] uppercase text-sm text-emerald">
+              Join The Movement
+            </p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
+              Build the Emerald Noir creative collective with us
+            </h2>
+            <p className="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+              Performers, DJs, chefs, mixologists, model staff, stylists, cinematographers—we&apos;re recruiting the crew that will power every pop-up, takeover, and eventually the lounge.
+            </p>
+          </header>
+          <div className="grid gap-6 md:grid-cols-2">
+            {data.collective.categories.slice(0, 4).map((category) => (
+              <div key={category.title} className="rounded-3xl border border-emerald/35 bg-graphite/80 p-6 shadow-neon space-y-3">
+                <h3 className="text-xl font-serif text-roseGold">{category.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/collective" className="neon-btn">
+              Join The Collective
+            </Link>
+            <Link href="/collective#talent-form" className="neon-btn">
+              Submit Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-4xl space-y-6 rounded-3xl border border-roseGold/30 bg-graphite/75 p-8 text-center shadow-neon sm:space-y-7 sm:p-12">
           <p className="tracking-[0.3em] uppercase text-sm text-emerald">
             Stay Ahead Of The Reveal

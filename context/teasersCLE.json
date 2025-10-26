@@ -334,5 +334,55 @@
       "Request takeover deck",
       "Lock your date"
     ]
+  },
+
+  "collective": {
+    "name": "Teasers Creative Collective",
+    "tagline": "Join the roster powering Cleveland’s Emerald Noir nightlife.",
+    "intro": "Teasers CLE is building an army of performers, DJs, chefs, hosts, servers, designers, and nightlife creatives. Get on the list so we can book you for upcoming pop-ups, takeovers, and the future lounge.",
+    "ctaCopy": "Drop your details, portfolio, and availability. When we script the next experience, you’ll be the first call.",
+    "categories": [
+      {
+        "title": "Performers & Dancers",
+        "description": "Soca, dancehall, afrobeats, contemporary, burlesque, aerialists, LED/prop artists, steelpan, percussionists."
+      },
+      {
+        "title": "DJs & Musicians",
+        "description": "Selectors fluent in soca, afrobeats, amapiano, dancehall, house, R&B blends; live instrumentalists to complement the set (pan, sax, violin, drums)."
+      },
+      {
+        "title": "Culinary & Beverage",
+        "description": "Chefs, pastry artists, mixologists, bar leads who can riff on Caribbean flavors and roaming service concepts."
+      },
+      {
+        "title": "Experience Crew",
+        "description": "Hosts, servers, model staff, glam squads, costume stylists, set designers, lighting techs, photographers, videographers."
+      }
+    ],
+    "perks": [
+      "Priority casting for pop-ups, Teasers Takeovers, and the future lounge.",
+      "Professional photo/video assets from shows you work.",
+      "Collaborative rehearsals, choreography labs, and menu R&D sessions.",
+      "Paid opportunities with transparent rates and sponsor perks."
+    ],
+    "faq": [
+      {
+        "question": "Do I need formal training?",
+        "answer": "No gatekeeping—if you bring stage presence, vibe, and professionalism, we want you. Submit a reel, portfolio, or reference so we feel your energy."
+      },
+      {
+        "question": "Is this paid?",
+        "answer": "Yes. We align on rates ahead of each booking and spotlight partners, tips, or sponsor bonuses when they’re in play."
+      },
+      {
+        "question": "How often do you book talent?",
+        "answer": "We run multiple events a month—pop-ups, venue takeovers, private collaborations—and keep a rotating roster so gigs stay fresh."
+      }
+    ],
+    "ctaButtons": [
+      "Join The Roster",
+      "Submit Portfolio",
+      "Book An Audition"
+    ]
   }
 }

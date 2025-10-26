@@ -24,6 +24,7 @@ export default function NavBar() {
     { href: "/gallery", label: "Gallery" },
     { href: "/press", label: "Press" },
     { href: "/takeover", label: "Takeover" },
+    { href: "/collective", label: "Collective" },
     { href: "/contact", label: "Join" },
   ];
 

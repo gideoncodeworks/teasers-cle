@@ -3,6 +3,9 @@ import data from "@/context/teasersCLE.json";
 
 const interestOptions = [
   "Teasers Takeover (Venue Inquiry)",
+  "Performer / Talent Roster",
+  "Culinary / Beverage Team",
+  "Creative Crew (Photo, Styling, Design)",
   "Investor Packet",
   "Crowdfunding Info",
   "VIP Invite List",
