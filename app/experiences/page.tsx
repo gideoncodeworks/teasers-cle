@@ -138,28 +138,18 @@ export default function ExperiencesPage() {
 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   {isOnSale ? (
-                    <>
-                      <a
-                        href={event.ticketUrl as string}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="neon-btn text-center"
-                      >
-                        Buy Tickets
-                      </a>
-                      <Link href={notifyLink} className="neon-btn text-center">
-                        Join Guestlist
-                      </Link>
-                    </>
+                    <a
+                      href={event.ticketUrl as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="neon-btn text-center"
+                    >
+                      Purchase Tickets
+                    </a>
                   ) : (
-                    <>
-                      <Link href={notifyLink} className="neon-btn text-center">
-                        Get Notified
-                      </Link>
-                      <Link href={partnerLink} className="neon-btn text-center">
-                        Partner With Us
-                      </Link>
-                    </>
+                    <Link href={notifyLink} className="neon-btn text-center">
+                      Get Notified
+                    </Link>
                   )}
                 </div>
               </motion.article>
