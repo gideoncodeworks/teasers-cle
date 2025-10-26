@@ -5,7 +5,7 @@ import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 export default function HomePage() {
-  const { brand, events, voice } = data;
+  const { brand, events, voice, takeover } = data;
 
   const upcomingEvents = events.slice(0, 3);
 
@@ -295,6 +295,57 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 bg-graphite/60 border-y border-emerald/20 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <p className="tracking-[0.3em] uppercase text-sm text-emerald">
+                Teasers Takeover
+              </p>
+              <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
+                {takeover.tagline}
+              </h2>
+              <p className="text-gray-300 leading-relaxed">
+                {takeover.summary}
+              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                We stage the lighting, talent, cocktails, and guestlist energy. You unlock the doors and watch the revenue lift.
+              </p>
+            </div>
+            <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+              {takeover.whyBarsLoveIt.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Link href="/takeover" className="neon-btn">
+                Explore Takeover Options
+              </Link>
+              <Link href="/contact" className="neon-btn">
+                Book A Walkthrough
+              </Link>
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            {takeover.packages.map((pkg) => (
+              <div key={pkg.title} className="space-y-2 rounded-3xl border border-emerald/35 bg-graphite/85 p-6 shadow-neon">
+                <p className="text-xs uppercase tracking-[0.3em] text-roseGold">
+                  {pkg.title}
+                </p>
+                <p className="text-sm text-gray-300 leading-relaxed">{pkg.description}</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gray-400">
+                  Ideal for: {pkg.idealFor}
+                </p>
               </div>
             ))}
           </div>

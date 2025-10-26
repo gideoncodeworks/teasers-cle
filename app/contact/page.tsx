@@ -1,6 +1,8 @@
+import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 const interestOptions = [
+  "Teasers Takeover (Venue Inquiry)",
   "Investor Packet",
   "Crowdfunding Info",
   "VIP Invite List",
@@ -24,6 +26,9 @@ export default function ContactPage() {
             <p className="mt-4 text-gray-300 leading-relaxed">
               Tell us how you want to be part of Teasers CLE — from private tables and investment
               opportunities to brand collaborations. Every message lands directly with our founding team.
+            </p>
+            <p className="text-sm text-gray-400 leading-relaxed mt-3">
+              Venues curious about a Teasers Takeover: include your location details and ideal dates so we can schedule a walkthrough.
             </p>
           </div>
 
@@ -132,12 +137,24 @@ export default function ContactPage() {
             </div>
           </div>
 
+          <div className="space-y-3 text-sm text-gray-300">
+            <h3 className="text-lg font-serif text-roseGold uppercase tracking-[0.3em]">
+              Teasers Takeover
+            </h3>
+            <p className="leading-relaxed">
+              Want us to flip your night? Share your venue details, capacity, and desired theme. We&apos;ll send the takeover deck and schedule a walkthrough.
+            </p>
+            <Link href="/takeover" className="inline-block text-emerald hover:text-roseGold transition-colors uppercase tracking-[0.25em]">
+              View Takeover Details →
+            </Link>
+          </div>
+
           <div className="space-y-3 text-sm text-gray-400">
             <p className="uppercase tracking-[0.3em] text-emerald">Why join?</p>
             <ul className="space-y-2">
-              <li>• First access to immersive supper clubs</li>
+              <li>• First access to immersive pop-ups</li>
               <li>• Invitations to investor salons and tastings</li>
-              <li>• Collaborator briefings before public announcements</li>
+              <li>• Collaborator & takeover briefings before public announcements</li>
             </ul>
           </div>
 

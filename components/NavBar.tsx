@@ -23,6 +23,7 @@ export default function NavBar() {
     { href: "/menu", label: "Menu" },
     { href: "/gallery", label: "Gallery" },
     { href: "/press", label: "Press" },
+    { href: "/takeover", label: "Takeover" },
     { href: "/contact", label: "Join" },
   ];
 

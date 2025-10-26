@@ -21,80 +21,228 @@
 
   "events": [
     {
-      "name": "Velvet Ember",
-      "theme": "Fire and Desire",
-      "date": "December 14, 2025",
-      "location": "The Vault, Downtown CLE",
-      "description": "A night bathed in candlelight and smoke — guests move through five fiery tasting courses paired with live flamenco and molten cocktails.",
-      "tagline": "Where flame meets flavor."
+      "name": "Carnival After Dark",
+      "theme": "Caribbean Soul Series",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Trinidad Carnival energy with roaming glow stations, wining lessons, and a soca DJ pushing the pace all night.",
+      "tagline": "Bring the mas to the midnight hours.",
+      "passed": ["Doubles shooters", "Jerk chicken lollipops", "Plantain chips", "Coconut shrimp skewers"],
+      "roaming": ["Champagne service", "Rum punch shots", "Sorrel mimosas"],
+      "bar": ["The Mas — spiced rum + passionfruit", "Port of Spain Sunset — coconut rum + mango"],
+      "vibe": "Costume encouraged, glitter glow-ups, Carnival choreography pop-ups."
     },
     {
-      "name": "The Tasting Room",
-      "theme": "Blind Indulgence",
-      "date": "January 25, 2026",
-      "location": "Secret Warehouse, Ohio City",
-      "description": "Guests are blindfolded as each course arrives — an intimate journey that strips away sight to amplify taste, scent, and sound.",
-      "tagline": "See nothing. Taste everything."
+      "name": "The Fete",
+      "theme": "Caribbean Soul Series",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "All-inclusive Caribbean party with endless punch, champagne, and a pure dance floor experience.",
+      "tagline": "Unlimited vibes. Zero standing still.",
+      "passed": ["Mini pelau bowls", "Bake & shark sliders", "Pholourie with chutney", "Curried chickpea cups"],
+      "roaming": ["Bottomless rum punch", "Champagne", "Carib beer bottles"],
+      "bar": ["The Fete — overproof rum, lime, bitters", "Trini Mule — aged rum, ginger beer"],
+      "vibe": "All-inclusive wristbands, dancehall-to-soca marathon, daylight-strobing lighting."
     },
     {
-      "name": "Mirror Dinner",
-      "theme": "Reflection & Revelation",
-      "date": "February 22, 2026",
-      "location": "West 25th Studio",
-      "description": "A mirrored dining table surrounded by projection art. Every reflection reveals a course inspired by self-perception and sensuality.",
-      "tagline": "Look closer — the story is you."
+      "name": "Rum & Riddim",
+      "theme": "Caribbean Soul Series",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Premium rum flights ease into a reggae and soca party with percussion breaks.",
+      "tagline": "Taste the terroir, then turn up.",
+      "passed": ["Rum-glazed pork belly", "Jerk wings", "Breadfruit fries", "Tamarind ribs"],
+      "roaming": ["Premium rum flights", "Champagne pairings", "Aged rum neat"],
+      "bar": ["The Riddim — island punch riff", "Kingston Sour — rum, lime, silky foam"],
+      "vibe": "Guided tasting 9–9:30, then selectors trade riddims until close."
     },
     {
-      "name": "Noir Nights",
-      "theme": "Smoke & Shadows",
-      "date": "March 21, 2026",
-      "location": "Private Penthouse, Playhouse Square",
-      "description": "Dark cocktails, dim jazz, and dishes that play with mystery — each bite conceals a surprise ingredient.",
-      "tagline": "What you can't see is what you'll crave."
+      "name": "Island Street Food Soirée",
+      "theme": "Caribbean Soul Series",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "A standing-room market mash-up with elevated Trinidad street eats and constant circulation.",
+      "tagline": "Lime, snack, repeat.",
+      "passed": ["Roti pinwheels", "Saltfish accra", "Cassava fries", "Mini curry bowls"],
+      "roaming": ["Sorrel champagne", "Ginger cocktails", "Coconut water spikes"],
+      "bar": ["Street Vendor — rum, ginger, lime", "Doubles Shot — curry vodka"],
+      "vibe": "Ambient vendors, live painters, riddim-driven flow."
     },
     {
-      "name": "Whisper & Wine",
-      "theme": "Secrets of the Cellar",
-      "date": "April 19, 2026",
-      "location": "Hidden Cellar, Tremont",
-      "description": "A sultry wine-pairing night where each course is introduced with a whispered story from the sommelier.",
-      "tagline": "Every sip tells a secret."
+      "name": "Independence Fete",
+      "theme": "Caribbean Soul Series",
+      "date": "Aug 31 • 9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Red, white, and black pride party celebrating Trinidad & Tobago Independence.",
+      "tagline": "Raise the flag, raise the energy.",
+      "passed": ["Crab & callaloo spoons", "Shark & bake bites", "Stewed chicken cups", "Coconut bake"],
+      "roaming": ["Champagne", "National rum blends", "Specialty punches"],
+      "bar": ["Independence — aged rum + bitters", "Red White Black — layered celebration shot"],
+      "vibe": "Dress code in national colors, anthem drop at midnight, flag waiving crowd."
     },
     {
-      "name": "Eclipse Supper",
-      "theme": "Light & Shadow",
-      "date": "May 17, 2026",
-      "location": "The Glass Room, Lakefront",
-      "description": "Guests dine under a shifting play of light and shadow as courses transition from bright to dark — symbolic of the celestial eclipse.",
-      "tagline": "Dine between worlds."
+      "name": "Afrobeat Nights",
+      "theme": "Afro-Caribbean Fusion",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Pan-African dance party blending Afrobeats, amapiano, and soca with runway moments.",
+      "tagline": "Diaspora rhythm. Fashion energy.",
+      "passed": ["Suya skewers", "Jollof arancini", "Kelewele bites", "Egusi dip with cassava chips"],
+      "roaming": ["Champagne + hibiscus", "Palm wine cocktails", "Chapman coolers"],
+      "bar": ["Lagos to POS — rum, ginger, bitters", "Diaspora — bourbon, sorrel"],
+      "vibe": "Fashion showcase, dance battles, projection-mapped visuals."
+    },
+    {
+      "name": "Kingston Meets Port of Spain",
+      "theme": "Afro-Caribbean Fusion",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Jamaica and Trinidad collide in a reggae vs. soca sound clash night.",
+      "tagline": "Two islands. One loud night.",
+      "passed": ["Jerk doubles", "Ackee bites", "Escovitch cups", "Curry goat sliders"],
+      "roaming": ["Red Stripe buckets", "Champagne", "Rum flight service"],
+      "bar": ["Two Islands — JA x TT rum blend", "Crossover — jerk margarita"],
+      "vibe": "Flag waving, DJ battle scoreboard, mid-party crowd judging."
+    },
+    {
+      "name": "Diaspora Sessions",
+      "theme": "Afro-Caribbean Fusion",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Black excellence nightlife featuring R&B, Afrobeats, and soca rotation with VIP hosting.",
+      "tagline": "Silk fits. Heavy bass.",
+      "passed": ["Blackened fish bites", "Dirty rice cups", "Bourbon ribs", "Cornbread with pepper jelly"],
+      "roaming": ["Champagne towers", "Cognac bottle service", "Signature cocktails"],
+      "bar": ["Black Gold — cognac, sorrel, gold flakes", "The Diaspora — rum meets bourbon"],
+      "vibe": "High fashion dress code, velvet VIP sections, polished service."
+    },
+    {
+      "name": "White Party: Emerald Edition",
+      "theme": "Sophisticated Nightlife",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "All-white elegance with emerald lighting, steel pan intro, and house music finale.",
+      "tagline": "Glow in emerald noir.",
+      "passed": ["Ceviche spoons", "Coconut shrimp", "Champagne mussels", "Mini lobster rolls"],
+      "roaming": ["Multiple champagne styles", "White rum cocktails"],
+      "bar": ["White Emerald — white rum, elderflower", "Blanc — vodka, coconut, lychee"],
+      "vibe": "Live pan to deep house transition, photo sets, shimmering dress code."
+    },
+    {
+      "name": "Neon Noir",
+      "theme": "Sophisticated Nightlife",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Futuristic Caribbean underground with UV lighting and experimental bites.",
+      "tagline": "The future glows emerald.",
+      "passed": ["Glow cocktails", "Molecular bites", "Edible flowers", "Caviar on plantain"],
+      "roaming": ["Glow-in-the-dark cocktails", "Dry ice champagne pours"],
+      "bar": ["Electric Emerald — gin, tonic, glow", "Rose Gold Rush — rum, rose, gold"],
+      "vibe": "House/soca remixes, fashion-forward guests, light-reactive dress preferred."
+    },
+    {
+      "name": "Velvet & Smoke",
+      "theme": "Sophisticated Nightlife",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Speakeasy Caribbean luxury with smoked cocktails and jazz-soca fusion.",
+      "tagline": "Low light, high flavor.",
+      "passed": ["Smoked jerk bites", "Bourbon-aged plantain", "Charred pineapple", "Blackened catfish spoons"],
+      "roaming": ["Whiskey neat service", "Aged rum flights", "Champagne chasers"],
+      "bar": ["The Speakeasy — rum, smoke, bitters", "Velvet Night — cognac, chocolate, chili"],
+      "vibe": "Candle glow, vinyl DJ moments, intimate seating pockets."
+    },
+    {
+      "name": "Carnival Prep Night",
+      "theme": "Sophisticated Nightlife",
+      "date": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Get mas-ready with costume fittings, stamina cocktails, and wine-up practice.",
+      "tagline": "Prep the body. Prime the vibe.",
+      "passed": ["Energy bites", "High-protein bowls", "Recovery shooters"],
+      "roaming": ["Champagne", "Electrolyte cocktails", "Coconut water spikes"],
+      "bar": ["Mas Ready — hydrating rum punch", "Stamina — energy + rum blend"],
+      "vibe": "Mas band aesthetic, choreography stations, fitness-percussion mashup."
+    },
+    {
+      "name": "Warehouse Fete",
+      "theme": "Cleveland Underground",
+      "date": "11PM – 4AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Late-night sound system culture with raw industrial staging and street food cones.",
+      "tagline": "After-hours lime with edge.",
+      "passed": ["Paper cone roti", "Jerk plantain", "Street-side wings"],
+      "roaming": ["Beer buckets", "Rum punch in mason jars", "Champagne contrast pours"],
+      "bar": ["The Warehouse — overproof rum, ginger", "Cleveland Underground — local beer + rum"],
+      "vibe": "Strobe smoke, projection grit, sunrise cooldown beats."
     }
   ],
 
   "menu": [
     {
-      "title": "Ember Kiss",
-      "description": "Charred scallop on smoked salt with habanero honey glaze.",
-      "type": "bite"
+      "title": "Doubles Shooters",
+      "description": "Mini curry chickpea doubles in shooter form with cucumber chutney.",
+      "type": "passed"
     },
     {
-      "title": "Midnight Velvet",
-      "description": "Cocoa-dusted filet with blackberry reduction and crushed pink peppercorns.",
-      "type": "bite"
+      "title": "Jerk Chicken Lollipops",
+      "description": "Slow-smoked drumettes with charred pineapple glaze and scotch bonnet honey.",
+      "type": "passed"
     },
     {
-      "title": "The Blind Pour",
-      "description": "A mystery cocktail unveiled only after you've tasted it — layered spirits with citrus, smoke, and spice.",
+      "title": "Bake & Shark Sliders",
+      "description": "Crispy white fish in coconut bake with tamarind sauce and fresh slaw.",
+      "type": "passed"
+    },
+    {
+      "title": "Suya Skewers",
+      "description": "Peanut-spiced beef skewers with cooling lime yogurt and hibiscus pickles.",
+      "type": "passed"
+    },
+    {
+      "title": "Ceviche Champagne Spoon",
+      "description": "Citrus shellfish ceviche served in chilled spoons with bubbles.",
+      "type": "passed"
+    },
+    {
+      "title": "Energy Mas Bowl",
+      "description": "High-protein quinoa, roasted plantain, callaloo pesto and grilled shrimp.",
+      "type": "passed"
+    },
+    {
+      "title": "The Mas",
+      "description": "Spiced rum, passionfruit, lime, bitters and nutmeg foam.",
       "type": "cocktail"
     },
     {
-      "title": "Mirror Martini",
-      "description": "Crystal-clear vodka cocktail served on reflective glass with edible shimmer.",
+      "title": "Port of Spain Sunset",
+      "description": "Coconut rum, mango nectar, ginger, and citrus smoke.",
       "type": "cocktail"
     },
     {
-      "title": "Eclipse Soufflé",
-      "description": "Dark chocolate soufflé with gold dust and salted caramel core.",
-      "type": "dessert"
+      "title": "Lagos to POS",
+      "description": "Dark rum, ginger, bitters, palm sugar and charred orange.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Electric Emerald",
+      "description": "Gin, tonic, chlorophyll, glow tonic and edible glitter.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Mas Ready",
+      "description": "Hydrating rum punch with coconut water, electrolytes and citrus.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Rum Flight",
+      "description": "Curated aged and overproof rum tasting with chocolate + citrus pairings.",
+      "type": "experience"
+    },
+    {
+      "title": "Champagne Service",
+      "description": "Signature roaming champagne cart with hibiscus pearls and sorrel reductions.",
+      "type": "experience"
     }
   ],
 
@@ -125,5 +273,66 @@
     "email": "hello@teaserscle.com",
     "phone": "(216) 555-TEAS",
     "address": "Cleveland, Ohio"
+  },
+
+  "takeover": {
+    "name": "Teasers Takeover",
+    "tagline": "Transform your venue into a one-night Emerald Noir experience.",
+    "summary": "We bring DJs, performers, signature lighting, roaming cocktails, and our guestlist energy. You provide the space—we build the night Cleveland talks about.",
+    "process": [
+      {
+        "title": "Concept Call",
+        "timing": "2 Weeks Out",
+        "details": "Align on theme, capacity, production budget, and revenue model. Choose between Carnival After Dark, Neon Noir, Rum & Riddim, or a custom concept."
+      },
+      {
+        "title": "Takeover Kit",
+        "timing": "Within 48 Hours",
+        "details": "Receive moodboards, run-of-show, staffing needs, custom menu, and marketing assets so your team is in sync."
+      },
+      {
+        "title": "Marketing Push",
+        "timing": "10 Days Out",
+        "details": "Teasers handles RSVPs and promo drops; venue co-promotes. Optional sponsor integration and influencer suite."
+      },
+      {
+        "title": "Show Day",
+        "timing": "Load-in + Night",
+        "details": "We stage lighting and sensory elements, brief staff, and run the show—from the first cocktail to the last encore moment."
+      },
+      {
+        "title": "Post-Event Debrief",
+        "timing": "Within 72 Hours",
+        "details": "Receive photo selects, performance metrics, and next steps for residencies or recurring nights."
+      }
+    ],
+    "packages": [
+      {
+        "title": "Essentials",
+        "description": "DJ, host/MC, lighting wash, Teasers-branded marketing + RSVP funnel.",
+        "idealFor": "Weekday or late-night buyouts wanting a quick energy lift."
+      },
+      {
+        "title": "Signature",
+        "description": "Essentials plus roaming cocktail carts, curated passed bites, performers or percussionists, and ambient decor.",
+        "idealFor": "Prime-night takeovers aiming for a full vibe flip."
+      },
+      {
+        "title": "Flagship",
+        "description": "Signature plus custom set builds, sponsor integrations, influencer content suite, and post-event aftermovie.",
+        "idealFor": "Large venues or brands seeking a statement collaboration."
+      }
+    ],
+    "whyBarsLoveIt": [
+      "New audience: Our guestlist arrives early, spends heavy, and shares content.",
+      "Content machine: Walk away with cinematic photo/video assets for your own channels.",
+      "Repeatable format: Rotate themes monthly for a recurring residency.",
+      "Sponsor-ready: Easily integrate rum houses, fashion partners, or local brands."
+    ],
+    "ctas": [
+      "Book a walkthrough",
+      "Request takeover deck",
+      "Lock your date"
+    ]
   }
 }
