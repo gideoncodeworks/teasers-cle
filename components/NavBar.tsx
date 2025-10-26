@@ -49,12 +49,12 @@ export default function NavBar() {
           </div>
         </Link>
 
-        <div className="hidden flex-wrap items-center justify-end gap-2 text-[10px] uppercase tracking-[0.2em] text-emerald md:flex md:gap-3 lg:gap-4 lg:text-[11px] xl:text-sm">
+        <div className="hidden items-center justify-end gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors duration-300 hover:text-roseGold"
+              className="whitespace-nowrap transition-colors duration-300 hover:text-roseGold"
             >
               {link.label}
             </Link>
