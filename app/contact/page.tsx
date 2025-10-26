@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import data from "@/context/teasersCLE.json";
 
 const interestOptions = [
@@ -14,6 +17,9 @@ const interestOptions = [
 
 export default function ContactPage() {
   const { contact, socials, brand } = data;
+  const searchParams = useSearchParams();
+  const preselectedInterest = searchParams.get("interest") ?? "";
+  const eventParam = searchParams.get("event");
 
   return (
     <div className="min-h-screen bg-hunter text-white px-6 py-24">
@@ -68,6 +74,7 @@ export default function ContactPage() {
               <select
                 name="interest"
                 required
+                defaultValue={preselectedInterest}
                 className="rounded-lg border-2 border-emerald/40 bg-black px-4 py-3 text-white focus:border-roseGold focus:outline-none transition-colors"
               >
                 <option value="">Select one</option>
@@ -85,6 +92,11 @@ export default function ContactPage() {
                 name="message"
                 rows={5}
                 placeholder="Tell us what you envision — private dinner, immersive activation, collaboration..."
+                defaultValue={
+                  eventParam
+                    ? `Interested in updates for ${eventParam} — please add me to the VIP invite list.`
+                    : undefined
+                }
                 className="rounded-lg border-2 border-emerald/40 bg-black px-4 py-3 text-white focus:border-roseGold focus:outline-none transition-colors"
               />
             </label>

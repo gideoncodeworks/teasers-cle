@@ -5,9 +5,10 @@ import Link from "next/link";
 import data from "@/context/teasersCLE.json";
 
 export default function HomePage() {
-  const { brand, events, voice, takeover } = data;
+  const { brand, events, voice, takeover, collective } = data;
 
   const upcomingEvents = events.slice(0, 3);
+  const highlightCategories = collective?.categories?.slice(0, 4) ?? [];
 
   const differentiators = [
     "Premium but accessible — elevated nights without bottle-service pricing.",
@@ -366,7 +367,7 @@ export default function HomePage() {
             </p>
           </header>
           <div className="grid gap-6 md:grid-cols-2">
-            {data.collective.categories.slice(0, 4).map((category) => (
+            {highlightCategories.map((category) => (
               <div key={category.title} className="rounded-3xl border border-emerald/35 bg-graphite/80 p-6 shadow-neon space-y-3">
                 <h3 className="text-xl font-serif text-roseGold">{category.title}</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
