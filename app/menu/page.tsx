@@ -36,7 +36,7 @@ export default function MenuPage() {
 
   const passed = menu.filter(item => item.type === "passed");
   const cocktails = menu.filter(item => item.type === "cocktail");
-  const experiences = menu.filter(item => item.type === "experience");
+  const roaming = menu.filter(item => item.type === "roaming");
 
   return (
     <div className="min-h-screen bg-hunter text-white">
@@ -48,8 +48,8 @@ export default function MenuPage() {
           The Menu
         </h1>
         <p className="max-w-3xl mx-auto text-gray-300 mt-6 leading-relaxed">
-          Curated roaming bites, rum-forward cocktails, and beverage experiences that travel with every Teasers CLE drop.
-          We prototype flavors during our nightlife series, refining them for the future lounge.
+          Over 100 curated items from our event series—passed bites that fuel the dance floor, signature cocktails that tell stories, and roaming service that keeps the night flowing.
+          Every dish and drink is a preview of what's coming to the Teasers CLE lounge.
         </p>
       </section>
 
@@ -58,20 +58,20 @@ export default function MenuPage() {
         <div className="max-w-6xl mx-auto space-y-14 sm:space-y-16">
           <MenuSection
             title="Passed Bites"
-            subtitle="Street food nostalgia elevated for the dance floor"
+            subtitle="Caribbean, soul food, Cleveland pride—52 flavors that dance"
             items={passed}
           />
 
           <MenuSection
-            title="Cocktails"
-            subtitle="Signature pours roaming through every pop-up"
+            title="Signature Cocktails"
+            subtitle="26 rum-forward creations crafted for the Emerald Noir experience"
             items={cocktails}
           />
 
           <MenuSection
-            title="Experiences"
-            subtitle="Service rituals that anchor the Emerald Noir aesthetic"
-            items={experiences}
+            title="Roaming Service"
+            subtitle="Drinks that come to you—champagne towers, rum flights, and bottle service without the wait"
+            items={roaming}
           />
         </div>
       </div>

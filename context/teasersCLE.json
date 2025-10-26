@@ -2,7 +2,7 @@
   "brand": {
     "name": "Teasers CLE",
     "tagline": "Where anticipation is the main course.",
-    "mission": "Teasers CLE is a Cleveland nightlife promotions company launching immersive pop-up events that preview the future Teasers lounge. Each event teases what's coming\u2014passed menu tastings, roaming cocktail service, and pure dance floor energy.",
+    "mission": "Teasers CLE is a Cleveland nightlife promotions company launching immersive pop-up events that preview the future Teasers lounge. Each event teases what's coming—passed menu tastings, roaming cocktail service, and pure dance floor energy.",
     "city": "Cleveland, Ohio",
     "palette": {
       "primary": "#00FF9D",
@@ -11,10 +11,10 @@
       "text": "#ffffff"
     },
     "tone": "Electric, mysterious, inclusive, and culturally diverse.",
-    "positioning": "Teasers CLE blends Caribbean soul with African American culture, Cleveland pride, and global nightlife\u2014every event is a party first, a menu preview second."
+    "positioning": "Teasers CLE blends Caribbean soul with African American culture, Cleveland pride, and global nightlife—every event is a party first, a menu preview second."
   },
   "story": {
-    "origin": "Born from a vision to bring Trinidad carnival energy to Cleveland's nightlife scene, Teasers CLE started as a concept for an immersive lounge. We're building toward that brick-and-mortar dream by throwing unforgettable pop-up parties\u2014each one testing menu items, cocktails, and vibes that will define the future space.",
+    "origin": "Born from a vision to bring Trinidad carnival energy to Cleveland's nightlife scene, Teasers CLE started as a concept for an immersive lounge. We're building toward that brick-and-mortar dream by throwing unforgettable pop-up parties—each one testing menu items, cocktails, and vibes that will define the future space.",
     "vision": "To open Cleveland's most talked-about lounge where Caribbean flavors meet global nightlife culture, and every night feels like an event you had to be there for."
   },
   "events": [
@@ -22,9 +22,9 @@
       "name": "Carnival After Dark",
       "theme": "Caribbean Soul",
       "date": "February 13, 2026",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "Experience Trinidad carnival's electric energy reimagined for a Cleveland night. This isn't a concert\u2014it's a full-body immersion into the most celebrated street party on earth. Soca rhythms pulse through a crowd dressed in sequins, feathers, and carnival-ready fits while cocktail servers weave through with champagne and Caribbean rum punches. Your ticket includes passed menu tastings showcasing what Teasers CLE will serve when the lounge opens.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Experience Trinidad carnival's electric energy reimagined for a Cleveland night. This isn't a concert—it's a full-body immersion into the most celebrated street party on earth. Soca rhythms pulse through a crowd dressed in sequins, feathers, and carnival-ready fits while cocktail servers weave through with champagne and Caribbean rum punches. Your ticket includes passed menu tastings showcasing what Teasers CLE will serve when the lounge opens.",
       "tagline": "Friday the 13th never felt this lucky.",
       "fullDescription": "Costume encouraged. Body paint station. Glow accessories. Soca DJ all night. This is your Valentine's weekend done different.",
       "passed": [
@@ -39,8 +39,8 @@
         "Sorrel mimosas"
       ],
       "bar": [
-        "The Mas \u2014 Spiced rum, passionfruit, lime, carnival energy",
-        "Port of Spain Sunset \u2014 Coconut rum, mango, grenadine glow"
+        "The Mas — Spiced rum, passionfruit, lime, carnival energy",
+        "Port of Spain Sunset — Coconut rum, mango, grenadine glow"
       ],
       "vibe": "Costume encouraged, body paint station, glow accessories, soca DJ all night.",
       "status": "onSale",
@@ -50,9 +50,9 @@
       "name": "Soul Sessions",
       "theme": "African American Culture",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "Grown and sexy doesn't mean boring. Soul Sessions is where Cleveland's Black professionals come to unwind to the sounds that raised them\u2014classic soul, neo-soul, and R&B slow burns that transition into uptempo bangers as the night heats up. Dress sharp, sip champagne, taste elevated Southern comfort food, and let the DJ take you from Anita Baker to Summer Walker.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Grown and sexy doesn't mean boring. Soul Sessions is where Cleveland's Black professionals come to unwind to the sounds that raised them—classic soul, neo-soul, and R&B slow burns that transition into uptempo bangers as the night heats up. Dress sharp, sip champagne, taste elevated Southern comfort food, and let the DJ take you from Anita Baker to Summer Walker.",
       "tagline": "Silk fits and slow jams.",
       "fullDescription": "Dress code enforced. No sneakers. Sophisticated, intimate, sensual. This is date night energy or girls' night elevation.",
       "passed": [
@@ -67,8 +67,8 @@
         "Whiskey cocktail trays"
       ],
       "bar": [
-        "Cleveland Soul \u2014 Cognac, honey, lemon, bitters",
-        "Neo Classic \u2014 Bourbon, peach pur\u00e9e, vanilla smoke"
+        "Cleveland Soul — Cognac, honey, lemon, bitters",
+        "Neo Classic — Bourbon, peach purée, vanilla smoke"
       ],
       "vibe": "Dress code enforced. No sneakers. Date night or girls' night elevation.",
       "status": "notify"
@@ -77,8 +77,8 @@
       "name": "Rum & Riddim",
       "theme": "Caribbean Soul",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "Start with knowledge, end with motion. Rum & Riddim opens with a 30-minute premium rum tasting led by a spirits expert, then transitions into a full-blown reggae and soca party. Learn the difference between aged Barbadian rum and Jamaican overproof, then put that education to work on the dance floor. Every ticket includes passed Caribbean bites paired with the tasting.",
       "tagline": "Taste the islands, then move to them.",
       "fullDescription": "Come for the culture, stay for the vibes. DJ spins classic reggae and modern soca until close.",
@@ -94,8 +94,8 @@
         "Aged rum neat pours"
       ],
       "bar": [
-        "The Riddim \u2014 Soca-inspired rum punch, three rums, tropical chaos",
-        "Kingston Sour \u2014 Dark rum, lime, egg white, Angostura foam"
+        "The Riddim — Soca-inspired rum punch, three rums, tropical chaos",
+        "Kingston Sour — Dark rum, lime, egg white, Angostura foam"
       ],
       "vibe": "Rum education (9-9:30pm), then reggae and soca until close.",
       "status": "notify"
@@ -104,9 +104,9 @@
       "name": "90s Hip-Hop Night",
       "theme": "African American Culture",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "If you remember when MTV played music videos and rap had a message, this night is for you. A Cleveland DJ spins nothing but golden era classics\u2014Biggie, Pac, Wu-Tang, Tribe, Lauryn, Missy, Jay, Nas\u2014while you feast on the party food that fueled house parties in '96. Throwback fits encouraged. Champagne and Hennessy flow all night.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "If you remember when MTV played music videos and rap had a message, this night is for you. A Cleveland DJ spins nothing but golden era classics—Biggie, Pac, Wu-Tang, Tribe, Lauryn, Missy, Jay, Nas—while you feast on the party food that fueled house parties in '96. Throwback fits encouraged. Champagne and Hennessy flow all night.",
       "tagline": "The golden era never sounded this good.",
       "fullDescription": "Baggy jeans. Jerseys. Timbs. Kangols. Pure nostalgia, zero pretense. This is the party that takes you back.",
       "passed": [
@@ -121,8 +121,8 @@
         "Craft beer buckets"
       ],
       "bar": [
-        "Golden Era \u2014 Hennessy, ginger ale, nostalgia",
-        "Wu-Tang \u2014 Spiced rum, honey, lemon, 36 chambers"
+        "Golden Era — Hennessy, ginger ale, nostalgia",
+        "Wu-Tang — Spiced rum, honey, lemon, 36 chambers"
       ],
       "vibe": "Throwback fits encouraged. Pure 90s vibes, zero pretense.",
       "status": "notify"
@@ -131,8 +131,8 @@
       "name": "The Fete",
       "theme": "Caribbean Soul",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "In Trinidad, 'the fete' means the all-inclusive party where the drinks never stop and the vibes never dip. We're bringing that energy to Cleveland. Your ticket gets you unlimited access to roaming rum punch, champagne, beer, and passed Trini street food all night long. No cash bar. No limits. Just pure soca, pure vibes, pure fete.",
       "tagline": "All-inclusive. All night. All vibes.",
       "fullDescription": "All-inclusive means ALL. No wallet out all night. Dance, drink, eat, repeat.",
@@ -148,8 +148,8 @@
         "Carib beer bottles on trays"
       ],
       "bar": [
-        "The Fete \u2014 Overproof rum, lime, Angostura bitters, chaos",
-        "Trini Mule \u2014 Aged rum, ginger beer, lime, island kick"
+        "The Fete — Overproof rum, lime, Angostura bitters, chaos",
+        "Trini Mule — Aged rum, ginger beer, lime, island kick"
       ],
       "vibe": "All-inclusive wristbands. No cash bar. Dance, drink, eat, repeat.",
       "status": "notify"
@@ -158,8 +158,8 @@
       "name": "Latin Nights",
       "theme": "Global Nightlife",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "Reggaeton basslines. Salsa rhythms. Bachata sensuality. Latin Nights is Cleveland's hottest dance floor, fueled by tequila shots, champagne, and the kind of passed Latin street food that keeps you moving. Whether you're here to dance or just watch people who can, the energy is infectious and the mojitos are cold.",
       "tagline": "Move to the rhythm or move aside.",
       "fullDescription": "High energy. Dance-focused. Reggaeton heavy, salsa when you need a break. Dress to move.",
@@ -176,8 +176,8 @@
         "Mojitos on trays"
       ],
       "bar": [
-        "Fuego \u2014 Tequila, jalape\u00f1o, lime, agave, heat",
-        "Noche Latina \u2014 White rum, passion fruit, lime, mint"
+        "Fuego — Tequila, jalapeño, lime, agave, heat",
+        "Noche Latina — White rum, passion fruit, lime, mint"
       ],
       "vibe": "High energy. Dance-focused. Reggaeton heavy, salsa breaks.",
       "status": "notify"
@@ -186,9 +186,9 @@
       "name": "CLE Nights",
       "theme": "Cleveland Pride",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "This one's for the homegrown. CLE Nights celebrates everything Cleveland\u2014Great Lakes beer, pierogies, Polish boys, Stadium Mustard, and a DJ spinning the mix of hip-hop, dance, and top 40 that makes our city move. Sports jerseys welcome. Civic pride required. Local vendors featured. This is Believeland after dark.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "This one's for the homegrown. CLE Nights celebrates everything Cleveland—Great Lakes beer, pierogies, Polish boys, Stadium Mustard, and a DJ spinning the mix of hip-hop, dance, and top 40 that makes our city move. Sports jerseys welcome. Civic pride required. Local vendors featured. This is Believeland after dark.",
       "tagline": "Cleveland pride. Cleveland vibes. Cleveland loud.",
       "fullDescription": "Wear your Cavs jersey. Your Browns gear. Your Guardians hat. This is home.",
       "passed": [
@@ -203,8 +203,8 @@
         "Champagne (because we're classy too)"
       ],
       "bar": [
-        "The 216 \u2014 Local bourbon, maple syrup, orange bitters",
-        "Believeland \u2014 Vodka, orange juice, pride, resilience"
+        "The 216 — Local bourbon, maple syrup, orange bitters",
+        "Believeland — Vodka, orange juice, pride, resilience"
       ],
       "vibe": "Sports jerseys welcome. Civic pride required. This is home.",
       "status": "notify"
@@ -213,8 +213,8 @@
       "name": "Kingston Meets Port of Spain",
       "theme": "Caribbean Soul",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "Jamaica versus Trinidad. Reggae versus soca. Jerk versus curry. Two islands, one dance floor, infinite vibes. The DJ alternates between Kingston dancehall classics and Port of Spain soca anthems while you taste the best of both cultures. Flag waving encouraged. Island pride required. May the best playlist win.",
       "tagline": "Two islands. One loud night.",
       "fullDescription": "Friendly rivalry. Dance battles. Flag waving. Two islands, one love.",
@@ -230,8 +230,8 @@
         "Caribbean rum flight trays"
       ],
       "bar": [
-        "Two Islands \u2014 Jamaican & Trini rum blend, the peace treaty",
-        "Crossover \u2014 Jerk-spiced margarita (yes, really)"
+        "Two Islands — Jamaican & Trini rum blend, the peace treaty",
+        "Crossover — Jerk-spiced margarita (yes, really)"
       ],
       "vibe": "Friendly rivalry. Dance battles. Flag waving. Island pride.",
       "status": "notify"
@@ -240,8 +240,8 @@
       "name": "Black Velvet",
       "theme": "African American Culture",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "Luxury. Excellence. Elegance. Black Velvet is the all-black dress code event where Cleveland's Black elite come to see and be seen. Champagne towers. Top-shelf cognac service. Upscale soul food passed by servers in black-on-black. The soundtrack is a curated mix of R&B, afrobeats, and tasteful trap. This is the night you dress up for.",
       "tagline": "Black excellence. Black opulence. Black joy.",
       "fullDescription": "All-black everything. Dress code strictly enforced. VIP sections available. Opulence required.",
@@ -252,13 +252,13 @@
         "Truffle mac & cheese squares"
       ],
       "roaming": [
-        "Champagne towers (Mo\u00ebt, Veuve)",
-        "Premium cognac neat pours (Hennessy XO, R\u00e9my Martin)",
+        "Champagne towers (Moët, Veuve)",
+        "Premium cognac neat pours (Hennessy XO, Rémy Martin)",
         "Craft cocktail trays"
       ],
       "bar": [
-        "Black Gold \u2014 Cognac, honey, lemon, edible gold flakes",
-        "Velvet Night \u2014 Bourbon, dark chocolate, Scotch bonnet tincture"
+        "Black Gold — Cognac, honey, lemon, edible gold flakes",
+        "Velvet Night — Bourbon, dark chocolate, Scotch bonnet tincture"
       ],
       "vibe": "All-black dress code. VIP sections. Opulence required.",
       "status": "notify"
@@ -267,16 +267,16 @@
       "name": "Neon Noir",
       "theme": "Global Nightlife",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "The future of nightlife is here, glowing emerald and rose gold under UV lights. Neon Noir is Teasers CLE's most experimental night\u2014molecular gastronomy bites, glow-in-the-dark cocktails, dry ice presentations, and a house/electronic soundtrack that feels like a cyberpunk fever dream. Dress futuristic. Think fashion-forward. Leave reality at the door.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "The future of nightlife is here, glowing emerald and rose gold under UV lights. Neon Noir is Teasers CLE's most experimental night—molecular gastronomy bites, glow-in-the-dark cocktails, dry ice presentations, and a house/electronic soundtrack that feels like a cyberpunk fever dream. Dress futuristic. Think fashion-forward. Leave reality at the door.",
       "tagline": "The future glows emerald.",
       "fullDescription": "UV lights. Fashion show energy. House and electronic music. This is the Instagram event.",
       "passed": [
         "Glow tonic cocktails in LED cups",
         "Molecular gastronomy bites (spheres, foams, smokes)",
         "Edible flowers and microgreens",
-        "Smoke-infused canap\u00e9s",
+        "Smoke-infused canapés",
         "Caviar on plantain chips"
       ],
       "roaming": [
@@ -285,8 +285,8 @@
         "Emerald-lit cocktail trays"
       ],
       "bar": [
-        "Electric Emerald \u2014 Gin, glow tonic, lime, neon energy",
-        "Rose Gold Rush \u2014 White rum, rose water, gold shimmer, future"
+        "Electric Emerald — Gin, glow tonic, lime, neon energy",
+        "Rose Gold Rush — White rum, rose water, gold shimmer, future"
       ],
       "vibe": "UV lights. Fashion-forward. House/electronic music. Instagram energy.",
       "status": "notify"
@@ -295,9 +295,9 @@
       "name": "Warehouse Sessions",
       "theme": "Cleveland Pride",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "Cleveland's industrial underbelly comes alive. Warehouse Sessions strips nightlife down to its raw essentials\u2014concrete floors, exposed brick, a massive sound system, and nothing but vibes. House music. Techno. Underground electronic. Craft beer buckets contrast with champagne trays. Street food style bites. No frills, all energy.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "Cleveland's industrial underbelly comes alive. Warehouse Sessions strips nightlife down to its raw essentials—concrete floors, exposed brick, a massive sound system, and nothing but vibes. House music. Techno. Underground electronic. Craft beer buckets contrast with champagne trays. Street food style bites. No frills, all energy.",
       "tagline": "Raw Cleveland. Pure energy.",
       "fullDescription": "Industrial. Underground. Raw. Cleveland's warehouse culture meets nightlife.",
       "passed": [
@@ -312,8 +312,8 @@
         "Champagne (for the contrast)"
       ],
       "bar": [
-        "The Warehouse \u2014 Whiskey, ginger beer, lime, raw energy",
-        "Rust Belt \u2014 Bourbon, Angostura, orange, Cleveland grit"
+        "The Warehouse — Whiskey, ginger beer, lime, raw energy",
+        "Rust Belt — Bourbon, Angostura, orange, Cleveland grit"
       ],
       "vibe": "Industrial. Underground. Raw. Cleveland warehouse culture.",
       "status": "notify"
@@ -322,9 +322,9 @@
       "name": "Velvet Sundays",
       "theme": "Global Nightlife",
       "date": "TBD",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
-      "description": "The weekend's last stand. Velvet Sundays is the end-of-weekend party where the dress code is 'whatever' and the vibe is 'just dance.' The DJ plays everything\u2014R&B, hip-hop, top 40, house\u2014and the food is pure comfort. Champagne, beer, mimosas at night (yes, really), and a crowd that just wants to extend the weekend one more night.",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "The weekend's last stand. Velvet Sundays is the end-of-weekend party where the dress code is 'whatever' and the vibe is 'just dance.' The DJ plays everything—R&B, hip-hop, top 40, house—and the food is pure comfort. Champagne, beer, mimosas at night (yes, really), and a crowd that just wants to extend the weekend one more night.",
       "tagline": "The weekend's not over yet.",
       "fullDescription": "Come as you are. Dance to whatever. No theme, just vibes. The weekend's not over yet.",
       "passed": [
@@ -340,8 +340,8 @@
         "Beer buckets"
       ],
       "bar": [
-        "Sunday Funday \u2014 Vodka, pineapple, orange, coconut, denial",
-        "Wind Down \u2014 Whiskey, ginger, honey, Monday dread"
+        "Sunday Funday — Vodka, pineapple, orange, coconut, denial",
+        "Wind Down — Whiskey, ginger, honey, Monday dread"
       ],
       "vibe": "No dress code. Mixed music. Pure vibes. Weekend extension.",
       "status": "notify"
@@ -350,8 +350,8 @@
       "name": "Independence Fete",
       "theme": "Caribbean Soul",
       "date": "August 31, 2026",
-      "time": "9PM \u2013 2AM",
-      "location": "Location revealed 48 hours prior \u2022 Cleveland",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
       "description": "On August 31st, Cleveland becomes Port of Spain. Independence Fete celebrates Trinidad & Tobago's freedom with a night of national pride, traditional food, and pure soca energy. Red, white, and black dress code. Flag waving. National anthem moment at midnight. Then the DJ plays nothing but Trini soca until the sun threatens to rise.",
       "tagline": "Raise the flag. Raise the energy.",
       "fullDescription": "National pride. Anthem at midnight. Flags everywhere. Pure Trini energy. This is the cultural cornerstone.",
@@ -368,8 +368,8 @@
         "Specialty punches"
       ],
       "bar": [
-        "Independence \u2014 Aged Angostura rum, bitters, lime, freedom",
-        "Red White Black \u2014 Layered shot representing the flag"
+        "Independence — Aged Angostura rum, bitters, lime, freedom",
+        "Red White Black — Layered shot representing the flag"
       ],
       "vibe": "Red/white/black dress code. Anthem at midnight. Flag waving. National pride.",
       "status": "notify"
@@ -378,53 +378,538 @@
   "menu": [
     {
       "title": "Doubles Shooters",
-      "description": "Mini curry chickpea doubles in shooter form with cucumber chutney.",
+      "description": "Trinidad's beloved street food reimagined: curried chickpea goodness nestled in pillowy bara bread, topped with tangy tamarind chutney. One bite transports you to a Port of Spain sunrise.",
       "type": "passed"
     },
     {
       "title": "Jerk Chicken Lollipops",
-      "description": "Slow-smoked drumettes with charred pineapple glaze and scotch bonnet honey.",
+      "description": "Jamaican heat meets sticky-sweet seduction. These drumettes are marinated in authentic jerk spices, grilled to perfection, then glazed with mango and fire—lick your fingers, we dare you.",
+      "type": "passed"
+    },
+    {
+      "title": "Plantain Chips with Pepper Sauce Caviar",
+      "description": "Golden plantain crisps crowned with bursts of Caribbean pepper sauce encapsulated in tiny spheres. Addictive crunch meets controlled heat—molecular gastronomy that respects the islands.",
+      "type": "passed"
+    },
+    {
+      "title": "Coconut Rum Shrimp on Sugarcane Skewers",
+      "description": "Plump shrimp bathed in coconut rum and skewered on edible sugarcane sticks. Each bite delivers tropical sweetness, ocean brine, and just enough island spirit to keep the night interesting.",
+      "type": "passed"
+    },
+    {
+      "title": "Fried Chicken Sliders with Hot Honey Drizzle",
+      "description": "Southern soul food elevated: buttermilk-fried chicken breast on a brioche bun, drizzled with honey infused with cayenne kick. This is the taste that makes grown folks weak in the knees.",
+      "type": "passed"
+    },
+    {
+      "title": "Mac & Cheese Cups with Truffle Breadcrumbs",
+      "description": "Creamy, three-cheese decadence crowned with crispy truffle panko. This is comfort food in couture—soul food that knows it's fancy and owns every bite.",
+      "type": "passed"
+    },
+    {
+      "title": "Collard Green Spring Rolls with Sweet Chili Dip",
+      "description": "Southern greens meet Asian technique in this cross-cultural masterpiece. Tender collards wrapped tight and fried crispy, served with a sweet chili sauce that bridges continents with every dip.",
+      "type": "passed"
+    },
+    {
+      "title": "Bourbon-Glazed Short Rib Tips",
+      "description": "Fall-off-the-bone beef tips slow-braised and lacquered with bourbon reduction. This is the kind of meat that makes you close your eyes and nod in appreciation—pure grown-and-sexy energy.",
+      "type": "passed"
+    },
+    {
+      "title": "Rum-Glazed Pork Belly Bites",
+      "description": "Caribbean rum caramelizes into a sticky-sweet coating on crispy-edged, melt-in-your-mouth pork belly. Each cube is a lesson in balance: fat, sweet, spice, and island soul.",
+      "type": "passed"
+    },
+    {
+      "title": "Jerk Wings with Lime Crema",
+      "description": "Chicken wings bathed in authentic Jamaican jerk marinade, charred to smoky perfection, then cooled with zesty lime crema. The heat builds slow—the cooling relief is instant.",
+      "type": "passed"
+    },
+    {
+      "title": "Breadfruit Fries with Garlic Aioli",
+      "description": "The Caribbean's starchy treasure, sliced thick and fried golden like the best fries you've never had. Dipped in roasted garlic aioli, this is island comfort food that needs no introduction.",
+      "type": "passed"
+    },
+    {
+      "title": "Tamarind BBQ Rib Tips",
+      "description": "Smoky pork ribs glazed in tangy-sweet tamarind BBQ sauce—a fusion of American backyard tradition and Caribbean fruit magic. Sticky fingers guaranteed, napkins optional.",
+      "type": "passed"
+    },
+    {
+      "title": "Classic Buffalo Wings",
+      "description": "No tricks, no fusion—just Frank's RedHot, real butter, and perfectly fried chicken wings. This is the taste of '90s house parties and basement cookouts, executed with reverence.",
+      "type": "passed"
+    },
+    {
+      "title": "Loaded Cheese Fries with Bacon",
+      "description": "Crispy fries buried under a mountain of melted cheese, crispy bacon, sour cream, and chives. This is late-night indulgence and day-party fuel rolled into one glorious pile.",
+      "type": "passed"
+    },
+    {
+      "title": "Mini Cheeseburger Sliders",
+      "description": "American classic shrunk down but not dumbed down: juicy beef patties, melted cheese, special sauce, pickles, on toasted buns. These sliders hit every nostalgic note.",
+      "type": "passed"
+    },
+    {
+      "title": "Pizza Rolls & Mozzarella Sticks",
+      "description": "Pure '90s nostalgia: crispy pizza rolls and golden mozzarella sticks with marinara dip. This is the snack table at every party that mattered, now served with champagne.",
+      "type": "passed"
+    },
+    {
+      "title": "Mini Pelau Bowls",
+      "description": "Trinidad's ultimate one-pot comfort: rice stewed with pigeon peas, caramelized chicken, and coconut milk in mini portions. Every spoonful tastes like Sunday dinner at grandma's house in Port of Spain.",
       "type": "passed"
     },
     {
       "title": "Bake & Shark Sliders",
-      "description": "Crispy white fish in coconut bake with tamarind sauce and fresh slaw.",
+      "description": "Trinidad's iconic beach snack reimagined: crispy fried shark on fluffy coconut bake, topped with tangy slaw and pepper sauce. This is Maracas Bay energy, landlocked in Cleveland.",
       "type": "passed"
     },
     {
-      "title": "Suya Skewers",
-      "description": "Peanut-spiced beef skewers with cooling lime yogurt and hibiscus pickles.",
+      "title": "Pholourie with Tamarind Sauce",
+      "description": "Golden fried split pea fritters—crispy outside, fluffy inside—served with sweet-and-sour tamarind dipping sauce. This Trini street food staple is dangerously addictive.",
       "type": "passed"
     },
     {
-      "title": "Ceviche Champagne Spoon",
-      "description": "Citrus shellfish ceviche served in chilled spoons with bubbles.",
+      "title": "Curried Chickpea Cups",
+      "description": "Warm, spiced chickpeas simmered in aromatic curry and served in crispy phyllo cups. Vegetarian comfort food with bold Caribbean flavor that converts carnivores on contact.",
+      "type": "passed"
+    },
+    {
+      "title": "Beef Empanadas with Chimichurri",
+      "description": "Flaky, golden pastry pockets stuffed with seasoned ground beef, then paired with bright, herbaceous chimichurri. This is Latin street food perfection—handheld, hot, and impossible to resist.",
+      "type": "passed"
+    },
+    {
+      "title": "Street-Style Taquitos",
+      "description": "Crispy rolled tortillas filled with your choice of slow-braised chicken or carne asada, served with lime crema and salsa verde. This is taco truck energy elevated to nightclub status.",
+      "type": "passed"
+    },
+    {
+      "title": "Ceviche in Mini Cups",
+      "description": "Fresh white fish cured in citrus, tossed with red onion, cilantro, and a kiss of jalapeño heat. Served ice-cold in shot-sized portions—refreshing, bright, and dangerously easy to keep eating.",
+      "type": "passed"
+    },
+    {
+      "title": "Sweet Plantain Chips with Guacamole",
+      "description": "Ripe plantains sliced thin and fried to caramelized perfection, served alongside creamy, lime-spiked guacamole. Sweet meets savory in this Latin-Caribbean fusion snack.",
+      "type": "passed"
+    },
+    {
+      "title": "Chorizo-Stuffed Dates",
+      "description": "Medjool dates stuffed with spicy chorizo and wrapped in crispy bacon—sweet, savory, smoky, and utterly addictive. This is tapas-style seduction on a toothpick.",
+      "type": "passed"
+    },
+    {
+      "title": "Pierogi Bites",
+      "description": "Cleveland's Polish heritage, fried crispy: potato and cheese pierogis golden-brown and served with sour cream. This is home, comfort, and civic pride in dumpling form.",
+      "type": "passed"
+    },
+    {
+      "title": "Polish Boy Sliders",
+      "description": "Cleveland's legendary street food shrunk to slider size: kielbasa topped with fries, coleslaw, and BBQ sauce on a bun. Messy, iconic, and unapologetically CLE.",
+      "type": "passed"
+    },
+    {
+      "title": "Stadium Mustard Hot Wings",
+      "description": "Chicken wings tossed in Cleveland's iconic Stadium Mustard glaze—tangy, bright, and unmistakably local. This is Browns game day meets nightlife elegance.",
+      "type": "passed"
+    },
+    {
+      "title": "Beer Cheese Dip with Pretzels",
+      "description": "Creamy cheese dip made with Great Lakes beer, served with soft pretzel bites. This is Cleveland brewing culture in dip form—rich, boozy, and built for sharing.",
+      "type": "passed"
+    },
+    {
+      "title": "Jerk-Spiced Doubles",
+      "description": "Fusion done fearlessly: Trinidad's doubles get a Jamaican jerk spice upgrade. This is two island cultures colliding in the best possible way—curry chickpeas meet scotch bonnet heat.",
+      "type": "passed"
+    },
+    {
+      "title": "Ackee & Saltfish Bites on Fried Bake",
+      "description": "Jamaica's national dish reimagined as finger food: scrambled ackee and salted cod on golden fried bake. This is Kingston breakfast energy served after dark.",
+      "type": "passed"
+    },
+    {
+      "title": "Escovitch Fish in Mini Cups",
+      "description": "Crispy fried fish topped with tangy pickled vegetables in the Jamaican tradition. Served in mini portions, this dish delivers island-style sweet, sour, and spice in every bite.",
+      "type": "passed"
+    },
+    {
+      "title": "Curry Goat Sliders with Mango Slaw",
+      "description": "Tender, slow-cooked Jamaican curry goat on soft buns, topped with sweet mango coleslaw. This is island soul food that demands respect—bold, aromatic, unforgettable.",
+      "type": "passed"
+    },
+    {
+      "title": "Blackened Catfish with Creole Aioli",
+      "description": "Southern catfish crusted in Cajun spices and seared to blackened perfection, finished with tangy Creole aioli. This is Louisiana heat meeting soul food elegance.",
+      "type": "passed"
+    },
+    {
+      "title": "Shrimp & Grits Bites",
+      "description": "Creamy white cheddar grits topped with sautéed shrimp and smoky Tasso ham. This Lowcountry classic gets the upscale treatment—each bite is Southern luxury.",
+      "type": "passed"
+    },
+    {
+      "title": "Braised Short Rib on Sweet Potato Medallions",
+      "description": "Fork-tender short rib over roasted sweet potato rounds, finished with microgreens. This is soul food at its most refined—earthy, elegant, and deeply satisfying.",
+      "type": "passed"
+    },
+    {
+      "title": "Truffle Mac & Cheese Squares",
+      "description": "Baked mac and cheese cut into shareable squares, infused with black truffle and topped with golden breadcrumbs. This is the dish that makes vegetarians forget everything else on the menu.",
+      "type": "passed"
+    },
+    {
+      "title": "Molecular Gastronomy Bites",
+      "description": "Spheres of flavor that burst on your tongue, edible foams, smoke-filled domes—this is food as theater. Each bite is a science experiment you're excited to taste.",
+      "type": "passed"
+    },
+    {
+      "title": "Smoke-Infused Canapés",
+      "description": "Elegant bites presented under glass cloches filled with aromatic smoke. When lifted, wisps of hickory or applewood reveal delicate, flavor-packed creations designed to wow.",
+      "type": "passed"
+    },
+    {
+      "title": "Caviar on Plantain Chips",
+      "description": "Luxury meets the Caribbean: briny caviar pearls atop crispy plantain chips with crème fraîche. This is opulence with island soul—unexpected, unforgettable, unapologetic.",
+      "type": "passed"
+    },
+    {
+      "title": "Street Tacos",
+      "description": "Authentic carne asada or al pastor on soft corn tortillas with cilantro, onion, and lime. This is taco truck perfection served in a nightclub setting—simple, honest, delicious.",
+      "type": "passed"
+    },
+    {
+      "title": "Loaded Beef Sliders",
+      "description": "Juicy beef patties piled high with bacon, cheese, and all the fixings. This is indulgence without apology—messy, satisfying, and designed for late-night cravings.",
+      "type": "passed"
+    },
+    {
+      "title": "Loaded Nachos",
+      "description": "Crispy tortilla chips buried under melted cheese, jalapeños, sour cream, guacamole, and your choice of protein. This is shareable chaos you won't want to share.",
+      "type": "passed"
+    },
+    {
+      "title": "Giant Soft Pretzels with Beer Cheese",
+      "description": "Warm, pillowy pretzels served with rich beer cheese dip. This is German-American tradition meets craft beer culture—salty, boozy, perfect for soaking up the night.",
+      "type": "passed"
+    },
+    {
+      "title": "Classic Cheeseburger Sliders",
+      "description": "Simple perfection: beef, cheese, pickles, ketchup, mustard, on toasted buns. This is American diner culture shrunk down and served with champagne—no frills, all flavor.",
+      "type": "passed"
+    },
+    {
+      "title": "Mac & Cheese Bites",
+      "description": "Creamy macaroni and cheese formed into bite-sized portions, breaded, and fried golden. This is comfort food you can dance with—crispy outside, gooey inside.",
+      "type": "passed"
+    },
+    {
+      "title": "Personal Pizzas",
+      "description": "Individual pizzas with classic toppings, perfect for late-night munchies. This is the food that keeps the dance floor fueled when the weekend refuses to end.",
+      "type": "passed"
+    },
+    {
+      "title": "Crab & Callaloo",
+      "description": "Trinidad's national treasure: blue crab simmered with callaloo greens in coconut milk and island spices. This is the dish that tastes like heritage, pride, and home.",
+      "type": "passed"
+    },
+    {
+      "title": "Shark & Bake Bites",
+      "description": "Crispy fried shark nestled in fluffy fried bake bread—Maracas Bay's most famous export. This is Trinidad beach culture served fresh, hot, and worth every calorie.",
+      "type": "passed"
+    },
+    {
+      "title": "Coconut Bake with Butter",
+      "description": "Warm, fluffy coconut-infused bake bread served with melting butter. Simple, traditional, soul-warming—this is Trinidad's breakfast staple turned nightlife comfort food.",
+      "type": "passed"
+    },
+    {
+      "title": "Stewed Chicken with Rice",
+      "description": "Tender chicken slow-cooked in aromatic Trini-style brown stew, served over fluffy rice. This is Sunday dinner in Port of Spain—familiar, comforting, full of love.",
+      "type": "passed"
+    },
+    {
+      "title": "Traditional Trini Desserts",
+      "description": "Sweet endings from the islands: coconut sugar cake, cassava pone, or gulab jamun depending on the night. Each bite is a tribute to Trinidad's diverse cultural tapestry.",
       "type": "passed"
     },
     {
       "title": "The Mas",
-      "description": "Spiced rum, passionfruit, lime, bitters and nutmeg foam.",
+      "description": "Spiced rum meets passionfruit, fresh lime, and aromatic bitters, crowned with nutmeg foam. This cocktail tastes like Trinidad Carnival—wild, vibrant, impossible to forget.",
       "type": "cocktail"
     },
     {
       "title": "Port of Spain Sunset",
-      "description": "Coconut rum, mango nectar, ginger, and citrus smoke.",
+      "description": "Coconut rum blended with mango nectar, ginger, and finished with citrus smoke under glass. Watch the Caribbean sun set in your glass with every sip.",
       "type": "cocktail"
     },
     {
       "title": "Cleveland Soul",
-      "description": "Cognac, honey, lemon, bitters.",
+      "description": "Cognac, honey, lemon, and bitters come together in this smooth, sophisticated sipper. This is Cleveland's Black excellence in cocktail form—classy, warm, timeless.",
       "type": "cocktail"
     },
     {
-      "title": "Electric Emerald",
-      "description": "Gin, tonic, chlorophyll, glow tonic and edible glitter.",
+      "title": "Neo Classic",
+      "description": "Bourbon meets peach purée and vanilla smoke in this R&B-inspired creation. Smooth as Anita Baker, bold as Mary J. Blige—this drink has soul.",
+      "type": "cocktail"
+    },
+    {
+      "title": "The Riddim",
+      "description": "Three types of Caribbean rum collide with tropical juices in organized chaos. This soca-inspired punch tastes like a beach party and hits like a bass drop.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Kingston Sour",
+      "description": "Dark Jamaican rum, fresh lime, egg white, and Angostura bitters create a silky foam-topped masterpiece. This is Kingston sophistication in a coupe glass.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Golden Era",
+      "description": "Hennessy and ginger ale—simple, nostalgic, iconic. This is the drink that fueled '90s house parties, served now with respect and zero pretense.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Wu-Tang",
+      "description": "Spiced rum, honey, lemon, and 36 chambers of flavor. This cocktail brings the ruckus with every sip—complex, bold, unforgettable.",
+      "type": "cocktail"
+    },
+    {
+      "title": "The Fete",
+      "description": "Overproof rum, fresh lime, Angostura bitters, and pure chaos in a glass. This is Trinidad's all-inclusive party spirit distilled into one dangerous, delicious drink.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Trini Mule",
+      "description": "Aged rum replaces vodka in this Caribbean twist on the Moscow Mule. Ginger beer, lime, and island kick make this refreshing, dangerous, and session-able.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Fuego",
+      "description": "Tequila infused with jalapeño heat, balanced with lime and agave sweetness. This drink brings the fire—literally—and doesn't apologize for the burn.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Noche Latina",
+      "description": "White rum, passionfruit, lime, and fresh mint create a refreshing Latin-inspired escape. This cocktail tastes like a warm night in San Juan.",
       "type": "cocktail"
     },
     {
       "title": "The 216",
-      "description": "Local bourbon, maple syrup, orange bitters\u2014Cleveland in a glass.",
+      "description": "Local bourbon, maple syrup, and orange bitters—Cleveland pride in a rocks glass. This is home, warmth, and Rust Belt resilience you can sip slowly.",
       "type": "cocktail"
+    },
+    {
+      "title": "Believeland",
+      "description": "Vodka, fresh orange juice, pride, and resilience. This simple screwdriver variation tastes like championship parades and comeback stories.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Two Islands",
+      "description": "Jamaican and Trinidadian rums blended in peaceful coexistence with tropical juices. This is the peace treaty between Kingston and Port of Spain, served ice-cold.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Crossover",
+      "description": "A jerk-spiced margarita that shouldn't work but absolutely does. Tequila meets scotch bonnet heat in this fearless Caribbean-Mexican fusion.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Black Gold",
+      "description": "Premium cognac, honey, lemon, and edible gold flakes float in luxury. This cocktail is opulence distilled—smooth, rich, and designed to be seen.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Velvet Night",
+      "description": "Bourbon, dark chocolate liqueur, and scotch bonnet tincture create complex, sultry heat. This is a nightcap with an edge—smooth velvet hiding a dangerous bite.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Electric Emerald",
+      "description": "Gin, glow tonic, chlorophyll, lime, and edible glitter create a neon-green spectacle under UV lights. This cocktail looks like the future and tastes like now.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Rose Gold Rush",
+      "description": "White rum, rose water, gold shimmer, and citrus create an Instagram-worthy cocktail that actually tastes incredible. This is beauty you can drink.",
+      "type": "cocktail"
+    },
+    {
+      "title": "The Warehouse",
+      "description": "Whiskey, ginger beer, lime, and raw Cleveland energy. This industrial-strength cocktail tastes like warehouse parties and underground raves.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Rust Belt",
+      "description": "Bourbon, Angostura bitters, orange peel, and Cleveland grit. This is an old fashioned with a backbone—strong, honest, built to last.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Sunday Funday",
+      "description": "Vodka, pineapple, orange, coconut, and denial that the weekend is ending. This tropical escape tastes like one more night out when you should be resting.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Wind Down",
+      "description": "Whiskey, ginger, honey, and the creeping dread of Monday morning. This cocktail helps you ease into the week ahead—smooth, soothing, inevitable.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Independence",
+      "description": "Aged Angostura rum, bitters, lime, and freedom. This cocktail celebrates Trinidad & Tobago's independence with every sip—proud, strong, undiluted.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Red White Black",
+      "description": "A layered shot representing Trinidad's flag colors—grenadine, cream, and coffee liqueur. This is national pride you can shoot back, patriotism in liquid form.",
+      "type": "cocktail"
+    },
+    {
+      "title": "Champagne Service",
+      "description": "Premium champagne and sparkling wine served on roaming trays throughout the night. This is elegance in motion—bubbles, celebration, and effortless sophistication delivered to your dance floor position.",
+      "type": "roaming"
+    },
+    {
+      "title": "Rum Punch Shots",
+      "description": "Caribbean rum punch served in shot form—sweet, strong, and dangerously easy to keep ordering. Roaming servers ensure your glass never stays empty long.",
+      "type": "roaming"
+    },
+    {
+      "title": "Sorrel Mimosas",
+      "description": "Trinidad's hibiscus sorrel mixed with champagne for a Caribbean twist on brunch's favorite cocktail. Tart, bubbly, and served any time of night we feel like it.",
+      "type": "roaming"
+    },
+    {
+      "title": "Cognac Neat Service",
+      "description": "Premium cognac poured neat and delivered directly to you. No bar wait, no compromise—just smooth, sophisticated sipping while you hold court on the dance floor.",
+      "type": "roaming"
+    },
+    {
+      "title": "Whiskey Cocktail Trays",
+      "description": "Pre-mixed whiskey cocktails circulating the room on elegant trays. Grab one mid-conversation or mid-dance—convenience meets craft cocktails.",
+      "type": "roaming"
+    },
+    {
+      "title": "Premium Rum Flight Trays",
+      "description": "Curated rum tastings delivered tableside—Barbadian, Jamaican, Trinidadian pours showcasing the Caribbean's finest. This is education with a buzz.",
+      "type": "roaming"
+    },
+    {
+      "title": "Aged Rum Neat Pours",
+      "description": "Sipping rums aged to perfection, served neat on roaming trays. This is for the connoisseur who wants quality without the bar line.",
+      "type": "roaming"
+    },
+    {
+      "title": "Hennessy Shot Service",
+      "description": "Hennessy cognac served in shots and delivered directly to your crew. This is '90s hip-hop culture meets bottle service convenience.",
+      "type": "roaming"
+    },
+    {
+      "title": "Craft Beer Buckets",
+      "description": "Ice-cold craft beers from local breweries served in portable buckets. Grab a bottle mid-dance and keep the energy high without losing your spot.",
+      "type": "roaming"
+    },
+    {
+      "title": "Carib Beer Bottle Service",
+      "description": "Trinidad's iconic Carib beer served ice-cold on roaming trays. This is island authenticity you can drink straight from the bottle.",
+      "type": "roaming"
+    },
+    {
+      "title": "Tequila Shot Trays",
+      "description": "Premium tequila shots with lime and salt, delivered right to you. No bar trip necessary—just grab, shoot, and get back to dancing.",
+      "type": "roaming"
+    },
+    {
+      "title": "Mojitos on Trays",
+      "description": "Fresh-muddled mojitos circulating the room. Mint, rum, lime, sugar, and bubbles in constant motion—refreshing, classic, always within reach.",
+      "type": "roaming"
+    },
+    {
+      "title": "Red Stripe Beer Service",
+      "description": "Jamaica's legendary Red Stripe lager served ice-cold and roaming. This is Kingston in a bottle, delivered wherever you're vibing.",
+      "type": "roaming"
+    },
+    {
+      "title": "Caribbean Rum Flight Trays",
+      "description": "Multi-island rum tastings roaming the venue—compare Jamaican overproof to aged Barbadian to Trini white rum. This is rum education without sitting still.",
+      "type": "roaming"
+    },
+    {
+      "title": "Premium Cognac Neat Pours",
+      "description": "Hennessy XO, Rémy Martin, and other top-shelf cognacs served neat on elegant trays. This is luxury delivery service for the discerning drinker.",
+      "type": "roaming"
+    },
+    {
+      "title": "Glow-in-the-Dark Cocktails",
+      "description": "Cocktails infused with glow tonic that illuminate under UV lights. These drinks are as much visual art as they are delicious—futuristic, photogenic, unforgettable.",
+      "type": "roaming"
+    },
+    {
+      "title": "Dry Ice Champagne Presentations",
+      "description": "Champagne served with theatrical dry ice fog cascading over the glasses. This is celebration as performance art—dramatic, shareable, pure Instagram gold.",
+      "type": "roaming"
+    },
+    {
+      "title": "Emerald-Lit Cocktail Trays",
+      "description": "Signature cocktails served on LED-lit trays glowing Teasers' emerald green. Every drink delivery is a mini light show—brand immersion you can sip.",
+      "type": "roaming"
+    },
+    {
+      "title": "Great Lakes Beer Trays",
+      "description": "Cleveland's finest craft beers from Great Lakes Brewing Co. roaming the venue. This is local pride you can drink while repping the 216.",
+      "type": "roaming"
+    },
+    {
+      "title": "Local Spirits Service",
+      "description": "Cleveland Whiskey and other local distillery products served on roaming trays. Support Cleveland's spirits scene without leaving the dance floor.",
+      "type": "roaming"
+    },
+    {
+      "title": "Well Drink Circulation",
+      "description": "Classic well cocktails—rum and coke, vodka soda, whiskey ginger—circulating continuously. This is no-frills refreshment that keeps the party moving.",
+      "type": "roaming"
+    },
+    {
+      "title": "Champagne Towers",
+      "description": "Stacked champagne glasses creating dramatic cascading pours. This is opulence as architecture—visual spectacle meeting celebratory sipping.",
+      "type": "roaming"
+    },
+    {
+      "title": "Endless Rum Punch Circulation",
+      "description": "All-inclusive rum punch service that never stops. Servers continuously circulate with fresh pours—your glass stays full, your vibes stay high.",
+      "type": "roaming"
+    },
+    {
+      "title": "Nighttime Mimosa Variations",
+      "description": "Mimosas after dark? Yes, really. Champagne mixed with tropical juices and delivered on roaming trays. Don't judge—just drink and keep dancing.",
+      "type": "roaming"
+    },
+    {
+      "title": "Beer Buckets",
+      "description": "Ice-filled buckets of domestic and craft beers circulating the venue. Grab a cold one without interrupting your conversation or breaking your dance floor streak.",
+      "type": "roaming"
+    },
+    {
+      "title": "Trini Rum Blends",
+      "description": "Custom blends of Trinidad's finest rums served on roaming trays. This is island heritage in liquid form, delivered directly to you.",
+      "type": "roaming"
+    },
+    {
+      "title": "Specialty Punches",
+      "description": "Rotating specialty rum punches unique to each event. From sorrel to passion fruit to tamarind—new flavors every night, constant circulation.",
+      "type": "roaming"
+    },
+    {
+      "title": "Craft Cocktail Trays",
+      "description": "Bartender-crafted signature cocktails roaming the venue in pre-mixed perfection. This is mixology without the wait—quality drinks delivered to you.",
+      "type": "roaming"
+    },
+    {
+      "title": "Glow Tonic Cocktails in LED Cups",
+      "description": "Cocktails served in light-up LED cups with glow tonic ingredients. These drinks literally light up the night—drink them before they stop glowing.",
+      "type": "roaming"
     }
   ],
   "press": [],
@@ -448,7 +933,7 @@
   "takeover": {
     "name": "Teasers Takeover",
     "tagline": "Transform your venue into a one-night Emerald Noir experience.",
-    "summary": "We bring DJs, performers, signature lighting, roaming cocktails, and our guestlist energy. You provide the space\u2014we build the night Cleveland talks about.",
+    "summary": "We bring DJs, performers, signature lighting, roaming cocktails, and our guestlist energy. You provide the space—we build the night Cleveland talks about.",
     "process": [
       {
         "title": "Concept Call",
@@ -468,7 +953,7 @@
       {
         "title": "Show Day",
         "timing": "Load-in + Night",
-        "details": "We stage lighting and sensory elements, brief staff, and run the show\u2014from the first cocktail to the last encore moment."
+        "details": "We stage lighting and sensory elements, brief staff, and run the show—from the first cocktail to the last encore moment."
       },
       {
         "title": "Post-Event Debrief",
@@ -537,7 +1022,7 @@
     "faq": [
       {
         "question": "Do I need formal training?",
-        "answer": "No gatekeeping\u2014if you bring stage presence, vibe, and professionalism, we want you. Submit a reel, portfolio, or reference so we feel your energy."
+        "answer": "No gatekeeping—if you bring stage presence, vibe, and professionalism, we want you. Submit a reel, portfolio, or reference so we feel your energy."
       },
       {
         "question": "Is this paid?",
@@ -545,7 +1030,7 @@
       },
       {
         "question": "How often do you book talent?",
-        "answer": "We run multiple events a month\u2014pop-ups, venue takeovers, private collaborations\u2014and keep a rotating roster so gigs stay fresh."
+        "answer": "We run multiple events a month—pop-ups, venue takeovers, private collaborations—and keep a rotating roster so gigs stay fresh."
       }
     ],
     "ctaButtons": [
