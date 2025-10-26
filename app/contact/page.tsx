@@ -60,10 +60,16 @@ function ContactForm() {
               className="space-y-4 bg-graphite/80 border border-emerald/30 rounded-3xl p-8 shadow-neon"
               name="guestlist-form"
               data-netlify="true"
+              netlify-honeypot="bot-field"
               method="post"
               action="/contact?submitted=true"
             >
             <input type="hidden" name="form-name" value="guestlist-form" />
+            <p className="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm uppercase tracking-[0.25em] text-gray-400">
                 Name

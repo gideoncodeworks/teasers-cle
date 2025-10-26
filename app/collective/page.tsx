@@ -128,10 +128,16 @@ export default function CollectivePage() {
               name="talent-form"
               method="post"
               data-netlify="true"
+              netlify-honeypot="bot-field"
               action="/contact?submitted=true"
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="talent-form" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm uppercase tracking-[0.25em] text-gray-400">
                   Name
