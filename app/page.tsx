@@ -8,20 +8,20 @@ export default function HomePage() {
   const { brand } = data;
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-white flex flex-col justify-center items-center">
+    <section className="relative min-h-screen overflow-hidden bg-dark text-white flex flex-col justify-center items-center">
       {/* Background hero video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
       >
         <source src="/brand/hero.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/70 to-dark/90" />
 
       {/* Cinematic intro text */}
       <motion.div
@@ -34,7 +34,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1 }}
-          className="text-5xl md:text-7xl font-serif text-[#d4af37] mb-4"
+          className="text-5xl md:text-7xl font-serif neon-text mb-4"
         >
           {brand.name}
         </motion.h1>
@@ -43,7 +43,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.2 }}
-          className="italic text-[#e8b6a9] text-lg md:text-2xl mb-10"
+          className="italic neon-blue-text text-lg md:text-2xl mb-10"
         >
           {brand.tagline}
         </motion.p>
@@ -55,17 +55,11 @@ export default function HomePage() {
           transition={{ delay: 1.4, duration: 1 }}
           className="flex flex-col sm:flex-row justify-center items-center gap-4"
         >
-          <Link
-            href="/experiences"
-            className="border border-[#d4af37] text-[#d4af37] px-8 py-3 rounded-full hover:bg-[#d4af37] hover:text-black transition text-sm uppercase tracking-wider"
-          >
+          <Link href="/experiences" className="neon-btn">
             Upcoming Experiences
           </Link>
 
-          <Link
-            href="/menu"
-            className="border border-[#e8b6a9] text-[#e8b6a9] px-8 py-3 rounded-full hover:bg-[#e8b6a9] hover:text-black transition text-sm uppercase tracking-wider"
-          >
+          <Link href="/menu" className="neon-btn">
             View Menu
           </Link>
         </motion.div>
@@ -76,7 +70,7 @@ export default function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 0] }}
         transition={{ repeat: Infinity, duration: 3 }}
-        className="absolute bottom-10 z-10 text-[#d4af37] text-sm tracking-wider"
+        className="absolute bottom-10 z-10 text-neonBlue text-sm tracking-wider"
       >
         Scroll ↓
       </motion.div>

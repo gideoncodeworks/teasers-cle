@@ -9,18 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: "#d4af37",
-        blush: "#e8b6a9",
-        plum: {
-          DEFAULT: "#2b0f18",
-          light: "#4a1f2f",
-          dark: "#1a0a0f",
-        },
+        neonPink: "#FF2EBE",
+        neonBlue: "#00B8FF",
+        dark: "#0A0A0A",
+        glow: "rgba(0,184,255,0.35)"
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
         sans: ["Inter", "sans-serif"],
+        serif: ["Playfair Display", "serif"]
       },
+      boxShadow: {
+        neon: "0 0 20px rgba(0,184,255,0.6), 0 0 40px rgba(255,46,190,0.3)"
+      },
+      backgroundImage: {
+        "neon-gradient":
+          "linear-gradient(135deg, rgba(255,46,190,0.8) 0%, rgba(0,184,255,0.8) 100%)"
+      }
     },
   },
   plugins: [],
