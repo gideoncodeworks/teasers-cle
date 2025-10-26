@@ -2,179 +2,216 @@
   "brand": {
     "name": "Teasers CLE",
     "tagline": "Where anticipation is the main course.",
-    "mission": "Teasers CLE is a Cleveland-based experiential dining and nightlife brand merging fine cuisine, art, and performance into unforgettable sensory experiences.",
+    "mission": "Teasers CLE is a Cleveland nightlife promotions company launching immersive pop-up events that preview the future Teasers lounge. Each event teases what's coming—passed menu tastings, roaming cocktail service, and pure dance floor energy.",
     "city": "Cleveland, Ohio",
     "palette": {
-      "primary": "#d4af37",
-      "accent": "#e8b6a9",
-      "dark": "#2b0f18",
+      "primary": "#00FF9D",
+      "accent": "#D59BF6",
+      "dark": "#021F1A",
       "text": "#ffffff"
     },
-    "tone": "Sensual, cinematic, exclusive, and artistic.",
-    "positioning": "Teasers CLE blends the intimacy of a supper club with the visual allure of modern art — a space where dining becomes theater and every event feels like a secret worth sharing."
+    "tone": "Electric, mysterious, inclusive, and culturally diverse.",
+    "positioning": "Teasers CLE blends Caribbean soul with African American culture, Cleveland pride, and global nightlife—every event is a party first, a menu preview second."
   },
 
   "story": {
-    "origin": "Born from the original Teasers concept, Teasers CLE began as a series of pop-up dinners in underground spaces across Cleveland. Each event teased the senses — dimly lit rooms, curated playlists, and daring tasting menus — until demand transformed it into a full experiential brand.",
-    "vision": "To redefine what dining can be by crafting nights that linger long after the last glass is cleared."
+    "origin": "Born from a vision to bring Trinidad carnival energy to Cleveland's nightlife scene, Teasers CLE started as a concept for an immersive lounge. We're building toward that brick-and-mortar dream by throwing unforgettable pop-up parties—each one testing menu items, cocktails, and vibes that will define the future space.",
+    "vision": "To open Cleveland's most talked-about lounge where Caribbean flavors meet global nightlife culture, and every night feels like an event you had to be there for."
   },
 
   "events": [
     {
       "name": "Carnival After Dark",
-      "theme": "Caribbean Soul Series",
-      "date": "9PM – 2AM",
+      "theme": "Caribbean Soul",
+      "date": "February 13, 2026",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Trinidad Carnival energy with roaming glow stations, wining lessons, and a soca DJ pushing the pace all night.",
-      "tagline": "Bring the mas to the midnight hours.",
-      "passed": ["Doubles shooters", "Jerk chicken lollipops", "Plantain chips", "Coconut shrimp skewers"],
-      "roaming": ["Champagne service", "Rum punch shots", "Sorrel mimosas"],
-      "bar": ["The Mas — spiced rum + passionfruit", "Port of Spain Sunset — coconut rum + mango"],
-      "vibe": "Costume encouraged, glitter glow-ups, Carnival choreography pop-ups."
+      "description": "Experience Trinidad carnival's electric energy reimagined for a Cleveland night. This isn't a concert—it's a full-body immersion into the most celebrated street party on earth. Soca rhythms pulse through a crowd dressed in sequins, feathers, and carnival-ready fits while cocktail servers weave through with champagne and Caribbean rum punches. Your ticket includes passed menu tastings showcasing what Teasers CLE will serve when the lounge opens.",
+      "tagline": "Friday the 13th never felt this lucky.",
+      "fullDescription": "Costume encouraged. Body paint station. Glow accessories. Soca DJ all night. This is your Valentine's weekend done different.",
+      "passed": ["Doubles shooters with tamarind chutney", "Jerk chicken lollipops with mango glaze", "Plantain chips with pepper sauce caviar", "Coconut rum shrimp on sugarcane skewers"],
+      "roaming": ["Champagne trays (continuous)", "Rum punch shots", "Sorrel mimosas"],
+      "bar": ["The Mas — Spiced rum, passionfruit, lime, carnival energy", "Port of Spain Sunset — Coconut rum, mango, grenadine glow"],
+      "vibe": "Costume encouraged, body paint station, glow accessories, soca DJ all night."
     },
     {
-      "name": "The Fete",
-      "theme": "Caribbean Soul Series",
-      "date": "9PM – 2AM",
+      "name": "Soul Sessions",
+      "theme": "African American Culture",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "All-inclusive Caribbean party with endless punch, champagne, and a pure dance floor experience.",
-      "tagline": "Unlimited vibes. Zero standing still.",
-      "passed": ["Mini pelau bowls", "Bake & shark sliders", "Pholourie with chutney", "Curried chickpea cups"],
-      "roaming": ["Bottomless rum punch", "Champagne", "Carib beer bottles"],
-      "bar": ["The Fete — overproof rum, lime, bitters", "Trini Mule — aged rum, ginger beer"],
-      "vibe": "All-inclusive wristbands, dancehall-to-soca marathon, daylight-strobing lighting."
+      "description": "Grown and sexy doesn't mean boring. Soul Sessions is where Cleveland's Black professionals come to unwind to the sounds that raised them—classic soul, neo-soul, and R&B slow burns that transition into uptempo bangers as the night heats up. Dress sharp, sip champagne, taste elevated Southern comfort food, and let the DJ take you from Anita Baker to Summer Walker.",
+      "tagline": "Silk fits and slow jams.",
+      "fullDescription": "Dress code enforced. No sneakers. Sophisticated, intimate, sensual. This is date night energy or girls' night elevation.",
+      "passed": ["Fried chicken sliders with hot honey drizzle", "Mac & cheese cups with truffle breadcrumbs", "Collard green spring rolls with sweet chili dip", "Bourbon-glazed short rib tips"],
+      "roaming": ["Champagne towers", "Cognac neat service", "Whiskey cocktail trays"],
+      "bar": ["Cleveland Soul — Cognac, honey, lemon, bitters", "Neo Classic — Bourbon, peach purée, vanilla smoke"],
+      "vibe": "Dress code enforced. No sneakers. Date night or girls' night elevation.",
+      "cta": "Get Notified"
     },
     {
       "name": "Rum & Riddim",
-      "theme": "Caribbean Soul Series",
-      "date": "9PM – 2AM",
+      "theme": "Caribbean Soul",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Premium rum flights ease into a reggae and soca party with percussion breaks.",
-      "tagline": "Taste the terroir, then turn up.",
-      "passed": ["Rum-glazed pork belly", "Jerk wings", "Breadfruit fries", "Tamarind ribs"],
-      "roaming": ["Premium rum flights", "Champagne pairings", "Aged rum neat"],
-      "bar": ["The Riddim — island punch riff", "Kingston Sour — rum, lime, silky foam"],
-      "vibe": "Guided tasting 9–9:30, then selectors trade riddims until close."
+      "description": "Start with knowledge, end with motion. Rum & Riddim opens with a 30-minute premium rum tasting led by a spirits expert, then transitions into a full-blown reggae and soca party. Learn the difference between aged Barbadian rum and Jamaican overproof, then put that education to work on the dance floor. Every ticket includes passed Caribbean bites paired with the tasting.",
+      "tagline": "Taste the islands, then move to them.",
+      "fullDescription": "Come for the culture, stay for the vibes. DJ spins classic reggae and modern soca until close.",
+      "passed": ["Rum-glazed pork belly bites", "Jerk wings with lime crema", "Breadfruit fries with garlic aioli", "Tamarind BBQ rib tips"],
+      "roaming": ["Premium rum flight trays", "Champagne chasers", "Aged rum neat pours"],
+      "bar": ["The Riddim — Soca-inspired rum punch, three rums, tropical chaos", "Kingston Sour — Dark rum, lime, egg white, Angostura foam"],
+      "vibe": "Rum education (9-9:30pm), then reggae and soca until close.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Island Street Food Soirée",
-      "theme": "Caribbean Soul Series",
-      "date": "9PM – 2AM",
+      "name": "90s Hip-Hop Night",
+      "theme": "African American Culture",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "A standing-room market mash-up with elevated Trinidad street eats and constant circulation.",
-      "tagline": "Lime, snack, repeat.",
-      "passed": ["Roti pinwheels", "Saltfish accra", "Cassava fries", "Mini curry bowls"],
-      "roaming": ["Sorrel champagne", "Ginger cocktails", "Coconut water spikes"],
-      "bar": ["Street Vendor — rum, ginger, lime", "Doubles Shot — curry vodka"],
-      "vibe": "Ambient vendors, live painters, riddim-driven flow."
+      "description": "If you remember when MTV played music videos and rap had a message, this night is for you. A Cleveland DJ spins nothing but golden era classics—Biggie, Pac, Wu-Tang, Tribe, Lauryn, Missy, Jay, Nas—while you feast on the party food that fueled house parties in '96. Throwback fits encouraged. Champagne and Hennessy flow all night.",
+      "tagline": "The golden era never sounded this good.",
+      "fullDescription": "Baggy jeans. Jerseys. Timbs. Kangols. Pure nostalgia, zero pretense. This is the party that takes you back.",
+      "passed": ["Classic buffalo wings (Frank's RedHot, real butter)", "Loaded cheese fries with bacon", "Mini cheeseburger sliders", "Pizza rolls and mozzarella sticks"],
+      "roaming": ["Champagne trays", "Hennessy shot service", "Craft beer buckets"],
+      "bar": ["Golden Era — Hennessy, ginger ale, nostalgia", "Wu-Tang — Spiced rum, honey, lemon, 36 chambers"],
+      "vibe": "Throwback fits encouraged. Pure 90s vibes, zero pretense.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Independence Fete",
-      "theme": "Caribbean Soul Series",
-      "date": "Aug 31 • 9PM – 2AM",
+      "name": "The Fete",
+      "theme": "Caribbean Soul",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Red, white, and black pride party celebrating Trinidad & Tobago Independence.",
-      "tagline": "Raise the flag, raise the energy.",
-      "passed": ["Crab & callaloo spoons", "Shark & bake bites", "Stewed chicken cups", "Coconut bake"],
-      "roaming": ["Champagne", "National rum blends", "Specialty punches"],
-      "bar": ["Independence — aged rum + bitters", "Red White Black — layered celebration shot"],
-      "vibe": "Dress code in national colors, anthem drop at midnight, flag waiving crowd."
+      "description": "In Trinidad, 'the fete' means the all-inclusive party where the drinks never stop and the vibes never dip. We're bringing that energy to Cleveland. Your ticket gets you unlimited access to roaming rum punch, champagne, beer, and passed Trini street food all night long. No cash bar. No limits. Just pure soca, pure vibes, pure fete.",
+      "tagline": "All-inclusive. All night. All vibes.",
+      "fullDescription": "All-inclusive means ALL. No wallet out all night. Dance, drink, eat, repeat.",
+      "passed": ["Mini pelau bowls (Trini one-pot comfort)", "Bake & shark sliders", "Pholourie with tamarind sauce", "Curried chickpea cups"],
+      "roaming": ["Endless rum punch circulation", "Champagne service", "Carib beer bottles on trays"],
+      "bar": ["The Fete — Overproof rum, lime, Angostura bitters, chaos", "Trini Mule — Aged rum, ginger beer, lime, island kick"],
+      "vibe": "All-inclusive wristbands. No cash bar. Dance, drink, eat, repeat.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Afrobeat Nights",
-      "theme": "Afro-Caribbean Fusion",
-      "date": "9PM – 2AM",
+      "name": "Latin Nights",
+      "theme": "Global Nightlife",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Pan-African dance party blending Afrobeats, amapiano, and soca with runway moments.",
-      "tagline": "Diaspora rhythm. Fashion energy.",
-      "passed": ["Suya skewers", "Jollof arancini", "Kelewele bites", "Egusi dip with cassava chips"],
-      "roaming": ["Champagne + hibiscus", "Palm wine cocktails", "Chapman coolers"],
-      "bar": ["Lagos to POS — rum, ginger, bitters", "Diaspora — bourbon, sorrel"],
-      "vibe": "Fashion showcase, dance battles, projection-mapped visuals."
+      "description": "Reggaeton basslines. Salsa rhythms. Bachata sensuality. Latin Nights is Cleveland's hottest dance floor, fueled by tequila shots, champagne, and the kind of passed Latin street food that keeps you moving. Whether you're here to dance or just watch people who can, the energy is infectious and the mojitos are cold.",
+      "tagline": "Move to the rhythm or move aside.",
+      "fullDescription": "High energy. Dance-focused. Reggaeton heavy, salsa when you need a break. Dress to move.",
+      "passed": ["Beef empanadas with chimichurri", "Street-style taquitos (chicken, carne asada)", "Ceviche in mini cups", "Sweet plantain chips with guac", "Chorizo-stuffed dates"],
+      "roaming": ["Tequila shot trays", "Champagne circulation", "Mojitos on trays"],
+      "bar": ["Fuego — Tequila, jalapeño, lime, agave, heat", "Noche Latina — White rum, passion fruit, lime, mint"],
+      "vibe": "High energy. Dance-focused. Reggaeton heavy, salsa breaks.",
+      "cta": "Get Notified"
+    },
+    {
+      "name": "CLE Nights",
+      "theme": "Cleveland Pride",
+      "date": "TBD",
+      "time": "9PM – 2AM",
+      "location": "Location revealed 48 hours prior • Cleveland",
+      "description": "This one's for the homegrown. CLE Nights celebrates everything Cleveland—Great Lakes beer, pierogies, Polish boys, Stadium Mustard, and a DJ spinning the mix of hip-hop, dance, and top 40 that makes our city move. Sports jerseys welcome. Civic pride required. Local vendors featured. This is Believeland after dark.",
+      "tagline": "Cleveland pride. Cleveland vibes. Cleveland loud.",
+      "fullDescription": "Wear your Cavs jersey. Your Browns gear. Your Guardians hat. This is home.",
+      "passed": ["Pierogi bites (potato & cheese, fried crispy)", "Polish boy sliders (kielbasa, fries, slaw, BBQ sauce)", "Stadium Mustard hot wings", "Local brewery beer cheese dip with pretzels"],
+      "roaming": ["Great Lakes beer trays", "Local spirits (Cleveland Whiskey, etc.)", "Champagne (because we're classy too)"],
+      "bar": ["The 216 — Local bourbon, maple syrup, orange bitters", "Believeland — Vodka, orange juice, pride, resilience"],
+      "vibe": "Sports jerseys welcome. Civic pride required. This is home.",
+      "cta": "Get Notified"
     },
     {
       "name": "Kingston Meets Port of Spain",
-      "theme": "Afro-Caribbean Fusion",
-      "date": "9PM – 2AM",
+      "theme": "Caribbean Soul",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Jamaica and Trinidad collide in a reggae vs. soca sound clash night.",
+      "description": "Jamaica versus Trinidad. Reggae versus soca. Jerk versus curry. Two islands, one dance floor, infinite vibes. The DJ alternates between Kingston dancehall classics and Port of Spain soca anthems while you taste the best of both cultures. Flag waving encouraged. Island pride required. May the best playlist win.",
       "tagline": "Two islands. One loud night.",
-      "passed": ["Jerk doubles", "Ackee bites", "Escovitch cups", "Curry goat sliders"],
-      "roaming": ["Red Stripe buckets", "Champagne", "Rum flight service"],
-      "bar": ["Two Islands — JA x TT rum blend", "Crossover — jerk margarita"],
-      "vibe": "Flag waving, DJ battle scoreboard, mid-party crowd judging."
+      "fullDescription": "Friendly rivalry. Dance battles. Flag waving. Two islands, one love.",
+      "passed": ["Jerk-spiced doubles (fusion done right)", "Ackee & saltfish bites on fried bake", "Escovitch fish in mini cups", "Curry goat sliders with mango slaw"],
+      "roaming": ["Red Stripe beer trays", "Champagne service", "Caribbean rum flight trays"],
+      "bar": ["Two Islands — Jamaican & Trini rum blend, the peace treaty", "Crossover — Jerk-spiced margarita (yes, really)"],
+      "vibe": "Friendly rivalry. Dance battles. Flag waving. Island pride.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Diaspora Sessions",
-      "theme": "Afro-Caribbean Fusion",
-      "date": "9PM – 2AM",
+      "name": "Black Velvet",
+      "theme": "African American Culture",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Black excellence nightlife featuring R&B, Afrobeats, and soca rotation with VIP hosting.",
-      "tagline": "Silk fits. Heavy bass.",
-      "passed": ["Blackened fish bites", "Dirty rice cups", "Bourbon ribs", "Cornbread with pepper jelly"],
-      "roaming": ["Champagne towers", "Cognac bottle service", "Signature cocktails"],
-      "bar": ["Black Gold — cognac, sorrel, gold flakes", "The Diaspora — rum meets bourbon"],
-      "vibe": "High fashion dress code, velvet VIP sections, polished service."
-    },
-    {
-      "name": "White Party: Emerald Edition",
-      "theme": "Sophisticated Nightlife",
-      "date": "9PM – 2AM",
-      "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "All-white elegance with emerald lighting, steel pan intro, and house music finale.",
-      "tagline": "Glow in emerald noir.",
-      "passed": ["Ceviche spoons", "Coconut shrimp", "Champagne mussels", "Mini lobster rolls"],
-      "roaming": ["Multiple champagne styles", "White rum cocktails"],
-      "bar": ["White Emerald — white rum, elderflower", "Blanc — vodka, coconut, lychee"],
-      "vibe": "Live pan to deep house transition, photo sets, shimmering dress code."
+      "description": "Luxury. Excellence. Elegance. Black Velvet is the all-black dress code event where Cleveland's Black elite come to see and be seen. Champagne towers. Top-shelf cognac service. Upscale soul food passed by servers in black-on-black. The soundtrack is a curated mix of R&B, afrobeats, and tasteful trap. This is the night you dress up for.",
+      "tagline": "Black excellence. Black opulence. Black joy.",
+      "fullDescription": "All-black everything. Dress code strictly enforced. VIP sections available. Opulence required.",
+      "passed": ["Blackened catfish with Creole aioli", "Shrimp & grits bites (white cheddar, Tasso ham)", "Braised short rib on sweet potato medallions", "Truffle mac & cheese squares"],
+      "roaming": ["Champagne towers (Moët, Veuve)", "Premium cognac neat pours (Hennessy XO, Rémy Martin)", "Craft cocktail trays"],
+      "bar": ["Black Gold — Cognac, honey, lemon, edible gold flakes", "Velvet Night — Bourbon, dark chocolate, Scotch bonnet tincture"],
+      "vibe": "All-black dress code. VIP sections. Opulence required.",
+      "cta": "Get Notified"
     },
     {
       "name": "Neon Noir",
-      "theme": "Sophisticated Nightlife",
-      "date": "9PM – 2AM",
+      "theme": "Global Nightlife",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Futuristic Caribbean underground with UV lighting and experimental bites.",
+      "description": "The future of nightlife is here, glowing emerald and rose gold under UV lights. Neon Noir is Teasers CLE's most experimental night—molecular gastronomy bites, glow-in-the-dark cocktails, dry ice presentations, and a house/electronic soundtrack that feels like a cyberpunk fever dream. Dress futuristic. Think fashion-forward. Leave reality at the door.",
       "tagline": "The future glows emerald.",
-      "passed": ["Glow cocktails", "Molecular bites", "Edible flowers", "Caviar on plantain"],
-      "roaming": ["Glow-in-the-dark cocktails", "Dry ice champagne pours"],
-      "bar": ["Electric Emerald — gin, tonic, glow", "Rose Gold Rush — rum, rose, gold"],
-      "vibe": "House/soca remixes, fashion-forward guests, light-reactive dress preferred."
+      "fullDescription": "UV lights. Fashion show energy. House and electronic music. This is the Instagram event.",
+      "passed": ["Glow tonic cocktails in LED cups", "Molecular gastronomy bites (spheres, foams, smokes)", "Edible flowers and microgreens", "Smoke-infused canapés", "Caviar on plantain chips"],
+      "roaming": ["Glow-in-the-dark cocktails", "Dry ice champagne presentations", "Emerald-lit cocktail trays"],
+      "bar": ["Electric Emerald — Gin, glow tonic, lime, neon energy", "Rose Gold Rush — White rum, rose water, gold shimmer, future"],
+      "vibe": "UV lights. Fashion-forward. House/electronic music. Instagram energy.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Velvet & Smoke",
-      "theme": "Sophisticated Nightlife",
-      "date": "9PM – 2AM",
+      "name": "Warehouse Sessions",
+      "theme": "Cleveland Pride",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Speakeasy Caribbean luxury with smoked cocktails and jazz-soca fusion.",
-      "tagline": "Low light, high flavor.",
-      "passed": ["Smoked jerk bites", "Bourbon-aged plantain", "Charred pineapple", "Blackened catfish spoons"],
-      "roaming": ["Whiskey neat service", "Aged rum flights", "Champagne chasers"],
-      "bar": ["The Speakeasy — rum, smoke, bitters", "Velvet Night — cognac, chocolate, chili"],
-      "vibe": "Candle glow, vinyl DJ moments, intimate seating pockets."
+      "description": "Cleveland's industrial underbelly comes alive. Warehouse Sessions strips nightlife down to its raw essentials—concrete floors, exposed brick, a massive sound system, and nothing but vibes. House music. Techno. Underground electronic. Craft beer buckets contrast with champagne trays. Street food style bites. No frills, all energy.",
+      "tagline": "Raw Cleveland. Pure energy.",
+      "fullDescription": "Industrial. Underground. Raw. Cleveland's warehouse culture meets nightlife.",
+      "passed": ["Street tacos (carne asada, al pastor)", "Loaded sliders (beef, bacon, cheese, chaos)", "Nachos with all the toppings", "Giant soft pretzels with beer cheese"],
+      "roaming": ["Craft beer buckets on trays", "Well drink circulation", "Champagne (for the contrast)"],
+      "bar": ["The Warehouse — Whiskey, ginger beer, lime, raw energy", "Rust Belt — Bourbon, Angostura, orange, Cleveland grit"],
+      "vibe": "Industrial. Underground. Raw. Cleveland warehouse culture.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Carnival Prep Night",
-      "theme": "Sophisticated Nightlife",
-      "date": "9PM – 2AM",
+      "name": "Velvet Sundays",
+      "theme": "Global Nightlife",
+      "date": "TBD",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Get mas-ready with costume fittings, stamina cocktails, and wine-up practice.",
-      "tagline": "Prep the body. Prime the vibe.",
-      "passed": ["Energy bites", "High-protein bowls", "Recovery shooters"],
-      "roaming": ["Champagne", "Electrolyte cocktails", "Coconut water spikes"],
-      "bar": ["Mas Ready — hydrating rum punch", "Stamina — energy + rum blend"],
-      "vibe": "Mas band aesthetic, choreography stations, fitness-percussion mashup."
+      "description": "The weekend's last stand. Velvet Sundays is the end-of-weekend party where the dress code is 'whatever' and the vibe is 'just dance.' The DJ plays everything—R&B, hip-hop, top 40, house—and the food is pure comfort. Champagne, beer, mimosas at night (yes, really), and a crowd that just wants to extend the weekend one more night.",
+      "tagline": "The weekend's not over yet.",
+      "fullDescription": "Come as you are. Dance to whatever. No theme, just vibes. The weekend's not over yet.",
+      "passed": ["Classic cheeseburger sliders", "Mac & cheese bites", "Buffalo wings (Frank's, always)", "Personal pizzas", "Late-night munchie energy"],
+      "roaming": ["Champagne trays", "Nighttime mimosa variations (don't judge)", "Beer buckets"],
+      "bar": ["Sunday Funday — Vodka, pineapple, orange, coconut, denial", "Wind Down — Whiskey, ginger, honey, Monday dread"],
+      "vibe": "No dress code. Mixed music. Pure vibes. Weekend extension.",
+      "cta": "Get Notified"
     },
     {
-      "name": "Warehouse Fete",
-      "theme": "Cleveland Underground",
-      "date": "11PM – 4AM",
+      "name": "Independence Fete",
+      "theme": "Caribbean Soul",
+      "date": "August 31, 2026",
+      "time": "9PM – 2AM",
       "location": "Location revealed 48 hours prior • Cleveland",
-      "description": "Late-night sound system culture with raw industrial staging and street food cones.",
-      "tagline": "After-hours lime with edge.",
-      "passed": ["Paper cone roti", "Jerk plantain", "Street-side wings"],
-      "roaming": ["Beer buckets", "Rum punch in mason jars", "Champagne contrast pours"],
-      "bar": ["The Warehouse — overproof rum, ginger", "Cleveland Underground — local beer + rum"],
-      "vibe": "Strobe smoke, projection grit, sunrise cooldown beats."
+      "description": "On August 31st, Cleveland becomes Port of Spain. Independence Fete celebrates Trinidad & Tobago's freedom with a night of national pride, traditional food, and pure soca energy. Red, white, and black dress code. Flag waving. National anthem moment at midnight. Then the DJ plays nothing but Trini soca until the sun threatens to rise.",
+      "tagline": "Raise the flag. Raise the energy.",
+      "fullDescription": "National pride. Anthem at midnight. Flags everywhere. Pure Trini energy. This is the cultural cornerstone.",
+      "passed": ["Crab & callaloo (the national dish)", "Shark & bake bites", "Coconut bake with butter", "Stewed chicken with rice", "Traditional Trini desserts"],
+      "roaming": ["Champagne celebration", "Trini rum blends", "Specialty punches"],
+      "bar": ["Independence — Aged Angostura rum, bitters, lime, freedom", "Red White Black — Layered shot representing the flag"],
+      "vibe": "Red/white/black dress code. Anthem at midnight. Flag waving. National pride."
     }
   ],
 
@@ -205,11 +242,6 @@
       "type": "passed"
     },
     {
-      "title": "Energy Mas Bowl",
-      "description": "High-protein quinoa, roasted plantain, callaloo pesto and grilled shrimp.",
-      "type": "passed"
-    },
-    {
       "title": "The Mas",
       "description": "Spiced rum, passionfruit, lime, bitters and nutmeg foam.",
       "type": "cocktail"
@@ -220,8 +252,8 @@
       "type": "cocktail"
     },
     {
-      "title": "Lagos to POS",
-      "description": "Dark rum, ginger, bitters, palm sugar and charred orange.",
+      "title": "Cleveland Soul",
+      "description": "Cognac, honey, lemon, bitters.",
       "type": "cocktail"
     },
     {
@@ -230,36 +262,13 @@
       "type": "cocktail"
     },
     {
-      "title": "Mas Ready",
-      "description": "Hydrating rum punch with coconut water, electrolytes and citrus.",
+      "title": "The 216",
+      "description": "Local bourbon, maple syrup, orange bitters—Cleveland in a glass.",
       "type": "cocktail"
-    },
-    {
-      "title": "Rum Flight",
-      "description": "Curated aged and overproof rum tasting with chocolate + citrus pairings.",
-      "type": "experience"
-    },
-    {
-      "title": "Champagne Service",
-      "description": "Signature roaming champagne cart with hibiscus pearls and sorrel reductions.",
-      "type": "experience"
     }
   ],
 
-  "press": [
-    {
-      "source": "Cleveland Scene",
-      "quote": "Teasers CLE is rewriting the city's nightlife — where dinner becomes performance art."
-    },
-    {
-      "source": "Eater Midwest",
-      "quote": "A sensory playground that feels like a dream sequence with flavor notes."
-    },
-    {
-      "source": "Crain's Cleveland",
-      "quote": "Part culinary experience, part art installation — Teasers CLE is a brand to watch."
-    }
-  ],
+  "press": [],
 
   "socials": {
     "instagram": "https://instagram.com/teaserscle",
@@ -267,7 +276,7 @@
     "eventbrite": "https://eventbrite.com/o/teasers-cle-000000"
   },
 
-  "voice": ["sensual", "cinematic", "exclusive", "artistic", "modern", "immersive"],
+  "voice": ["electric", "mysterious", "inclusive", "diverse", "party-first"],
 
   "contact": {
     "email": "hello@teaserscle.com",
@@ -338,9 +347,9 @@
 
   "collective": {
     "name": "Teasers Creative Collective",
-    "tagline": "Join the roster powering Cleveland’s Emerald Noir nightlife.",
+    "tagline": "Join the roster powering Cleveland's Emerald Noir nightlife.",
     "intro": "Teasers CLE is building an army of performers, DJs, chefs, hosts, servers, designers, and nightlife creatives. Get on the list so we can book you for upcoming pop-ups, takeovers, and the future lounge.",
-    "ctaCopy": "Drop your details, portfolio, and availability. When we script the next experience, you’ll be the first call.",
+    "ctaCopy": "Drop your details, portfolio, and availability. When we script the next experience, you'll be the first call.",
     "categories": [
       {
         "title": "Performers & Dancers",
@@ -372,7 +381,7 @@
       },
       {
         "question": "Is this paid?",
-        "answer": "Yes. We align on rates ahead of each booking and spotlight partners, tips, or sponsor bonuses when they’re in play."
+        "answer": "Yes. We align on rates ahead of each booking and spotlight partners, tips, or sponsor bonuses when they're in play."
       },
       {
         "question": "How often do you book talent?",
