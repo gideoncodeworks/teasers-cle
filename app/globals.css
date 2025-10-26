@@ -85,6 +85,12 @@ section {
   z-index: 1;
 }
 
+@media (max-width: 640px) {
+  section {
+    padding: 4rem 1.25rem;
+  }
+}
+
 .bg-gradient {
   background: radial-gradient(circle at center, var(--emerald) 0%, var(--hunter) 70%);
 }

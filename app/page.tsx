@@ -68,7 +68,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-hunter text-white">
-      <section className="relative overflow-hidden px-6 pt-28 pb-24 text-center">
+      <section className="relative overflow-hidden px-4 pt-24 pb-20 text-center sm:px-6 sm:pt-28 sm:pb-24">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-hunter via-graphite to-hunter" />
         <motion.div
           className="absolute inset-0 -z-20 blur-[140px] opacity-40"
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
         </motion.div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-4">
+        <div className="mt-12 flex flex-wrap justify-center gap-3 sm:mt-14 sm:gap-4">
           {voice.map((descriptor) => (
             <span
               key={descriptor}
@@ -136,8 +136,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
           <div className="space-y-6">
             <span className="tracking-[0.3em] text-xs uppercase text-emerald">
               What We Do Right Now
@@ -161,7 +161,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          <div className="space-y-4 rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon">
+          <div className="space-y-4 rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon sm:p-8">
             <h3 className="text-xl font-serif text-emerald uppercase tracking-[0.3em]">
               How We Monetize Phase One
             </h3>
@@ -181,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative px-6 py-20">
+      <section className="relative px-4 py-16 sm:px-6 sm:py-20">
         <motion.div
           className="absolute inset-0 -z-10 opacity-30"
           animate={{
@@ -204,7 +204,7 @@ export default function HomePage() {
             </p>
           </header>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {upcomingEvents.map((event) => (
               <article
                 key={event.name}
@@ -237,8 +237,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 bg-graphite/50 border-y border-emerald/20">
-        <div className="mx-auto max-w-6xl space-y-10">
+      <section className="px-4 py-16 border-y border-emerald/20 bg-graphite/50 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-6xl space-y-8 sm:space-y-10">
           <header className="text-center space-y-4">
             <p className="tracking-[0.3em] uppercase text-sm text-emerald">
               Why Cleveland
@@ -247,7 +247,7 @@ export default function HomePage() {
               The city that makes this vision possible
             </h2>
           </header>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {whyCleveland.map((reason) => (
               <div
                 key={reason}
@@ -260,8 +260,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl space-y-12">
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-6xl space-y-10 sm:space-y-12">
           <header className="text-center space-y-4">
             <p className="tracking-[0.3em] uppercase text-sm text-emerald">
               Roadmap
@@ -270,11 +270,11 @@ export default function HomePage() {
               From pop-up series to permanent lounge
             </h2>
           </header>
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {roadmap.map((stage) => (
               <div
                 key={stage.phase}
-                className="rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon space-y-5"
+                className="space-y-5 rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon sm:p-8"
               >
                 <div className="flex flex-col gap-1">
                   <span className="text-xs uppercase tracking-[0.3em] text-emerald">
@@ -301,8 +301,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-roseGold/30 bg-graphite/75 p-12 text-center shadow-neon space-y-7">
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-4xl space-y-6 rounded-3xl border border-roseGold/30 bg-graphite/75 p-8 text-center shadow-neon sm:space-y-7 sm:p-12">
           <p className="tracking-[0.3em] uppercase text-sm text-emerald">
             Stay Ahead Of The Reveal
           </p>
