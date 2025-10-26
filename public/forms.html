@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netlify Forms Detection</title>
+</head>
+<body>
+  <!-- Hidden forms for Netlify detection -->
+
+  <!-- Contact/Guestlist Form -->
+  <form name="guestlist-form" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <select name="interest">
+      <option value="Teasers Takeover (Venue Inquiry)">Teasers Takeover (Venue Inquiry)</option>
+      <option value="Performer / Talent Roster">Performer / Talent Roster</option>
+      <option value="Culinary / Beverage Team">Culinary / Beverage Team</option>
+      <option value="Creative Crew (Photo, Styling, Design)">Creative Crew (Photo, Styling, Design)</option>
+      <option value="Investor Packet">Investor Packet</option>
+      <option value="Crowdfunding Info">Crowdfunding Info</option>
+      <option value="VIP Invite List">VIP Invite List</option>
+      <option value="Collaboration or Partnership">Collaboration or Partnership</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input type="text" name="bot-field" />
+  </form>
+
+  <!-- Talent Roster Form -->
+  <form name="talent-form" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="phone_or_social" />
+    <select name="discipline">
+      <option value="Performer / Dancer">Performer / Dancer</option>
+      <option value="DJ / Musician">DJ / Musician</option>
+      <option value="Chef / Culinary">Chef / Culinary</option>
+      <option value="Mixologist / Bar Lead">Mixologist / Bar Lead</option>
+      <option value="Host / Model Staff">Host / Model Staff</option>
+      <option value="Stylist / Glam / Wardrobe">Stylist / Glam / Wardrobe</option>
+      <option value="Set / Lighting / Tech">Set / Lighting / Tech</option>
+      <option value="Photo / Video">Photo / Video</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="text" name="availability" />
+    <textarea name="links"></textarea>
+    <textarea name="story"></textarea>
+    <input type="text" name="bot-field" />
+  </form>
+</body>
+</html>
