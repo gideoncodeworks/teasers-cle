@@ -88,6 +88,7 @@ const cocktailImages = [
   { src: "/brand/carnival/the-mas.jpg", label: "The Mas", alt: "Spiced rum, passionfruit, lime" },
   { src: "/brand/carnival/port-of-spain-sunset.jpg", label: "Port of Spain Sunset", alt: "Coconut rum, mango, grenadine" },
   { src: "/brand/carnival/rum-punch.jpg", label: "Caribbean Rum Punch", alt: "Traditional rum punch" },
+  { src: "/brand/carnival/sorrel-mimosa.jpg", label: "Sorrel Mimosa", alt: "Champagne toast with Caribbean sorrel twist" },
 ];
 
 const foodImages = [
