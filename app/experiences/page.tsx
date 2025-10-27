@@ -140,9 +140,9 @@ export default function ExperiencesPage() {
                   ) : null}
                 </div>
 
-                <div className="flex flex-col gap-3 sm:flex-row">
+                <div className="flex flex-col gap-3">
                   {hasEventPage && eventPageUrl && (
-                    <Link href={eventPageUrl} className="neon-btn text-center">
+                    <Link href={eventPageUrl} className="neon-btn text-center text-sm">
                       View Full Experience
                     </Link>
                   )}
@@ -151,12 +151,12 @@ export default function ExperiencesPage() {
                       href={event.ticketUrl as string}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="neon-btn text-center"
+                      className="neon-btn text-center text-sm"
                     >
                       Purchase Tickets
                     </a>
                   ) : (
-                    <Link href={notifyLink} className="neon-btn text-center">
+                    <Link href={notifyLink} className="neon-btn text-center text-sm">
                       Get Notified
                     </Link>
                   )}
