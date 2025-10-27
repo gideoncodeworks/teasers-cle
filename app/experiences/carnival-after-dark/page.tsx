@@ -1,569 +1,559 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import data from "@/context/teasersCLE.json";
 
-const neonColors = {
-  pink: "#FF1493",
-  purple: "#9D4EDD",
-  blue: "#00D9FF",
-  gold: "#FFD700",
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
-const TicketCard = ({
-  title,
-  price,
-  features,
-  cta,
-  highlight = false,
-}: {
-  title: string;
-  price: string;
-  features: string[];
-  cta: string;
-  highlight?: boolean;
-}) => (
+const ticketTiers = [
+  {
+    title: "Early Access",
+    price: "$85",
+    availability: "First 50 tickets",
+    perks: [
+      "Two specialty cocktails (arrival + midnight pour)",
+      "Champagne toast at 11:59 PM",
+      "Unlimited non-alcoholic sorrel + pineapple ginger",
+      "Roaming Caribbean bites all night",
+      "48-hour secret location drop via SMS & email",
+    ],
+    cta: "Buy Early Access",
+    highlight: false,
+  },
+  {
+    title: "General Admission",
+    price: "$110",
+    availability: "Standard release",
+    perks: [
+      "Everything in Early Access",
+      "Glow-up bar: body paint, feathers, glitter",
+      "Choreography pop-ups & wining workshops",
+      "Immersive photo installations & pro content capture",
+      "Priority RSVP for future Teasers CLE drops",
+    ],
+    cta: "Buy GA",
+    highlight: true,
+  },
+  {
+    title: "Mas Band VIP",
+    price: "$150",
+    availability: "Limited wristbands",
+    perks: [
+      "Dedicated VIP check-in + priority entry",
+      "Open bar wristband (house spirits, specialty cocktails & bubbles 9PM–1AM)",
+      "Reserved lounge seating & personal host",
+      "Mas glam touch-up (face jewels, shimmer, accessories)",
+      "VIP photo moment with next-day digital selects",
+    ],
+    cta: "Buy VIP",
+    highlight: false,
+  },
+];
+
+const programming = [
+  {
+    title: "Soca + Dancehall DJ Sets",
+    description: "Cleveland’s top selectors plus special guests spinning 100% Caribbean riddims with percussion drops.",
+  },
+  {
+    title: "Glow & Mas Glam Stations",
+    description: "Professional body painters, glitter artists, and feather stylists on deck to level up your look.",
+  },
+  {
+    title: "Wining Workshops",
+    description: "Short choreography moments led by Teasers dancers to help the crowd find their waistline.",
+  },
+  {
+    title: "Secret Performance Reveals",
+    description: "Expect steelpan cameos, carnival costumed cast members, and midnight hype squads.",
+  },
+];
+
+const schedule = [
+  { time: "9:00 PM", detail: "Doors open • Arrival cocktail • Glow bar & glam stations live" },
+  { time: "9:30 PM", detail: "DJ warm-up set • Carnival warm-up session" },
+  { time: "10:30 PM", detail: "Percussion break • Roaming bites wave #2" },
+  { time: "11:59 PM", detail: "Champagne toast • Anthem moment • Crowd reveal" },
+  { time: "12:15 AM", detail: "Soca power hour • Rum punch mini-service" },
+  { time: "1:30 AM", detail: "Cooldown riddims • Late-night bites" },
+  { time: "2:00 AM", detail: "Doors close • Hydration & aftercare on exit" },
+];
+
+const cocktailImages = [
+  { src: "/brand/carnival/the-mas.jpg", label: "The Mas", alt: "The Mas cocktail with lime wheel and mint" },
+  { src: "/brand/carnival/port-of-spain-sunset.jpg", label: "Port of Spain Sunset", alt: "Layered Port of Spain Sunset cocktail" },
+  { src: "/brand/carnival/rum-punch-shots.jpg", label: "Rum Punch Shots", alt: "Vibrant rum punch shots on tray" },
+  { src: "/brand/carnival/sorrel-mimosa.jpg", label: "Sorrel Mimosa", alt: "Sorrel mimosa with lime garnish" },
+];
+
+const foodImages = [
+  { src: "/brand/carnival/doubles-shooters.jpg", label: "Doubles Shooters", alt: "Doubles shooters with tamarind chutney" },
+  { src: "/brand/carnival/jerk-chicken-lollipops.jpg", label: "Jerk Chicken Lollipops", alt: "Jerk chicken lollipops with glaze" },
+  { src: "/brand/carnival/plantain-chips-pepper-caviar.jpg", label: "Plantain Chips", alt: "Plantain chips with pepper sauce pearls" },
+  { src: "/brand/carnival/coconut-rum-shrimp.jpg", label: "Coconut Rum Shrimp", alt: "Coconut rum shrimp on sugarcane skewers" },
+];
+
+const vipSnackImages = [
+  { src: "/brand/carnival/mini-beef-patties.jpg", label: "Mini Beef Patties", alt: "Mini beef patties with scotch bonnet" },
+  { src: "/brand/carnival/plantain-sliders.jpg", label: "Plantain Sliders", alt: "Plantain sliders with jerk pulled meat" },
+  { src: "/brand/carnival/spicy-wings.jpg", label: "Spicy Wings", alt: "Caribbean spicy wings with lime wedges" },
+];
+
+const faq = [
+  {
+    q: "What should I wear?",
+    a: "Think carnival chic: sequins, feathers, iridescent fabrics, bold color. Heels are welcome but dress to move—this is a party first. No athletic shorts, plain tees, or sneakers.",
+  },
+  {
+    q: "Are tickets all-inclusive?",
+    a: "GA includes two specialty cocktails, a champagne toast, unlimited non-alcoholic beverages, and roaming bites. VIP Mas Band wristbands unlock open bar (house spirits + bubbles) from 9PM–1AM.",
+  },
+  {
+    q: "When do I get the location?",
+    a: "The venue drop hits your inbox and phone 48 hours before doors. It’s within Cleveland city limits with valet + rideshare queue.",
+  },
+  {
+    q: "Can I come with a group?",
+    a: "Absolutely. Grab GA or VIP tickets individually, then email hello@teaserscle.com with your order numbers—we’ll seat or stage you together.",
+  },
+];
+
+const MediaCard = ({ image }: { image: { src: string; alt: string; label: string } }) => (
   <motion.div
-    variants={fadeInUp}
-    whileHover={{ scale: 1.05, y: -10 }}
-    className={`relative rounded-3xl p-8 transition-all ${
-      highlight
-        ? "bg-gradient-to-br from-[#FF1493]/20 via-[#9D4EDD]/20 to-[#00D9FF]/20 border-2 border-[#FF1493] shadow-[0_0_40px_rgba(255,20,147,0.3)]"
-        : "bg-[#1a1a1a] border border-[#9D4EDD]/30 hover:border-[#00D9FF]/50"
-    }`}
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.6 }}
+    className="overflow-hidden rounded-3xl border border-emerald/30 bg-graphite/80 shadow-neon"
   >
-    {highlight && (
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF1493] text-black px-6 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-        Most Popular
-      </div>
-    )}
-    <div className="space-y-6">
-      <div>
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <div className="flex items-baseline gap-1">
-          <span className="text-5xl font-black" style={{ color: neonColors.pink }}>
-            ${price}
-          </span>
-          <span className="text-gray-400">/person</span>
-        </div>
-      </div>
-      <ul className="space-y-3 text-gray-300">
-        {features.map((feature, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <span className="text-[#00D9FF] mt-1">✓</span>
-            <span className="text-sm leading-relaxed">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="https://TeasersCarnivalAfterDark.eventbrite.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full py-4 text-center font-bold uppercase tracking-wider rounded-xl transition-all"
-        style={{
-          background: highlight
-            ? `linear-gradient(135deg, ${neonColors.pink}, ${neonColors.purple})`
-            : `linear-gradient(135deg, ${neonColors.purple}, ${neonColors.blue})`,
-          boxShadow: `0 0 20px ${highlight ? neonColors.pink : neonColors.purple}40`,
-        }}
-      >
-        {cta}
-      </a>
+    <div className="relative h-56 w-full sm:h-64">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        className="object-cover"
+        sizes="(min-width: 1024px) 25vw, (min-width: 768px) 45vw, 90vw"
+      />
+    </div>
+    <div className="border-t border-emerald/20 px-5 py-4 text-xs uppercase tracking-[0.3em] text-gray-400">
+      {image.label}
     </div>
   </motion.div>
 );
-
-const ExperienceCard = ({ icon, title, description }: { icon: string; title: string; description: string }) => (
-  <motion.div
-    variants={fadeInUp}
-    whileHover={{ y: -5 }}
-    className="bg-[#1a1a1a] border border-[#9D4EDD]/30 rounded-2xl p-6 hover:border-[#00D9FF]/50 transition-all"
-  >
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-    <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
-  </motion.div>
-);
-
-const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b border-[#9D4EDD]/30">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex items-center justify-between text-left group"
-      >
-        <span className="text-lg font-semibold text-white group-hover:text-[#FF1493] transition-colors">
-          {question}
-        </span>
-        <span
-          className="text-2xl transition-transform"
-          style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", color: neonColors.pink }}
-        >
-          +
-        </span>
-      </button>
-      {isOpen && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          className="pb-6 text-gray-300 leading-relaxed"
-        >
-          {answer}
-        </motion.div>
-      )}
-    </div>
-  );
-};
 
 export default function CarnivalAfterDarkPage() {
+  const event = data.events.find((item) => item.name === "Carnival After Dark");
+
+  if (!event) {
+    return (
+      <div className="min-h-screen bg-hunter text-white flex items-center justify-center px-6">
+        <div className="text-center space-y-4">
+          <h1 className="text-3xl font-serif text-roseGold">Carnival After Dark loading…</h1>
+          <p className="text-gray-300">
+            We’re updating the event details right now. Check back shortly or{" "}
+            <Link href="/experiences" className="text-emerald underline">
+              return to the calendar
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  const eventbriteUrl = event.ticketUrl || "https://TeasersCarnivalAfterDark.eventbrite.com";
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-        {/* Animated Neon Background */}
+    <div className="bg-hunter text-white">
+      {/* Hero */}
+      <section className="relative overflow-hidden px-4 pt-28 pb-24 sm:px-6 lg:px-10">
         <motion.div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 -z-10 opacity-40"
           animate={{
             background: [
-              `radial-gradient(circle at 20% 50%, ${neonColors.pink}40 0%, transparent 50%)`,
-              `radial-gradient(circle at 80% 50%, ${neonColors.purple}40 0%, transparent 50%)`,
-              `radial-gradient(circle at 50% 80%, ${neonColors.blue}40 0%, transparent 50%)`,
-              `radial-gradient(circle at 20% 50%, ${neonColors.pink}40 0%, transparent 50%)`,
+              "radial-gradient(circle at 20% 40%, rgba(0,255,157,0.2) 0%, transparent 55%)",
+              "radial-gradient(circle at 80% 50%, rgba(213,155,246,0.25) 0%, transparent 55%)",
+              "radial-gradient(circle at 50% 80%, rgba(0,255,157,0.2) 0%, transparent 55%)",
             ],
           }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
         />
-
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          transition={{ duration: 1 }}
-          className="relative z-10 text-center max-w-5xl space-y-8"
-        >
-          <motion.h1
-            className="text-6xl md:text-8xl font-black tracking-tight"
-            style={{
-              background: `linear-gradient(135deg, ${neonColors.pink}, ${neonColors.purple}, ${neonColors.blue})`,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
+        <div className="mx-auto max-w-6xl space-y-10 text-center">
+          <motion.span
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.6 }}
+            className="text-xs uppercase tracking-[0.35em] text-emerald"
           >
-            CARNIVAL AFTER DARK
+            Teasers CLE Presents
+          </motion.span>
+
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl font-serif neon-text sm:text-6xl md:text-7xl"
+          >
+            Carnival After Dark
           </motion.h1>
 
-          <p className="text-2xl md:text-3xl font-light" style={{ color: neonColors.gold }}>
-            Friday the 13th never felt this lucky.
-          </p>
-
-          <div className="space-y-2 text-lg text-gray-300">
-            <p className="font-semibold">February 13, 2026 • 9PM–2AM</p>
-            <p>Cleveland • Secret Location Revealed 48 Hours Prior</p>
-          </div>
-
-          <motion.a
-            href="https://TeasersCarnivalAfterDark.eventbrite.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block px-12 py-5 text-xl font-bold uppercase tracking-wider rounded-full"
-            style={{
-              background: `linear-gradient(135deg, ${neonColors.pink}, ${neonColors.purple})`,
-              boxShadow: `0 0 40px ${neonColors.pink}60`,
-            }}
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-300 sm:text-xl"
           >
-            Get Tickets
-          </motion.a>
-        </motion.div>
-      </section>
+            {event.fullDescription || event.description}
+          </motion.p>
 
-      {/* About Section */}
-      <section className="py-24 px-4 relative">
-        <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-3 text-sm uppercase tracking-[0.3em] text-gray-400"
+          >
+            <span>{event.date}</span>
+            <span>•</span>
+            <span>{event.time}</span>
+            <span>•</span>
+            <span>Secret Cleveland location (drop in 48 hours)</span>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <a
+              href={eventbriteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn px-8 py-4 text-base sm:text-lg"
+            >
+              Buy Tickets
+            </a>
+            <Link href="/experiences" className="neon-btn px-8 py-4 text-base sm:text-lg">
+              View Full Calendar
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h2
-              className="text-4xl md:text-5xl font-black text-center mb-8"
-              style={{ color: neonColors.pink }}
-            >
-              What Is This?
-            </h2>
-            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-              <p>
-                Experience Trinidad Carnival's electric energy reimagined for a Cleveland night. This isn't a
-                concert—it's a full-body immersion into the most celebrated street party on earth. Soca rhythms pulse
-                through a crowd dressed in sequins, feathers, and carnival-ready fits while servers circulate with
-                champagne and Caribbean rum punches.
-              </p>
-              <p>
-                Your ticket includes <strong style={{ color: neonColors.gold }}>passed food</strong>,{" "}
-                <strong style={{ color: neonColors.gold }}>free drinks (9-11pm)</strong>,{" "}
-                <strong style={{ color: neonColors.gold }}>live DJ</strong>,{" "}
-                <strong style={{ color: neonColors.gold }}>body paint station</strong>, and pure island vibes until 2AM.
-              </p>
-            </div>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Carnival energy, Cleveland backdrop</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Teasers CLE is turning Friday the 13th into a full carnival immersion—soca riddims, glow-up glam squads,
+              mas costuming moments, and roaming menus inspired by Port of Spain street food. Every ticket funds the
+              Teasers lounge build-out, so you’re partying for a purpose.
+            </p>
+            <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+              <li>• Secret industrial venue reimagined with Emerald Noir staging</li>
+              <li>• Professional photo + video capture (content delivered within 72 hours)</li>
+              <li>• Zero standing still—wining workshops, energy squads, percussion breaks</li>
+              <li>• Complimentary hydration + recovery station on exit</li>
+            </ul>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Experience Highlights */}
-      <section className="py-24 px-4 bg-[#0f0f0f]">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-black text-center mb-16"
-            style={{ color: neonColors.purple }}
-          >
-            What You Get
-          </motion.h2>
 
           <motion.div
+            variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
-            }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="space-y-6 rounded-3xl border border-emerald/30 bg-graphite/80 p-8 shadow-neon"
           >
-            <ExperienceCard
-              icon="🍾"
-              title="Welcome Champagne"
-              description="Bubbles on arrival to start your night right"
-            />
-            <ExperienceCard
-              icon="🍹"
-              title="Free Signature Cocktails"
-              description="The Mas, Port of Spain Sunset, and rum punch (9-11pm)"
-            />
-            <ExperienceCard
-              icon="🍖"
-              title="Caribbean Bites"
-              description="Doubles, jerk chicken, plantain chips, coconut shrimp (9-11pm)"
-            />
-            <ExperienceCard icon="🎵" title="Live Soca DJ" description="Non-stop island energy until 2AM" />
-            <ExperienceCard
-              icon="🎨"
-              title="Body Paint Station"
-              description="Neon pigments and glitter to complete your look"
-            />
-            <ExperienceCard
-              icon="✨"
-              title="Glow Accessories"
-              description="LED bracelets at the door for everyone"
-            />
-            <ExperienceCard
-              icon="🔒"
-              title="Secret Location"
-              description="Address revealed 48 hours before the event"
-            />
+            <h3 className="text-xl font-serif text-emerald uppercase tracking-[0.3em]">Ticket Includes</h3>
+            <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+              <li>• Two specialty cocktails + champagne toast (GA)</li>
+              <li>• Roaming Caribbean tasting menu (bites refreshed hourly)</li>
+              <li>• Glow bar: body paint, feathers, glitter, mas accessories</li>
+              <li>• Live performances + DJ sets all night</li>
+              <li>• Secret location drop + concierge support</li>
+            </ul>
+            <a
+              href={eventbriteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn inline-block text-center"
+            >
+              Reserve Your Spot
+            </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Ticket Tiers */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-black text-center mb-4"
-            style={{ color: neonColors.blue }}
-          >
-            Choose Your Experience
-          </motion.h2>
-          <p className="text-center text-gray-400 mb-16 text-lg">All tickets include champagne, cocktails (9-11pm), food, DJ, and body paint</p>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            <TicketCard
-              title="Early Bird"
-              price="50"
-              cta="Buy Early Bird"
-              features={[
-                "Welcome champagne on arrival",
-                "Free signature cocktails (9-11pm)",
-                "Caribbean passed bites (9-11pm)",
-                "Live Soca DJ until 2AM",
-                "Body paint station access",
-                "LED glow accessories",
-                "Limited to 50 tickets",
-              ]}
-            />
-
-            <TicketCard
-              title="General Admission"
-              price="65"
-              cta="Buy GA Ticket"
-              highlight={true}
-              features={[
-                "Everything in Early Bird",
-                "Standard entry at 9pm",
-                "Prime dance floor access",
-                "Unlimited body paint designs",
-                "Photo booth access",
-                "Secret location reveal 48hrs prior",
-              ]}
-            />
-
-            <TicketCard
-              title="VIP Upgrade"
-              price="130"
-              cta="Buy VIP"
-              features={[
-                "Early entry at 8:30pm",
-                "Double champagne on arrival",
-                "Reserved VIP lounge seating",
-                "Table service all night",
-                "Late-night snacks (11pm-1am)",
-                "Exclusive Teasers CLE merch",
-                "Skip-the-line access",
-                "Limited to 30 tickets",
-              ]}
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Menu Preview */}
-      <section className="py-24 px-4 bg-[#0f0f0f]">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-black text-center mb-16"
-            style={{ color: neonColors.gold }}
-          >
-            What You're Eating & Drinking
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              className="space-y-6"
-            >
-              <div>
-                <h3 className="text-2xl font-bold mb-4" style={{ color: neonColors.pink }}>
-                  Passed Bites (9-11pm)
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Doubles shooters with tamarind chutney</li>
-                  <li>• Jerk chicken lollipops with mango glaze</li>
-                  <li>• Plantain chips with pepper sauce</li>
-                  <li>• Coconut rum shrimp on sugarcane skewers</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold mb-4" style={{ color: neonColors.purple }}>
-                  Signature Cocktails
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>
-                    <strong>The Mas</strong> — Spiced rum, passionfruit, lime
-                  </li>
-                  <li>
-                    <strong>Port of Spain Sunset</strong> — Coconut rum, mango, grenadine
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ delay: 0.2 }}
-              className="space-y-6"
-            >
-              <div>
-                <h3 className="text-2xl font-bold mb-4" style={{ color: neonColors.blue }}>
-                  VIP Late-Night Snacks (11pm-1am)
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Mini beef patties</li>
-                  <li>• Plantain sliders</li>
-                  <li>• Spicy wings with lime</li>
-                </ul>
-              </div>
-
-              <div className="bg-[#1a1a1a] border border-[#FFD700]/30 rounded-2xl p-6">
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  <strong style={{ color: neonColors.gold }}>Dietary restrictions?</strong> Contact us at
-                  info@teaserscle.com and we'll do our best to accommodate.
-                </p>
-              </div>
-            </motion.div>
+      {/* Ticketing */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Choose Your Experience</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Three ways to enter the mas</h2>
+          </header>
+          <div className="grid gap-6 md:grid-cols-3">
+            {ticketTiers.map((tier) => (
+              <motion.div
+                key={tier.title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className={`rounded-3xl border bg-graphite/85 p-6 shadow-neon ${
+                  tier.highlight ? "border-roseGold/60" : "border-emerald/30"
+                }`}
+              >
+                {tier.highlight && (
+                  <div className="mb-4 inline-block rounded-full border border-roseGold/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-roseGold">
+                    Most Popular
+                  </div>
+                )}
+                <div className="space-y-5">
+                  <div>
+                    <h3 className="text-xl font-serif text-roseGold">{tier.title}</h3>
+                    <p className="text-sm uppercase tracking-[0.25em] text-gray-400">{tier.availability}</p>
+                    <p className="mt-2 text-4xl font-bold text-emerald">{tier.price}</p>
+                  </div>
+                  <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+                    {tier.perks.map((perk) => (
+                      <li key={perk}>• {perk}</li>
+                    ))}
+                  </ul>
+                  <a
+                    href={eventbriteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="neon-btn block text-center"
+                  >
+                    {tier.cta}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-3xl mx-auto">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-black text-center mb-16"
-            style={{ color: neonColors.pink }}
-          >
-            Questions?
-          </motion.h2>
-
-          <div className="space-y-2">
-            <FAQItem
-              question="What's the dress code?"
-              answer="Costume encouraged—sequins, feathers, bold colors. Or just wear something you can dance in all night. This is carnival energy, so come dressed to celebrate!"
-            />
-            <FAQItem
-              question="Where is the event?"
-              answer="Secret location in Cleveland. The address will be revealed to all ticket holders 48 hours before the event via email and SMS."
-            />
-            <FAQItem
-              question="Is there parking?"
-              answer="Yes! Parking details will be sent along with the location reveal 48 hours before the event."
-            />
-            <FAQItem
-              question="What if I have dietary restrictions?"
-              answer="Contact us at info@teaserscle.com before the event and we'll do our best to accommodate your needs."
-            />
-            <FAQItem
-              question="Can I buy tickets at the door?"
-              answer="No. This is a ticketed event only. Once we hit capacity, sales close. Buy your tickets in advance to guarantee entry!"
-            />
-            <FAQItem
-              question="What time does VIP entry start?"
-              answer="VIP doors open at 8:30pm with early access. General Admission and Early Bird doors open at 9pm."
-            />
-            <FAQItem
-              question="Is this a 21+ event?"
-              answer="Yes. Valid ID is required for entry. No exceptions."
-            />
+      {/* Menu & Cocktails */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10 bg-graphite/60 border-y border-emerald/20">
+        <div className="mx-auto max-w-6xl space-y-12">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Taste The Tease</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Menu & Cocktail Journey</h2>
+            <p className="mx-auto max-w-3xl text-gray-300 leading-relaxed">
+              Every roaming bite + cocktail was designed alongside the Teasers CLE culinary and bar teams. Expect the
+              flavors that will anchor the eventual lounge—spiked sorrel, doubles shooters, rum-soaked desserts, and
+              bright coastal accents.
+            </p>
+          </header>
+          <div className="grid gap-10 md:grid-cols-2">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-4"
+            >
+              <h3 className="text-xl font-serif text-roseGold uppercase tracking-[0.3em]">Roaming Bites</h3>
+              <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+                {event.passed?.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="space-y-4"
+            >
+              <h3 className="text-xl font-serif text-roseGold uppercase tracking-[0.3em]">Signature Cocktails</h3>
+              <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
+                {event.bar?.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+                <li>• VIP open-bar features house spirits, bubbles, and late-night espresso rum tonics</li>
+              </ul>
+            </motion.div>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {cocktailImages.map((image) => (
+              <MediaCard key={image.label} image={image} />
+            ))}
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {foodImages.map((image) => (
+              <MediaCard key={image.label} image={image} />
+            ))}
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {vipSnackImages.map((image) => (
+              <MediaCard key={image.label} image={image} />
+            ))}
+          </div>
+          <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 text-sm text-gray-300 shadow-neon">
+            <p>
+              Drop final cocktail + food photography into <code className="text-emerald">public/brand/carnival/</code> using the filenames above and they’ll populate automatically.
+              Want to sponsor a cocktail station or provide culinary collaboration (e.g., dessert cart, infused rum tasting)?
+              Email{" "}
+              <a href="mailto:hello@teaserscle.com" className="text-emerald underline">
+                hello@teaserscle.com
+              </a>{" "}
+              for partnership packets.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="py-24 px-4 relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 opacity-20"
-          animate={{
-            background: [
-              `radial-gradient(circle at 50% 50%, ${neonColors.pink}60 0%, transparent 70%)`,
-              `radial-gradient(circle at 50% 50%, ${neonColors.purple}60 0%, transparent 70%)`,
-              `radial-gradient(circle at 50% 50%, ${neonColors.blue}60 0%, transparent 70%)`,
-              `radial-gradient(circle at 50% 50%, ${neonColors.pink}60 0%, transparent 70%)`,
-            ],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
+      {/* Programming */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-6xl space-y-12">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Programming</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">What’s happening all night</h2>
+          </header>
+          <div className="grid gap-6 md:grid-cols-2">
+            {programming.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-3 rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon"
+              >
+                <h3 className="text-lg font-serif text-roseGold">{item.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black" style={{ color: neonColors.gold }}>
-            Ready to Experience Carnival?
+      {/* Schedule */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10 bg-graphite/60 border-y border-emerald/20">
+        <div className="mx-auto max-w-6xl space-y-12">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Night Flow</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">From arrival to aftercare</h2>
+          </header>
+          <div className="space-y-4">
+            {schedule.map((item) => (
+              <motion.div
+                key={item.time}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col gap-2 rounded-3xl border border-emerald/30 bg-graphite/80 p-5 shadow-neon sm:flex-row sm:items-center sm:justify-between"
+              >
+                <span className="text-sm uppercase tracking-[0.3em] text-emerald">{item.time}</span>
+                <p className="text-sm text-gray-300 leading-relaxed sm:text-right">{item.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Placeholder */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-6xl space-y-8">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Visuals Coming Soon</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Concept art, cocktails, & wardrobe</h2>
+            <p className="mx-auto max-w-3xl text-sm text-gray-300">
+              We’re finalizing the lookbook for Carnival After Dark. Expect renders of the transformed venue, costume
+              inspiration, and cocktail photography. Drop your email on the event page to get first access.
+            </p>
+          </header>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[1, 2, 3].map((slot) => (
+              <div
+                key={slot}
+                className="flex h-48 items-center justify-center rounded-3xl border border-dashed border-emerald/30 bg-graphite/80 text-sm text-gray-500"
+              >
+                Image Placeholder
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10 bg-graphite/60 border-y border-emerald/20">
+        <div className="mx-auto max-w-4xl space-y-8">
+          <header className="space-y-3 text-center">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">FAQ</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Know before you glow</h2>
+          </header>
+          <div className="space-y-6">
+            {faq.map((item) => (
+              <motion.div
+                key={item.q}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon"
+              >
+                <h3 className="text-lg font-serif text-roseGold">{item.q}</h3>
+                <p className="mt-3 text-sm text-gray-300 leading-relaxed">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-4xl space-y-8 rounded-3xl border border-roseGold/40 bg-graphite/80 p-10 text-center shadow-neon sm:p-12">
+          <p className="text-sm uppercase tracking-[0.3em] text-emerald">Ready to celebrate?</p>
+          <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
+            Secure your spot before the secret drop
           </h2>
-          <p className="text-xl text-gray-300">
-            Limited tickets available. Don't miss Cleveland's hottest nightlife event of 2026.
+          <p className="text-gray-300 leading-relaxed">
+            Tickets move fast once the location drops. Grab your crew, lock a VIP lounge, and we’ll send the coordinates
+            48 hours before doors.
           </p>
-          <motion.a
-            href="https://TeasersCarnivalAfterDark.eventbrite.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block px-12 py-5 text-xl font-bold uppercase tracking-wider rounded-full"
-            style={{
-              background: `linear-gradient(135deg, ${neonColors.pink}, ${neonColors.purple})`,
-              boxShadow: `0 0 40px ${neonColors.pink}60`,
-            }}
-          >
-            Get Your Tickets Now
-          </motion.a>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href={eventbriteUrl} target="_blank" rel="noopener noreferrer" className="neon-btn px-8 py-4 text-base">
+              Buy Tickets
+            </a>
+            <Link href="/experiences" className="neon-btn px-8 py-4 text-base">
+              View Calendar
+            </Link>
+            <Link href="/collective" className="neon-btn px-8 py-4 text-base">
+              Perform With Us
+            </Link>
+          </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-[#9D4EDD]/30 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-            <div>
-              <Link href="/" className="text-2xl font-black" style={{ color: neonColors.pink }}>
-                TEASERS CLE
-              </Link>
-              <p className="text-gray-500 text-sm mt-2">Where anticipation is the main course.</p>
-            </div>
-
-            <div className="flex gap-6 items-center">
-              <a
-                href="https://instagram.com/teaserscle"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#FF1493] transition-colors"
-              >
-                Instagram
-              </a>
-              <a
-                href="mailto:info@teaserscle.com"
-                className="text-gray-400 hover:text-[#FF1493] transition-colors"
-              >
-                Contact
-              </a>
-              <Link href="/experiences" className="text-gray-400 hover:text-[#FF1493] transition-colors">
-                All Events
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-[#9D4EDD]/20 text-center text-sm text-gray-500">
-            <p>21+ Event • Valid ID Required • Powered by Teasers CLE</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
