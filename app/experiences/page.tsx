@@ -13,7 +13,7 @@ export default function ExperiencesPage() {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-hunter text-white">
+    <div className="relative overflow-hidden bg-hunter text-white">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -13,7 +13,7 @@ export default function CollectivePage() {
   const { collective, socials, contact } = data;
 
   return (
-    <div className="min-h-screen bg-hunter text-white">
+    <div className="bg-hunter text-white">
       <section className="relative overflow-hidden px-4 pt-24 pb-16 text-center sm:px-6 sm:pt-28 sm:pb-20">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-roseGold/15 via-hunter to-graphite" />
         <motion.div

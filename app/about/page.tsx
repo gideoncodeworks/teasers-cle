@@ -14,7 +14,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-hunter text-white overflow-hidden">
+    <div className="relative bg-hunter text-white overflow-hidden">
       {/* Hero */}
       <motion.section
         initial={{ opacity: 0 }}
