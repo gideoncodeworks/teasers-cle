@@ -61,6 +61,10 @@ export default function ExperiencesPage() {
             const notifyLink = `/contact?interest=${encodeURIComponent("VIP Invite List")}&event=${encodeURIComponent(event.name)}`;
             const partnerLink = `/contact?interest=${encodeURIComponent("Teasers Takeover (Venue Inquiry)")}&event=${encodeURIComponent(event.name)}`;
 
+            // Check if event has a dedicated page
+            const hasEventPage = event.name === "Carnival After Dark";
+            const eventPageUrl = hasEventPage ? "/experiences/carnival-after-dark" : null;
+
             return (
               <motion.article
                 key={event.name}
@@ -137,6 +141,11 @@ export default function ExperiencesPage() {
                 </div>
 
                 <div className="flex flex-col gap-3 sm:flex-row">
+                  {hasEventPage && eventPageUrl && (
+                    <Link href={eventPageUrl} className="neon-btn text-center">
+                      View Full Experience
+                    </Link>
+                  )}
                   {isOnSale ? (
                     <a
                       href={event.ticketUrl as string}
