@@ -5,7 +5,7 @@ export default function Footer() {
   const { socials, brand } = data;
 
   return (
-    <footer className="bg-hunter text-white py-10 text-center border-t-2 border-emerald/50 relative">
+    <footer className="bg-hunter text-white py-10 text-center border-t border-emerald/20 relative">
       <div className="flex flex-col items-center gap-4">
         <div className="relative h-12 w-40">
           <Image
