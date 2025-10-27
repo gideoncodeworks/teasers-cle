@@ -417,7 +417,6 @@ export default function CarnivalAfterDarkPage() {
           </div>
           <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 text-sm text-gray-300 shadow-neon">
             <p>
-              Drop final cocktail + food photography into <code className="text-emerald">public/brand/carnival/</code> using the filenames above and they’ll populate automatically.
               Want to sponsor a cocktail station or provide culinary collaboration (e.g., dessert cart, infused rum tasting)?
               Email{" "}
               <a href="mailto:hello@teaserscle.com" className="text-emerald underline">
