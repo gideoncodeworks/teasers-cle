@@ -131,12 +131,12 @@ const MediaCard = ({ image }: { image: { src: string; alt: string; label: string
     transition={{ duration: 0.6 }}
     className="overflow-hidden rounded-3xl border border-emerald/30 bg-graphite/80 shadow-neon"
   >
-    <div className="relative h-56 w-full sm:h-64">
+    <div className="relative h-56 w-full sm:h-64 bg-black/40">
       <Image
         src={image.src}
         alt={image.alt}
         fill
-        className="object-cover"
+        className="object-contain"
         sizes="(min-width: 1024px) 25vw, (min-width: 768px) 45vw, 90vw"
       />
     </div>
