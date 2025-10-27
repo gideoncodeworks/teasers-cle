@@ -12,43 +12,47 @@ const fadeUp = {
 
 const ticketTiers = [
   {
-    title: "Early Access",
-    price: "$85",
-    availability: "First 50 tickets",
+    title: "Early Bird",
+    price: "$50",
+    availability: "Limited to 50 tickets",
     perks: [
-      "Two specialty cocktails (arrival + midnight pour)",
-      "Champagne toast at 11:59 PM",
-      "Unlimited non-alcoholic sorrel + pineapple ginger",
-      "Roaming Caribbean bites all night",
-      "48-hour secret location drop via SMS & email",
+      "Welcome champagne on arrival",
+      "Free cocktails 9-11pm (The Mas, Port of Spain Sunset, rum punch)",
+      "Caribbean food 9-11pm (Doubles, jerk chicken, plantain chips, coconut shrimp)",
+      "Live Soca DJ until 2AM",
+      "Body paint station (neon pigments & glitter)",
+      "LED glow accessories at the door",
+      "Secret location revealed 48 hours before",
     ],
-    cta: "Buy Early Access",
+    cta: "Buy Early Bird",
     highlight: false,
   },
   {
     title: "General Admission",
-    price: "$110",
-    availability: "Standard release",
+    price: "$65",
+    availability: "Standard entry at 9pm",
     perks: [
-      "Everything in Early Access",
-      "Glow-up bar: body paint, feathers, glitter",
-      "Choreography pop-ups & wining workshops",
-      "Immersive photo installations & pro content capture",
-      "Priority RSVP for future Teasers CLE drops",
+      "Everything in Early Bird",
+      "Standard entry at 9pm",
+      "Prime dance floor access",
+      "Unlimited body paint designs",
+      "Photo booth access",
     ],
     cta: "Buy GA",
     highlight: true,
   },
   {
-    title: "Mas Band VIP",
-    price: "$150",
-    availability: "Limited wristbands",
+    title: "VIP Upgrade",
+    price: "$130",
+    availability: "Limited to 30 tickets",
     perks: [
-      "Dedicated VIP check-in + priority entry",
-      "Open bar wristband (house spirits, specialty cocktails & bubbles 9PM–1AM)",
-      "Reserved lounge seating & personal host",
-      "Mas glam touch-up (face jewels, shimmer, accessories)",
-      "VIP photo moment with next-day digital selects",
+      "Early entry at 8:30pm",
+      "Double champagne on arrival",
+      "Reserved VIP lounge seating",
+      "Table service all night",
+      "Late-night snacks (11pm-1am): Mini beef patties, plantain sliders, spicy wings",
+      "Exclusive Teasers CLE merch",
+      "Skip-the-line access",
     ],
     cta: "Buy VIP",
     highlight: false,
@@ -58,15 +62,11 @@ const ticketTiers = [
 const programming = [
   {
     title: "Soca + Dancehall DJ Sets",
-    description: "Cleveland’s top selectors plus special guests spinning 100% Caribbean riddims with percussion drops.",
+    description: "Cleveland's top selectors plus special guests spinning 100% Caribbean riddims with percussion drops.",
   },
   {
     title: "Glow & Mas Glam Stations",
     description: "Professional body painters, glitter artists, and feather stylists on deck to level up your look.",
-  },
-  {
-    title: "Wining Workshops",
-    description: "Short choreography moments led by Teasers dancers to help the crowd find their waistline.",
   },
   {
     title: "Secret Performance Reveals",
@@ -75,20 +75,19 @@ const programming = [
 ];
 
 const schedule = [
-  { time: "9:00 PM", detail: "Doors open • Arrival cocktail • Glow bar & glam stations live" },
-  { time: "9:30 PM", detail: "DJ warm-up set • Carnival warm-up session" },
-  { time: "10:30 PM", detail: "Percussion break • Roaming bites wave #2" },
-  { time: "11:59 PM", detail: "Champagne toast • Anthem moment • Crowd reveal" },
-  { time: "12:15 AM", detail: "Soca power hour • Rum punch mini-service" },
-  { time: "1:30 AM", detail: "Cooldown riddims • Late-night bites" },
-  { time: "2:00 AM", detail: "Doors close • Hydration & aftercare on exit" },
+  { time: "9:00 PM", detail: "Doors open • Welcome champagne • Glow bar & body paint stations live" },
+  { time: "9:30 PM", detail: "DJ warm-up set • Caribbean bites service begins" },
+  { time: "10:30 PM", detail: "Soca energy peaks • Roaming cocktails continue" },
+  { time: "11:00 PM", detail: "Food & cocktails service ends • DJ intensifies" },
+  { time: "12:00 AM", detail: "Midnight vibes • Secret performances & surprises" },
+  { time: "1:00 AM", detail: "VIP late-night snacks (patties, sliders, wings)" },
+  { time: "2:00 AM", detail: "Doors close • Last call" },
 ];
 
 const cocktailImages = [
-  { src: "/brand/carnival/the-mas.jpg", label: "The Mas", alt: "The Mas cocktail with lime wheel and mint" },
-  { src: "/brand/carnival/port-of-spain-sunset.jpg", label: "Port of Spain Sunset", alt: "Layered Port of Spain Sunset cocktail" },
-  { src: "/brand/carnival/rum-punch-shots.jpg", label: "Rum Punch Shots", alt: "Vibrant rum punch shots on tray" },
-  { src: "/brand/carnival/sorrel-mimosa.jpg", label: "Sorrel Mimosa", alt: "Sorrel mimosa with lime garnish" },
+  { src: "/brand/carnival/the-mas.jpg", label: "The Mas", alt: "Spiced rum, passionfruit, lime" },
+  { src: "/brand/carnival/port-of-spain-sunset.jpg", label: "Port of Spain Sunset", alt: "Coconut rum, mango, grenadine" },
+  { src: "/brand/carnival/rum-punch.jpg", label: "Caribbean Rum Punch", alt: "Traditional rum punch" },
 ];
 
 const foodImages = [
@@ -107,19 +106,19 @@ const vipSnackImages = [
 const faq = [
   {
     q: "What should I wear?",
-    a: "Think carnival chic: sequins, feathers, iridescent fabrics, bold color. Heels are welcome but dress to move—this is a party first. No athletic shorts, plain tees, or sneakers.",
+    a: "Think carnival chic: sequins, feathers, iridescent fabrics, bold colors. Heels are welcome but dress to move—this is a party first. No athletic shorts, plain tees, or sneakers.",
   },
   {
     q: "Are tickets all-inclusive?",
-    a: "GA includes two specialty cocktails, a champagne toast, unlimited non-alcoholic beverages, and roaming bites. VIP Mas Band wristbands unlock open bar (house spirits + bubbles) from 9PM–1AM.",
+    a: "All tickets include welcome champagne, free signature cocktails (9-11pm), Caribbean bites (9-11pm), body paint station, LED glow accessories, and live Soca DJ until 2AM. VIP tickets add early entry, VIP lounge seating, table service, late-night snacks, and exclusive merch.",
   },
   {
     q: "When do I get the location?",
-    a: "The venue drop hits your inbox and phone 48 hours before doors. It’s within Cleveland city limits with valet + rideshare queue.",
+    a: "The secret venue address will be revealed 48 hours before the event via email and SMS. It's within Cleveland city limits.",
   },
   {
     q: "Can I come with a group?",
-    a: "Absolutely. Grab GA or VIP tickets individually, then email hello@teaserscle.com with your order numbers—we’ll seat or stage you together.",
+    a: "Absolutely. Buy your tickets individually, then email hello@teaserscle.com with your order numbers and we'll coordinate group seating.",
   },
 ];
 
