@@ -367,7 +367,7 @@ export default function CarnivalAfterDarkPage() {
               bright coastal accents.
             </p>
             <p className="text-xs uppercase tracking-[0.25em] text-gray-500 italic">
-              *Images shown are concept art. Real event photography will be added to the gallery after the experience.
+              *Images shown are concept art. Menu options subject to change. Real event photography will be added to the gallery after the experience.
             </p>
           </header>
           <div className="grid gap-10 md:grid-cols-2">
