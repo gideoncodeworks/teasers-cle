@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -143,14 +144,22 @@ const faq = [
   },
 ];
 
-const MediaCard = ({ image }: { image: { src: string; alt: string; label: string } }) => (
+const MediaCard = ({
+  image,
+  onClick
+}: {
+  image: { src: string; alt: string; label: string };
+  onClick?: () => void;
+}) => (
   <motion.div
     variants={fadeUp}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}
     transition={{ duration: 0.6 }}
-    className="overflow-hidden rounded-3xl border border-emerald/30 bg-graphite/80 shadow-neon"
+    whileHover={{ scale: 1.02 }}
+    onClick={onClick}
+    className="overflow-hidden rounded-3xl border border-emerald/30 bg-graphite/80 shadow-neon cursor-pointer transition-all hover:border-roseGold/50"
   >
     <div className="relative h-56 w-full sm:h-64 bg-black/40">
       <Image
@@ -161,13 +170,15 @@ const MediaCard = ({ image }: { image: { src: string; alt: string; label: string
         sizes="(min-width: 1024px) 25vw, (min-width: 768px) 45vw, 90vw"
       />
     </div>
-    <div className="border-t border-emerald/20 px-5 py-4 text-xs uppercase tracking-[0.3em] text-gray-400">
-      {image.label}
+    <div className="border-t border-emerald/20 px-5 py-4 text-xs uppercase tracking-[0.3em] text-gray-400 flex items-center justify-between">
+      <span>{image.label}</span>
+      <span className="text-emerald text-xs">Click to view</span>
     </div>
   </motion.div>
 );
 
 export default function CarnivalAfterDarkPage() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; label: string } | null>(null);
   const event = data.events.find((item) => item.name === "Carnival After Dark");
 
   if (!event) {
@@ -452,17 +463,17 @@ export default function CarnivalAfterDarkPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {cocktailImages.map((image) => (
-              <MediaCard key={image.label} image={image} />
+              <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {foodImages.map((image) => (
-              <MediaCard key={image.label} image={image} />
+              <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {vipSnackImages.map((image) => (
-              <MediaCard key={image.label} image={image} />
+              <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
           <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon space-y-4">
@@ -592,7 +603,7 @@ export default function CarnivalAfterDarkPage() {
           </header>
           <div className="grid gap-6 md:grid-cols-3">
             {conceptArtImages.map((image) => (
-              <MediaCard key={image.label} image={image} />
+              <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
         </div>
@@ -648,6 +659,44 @@ export default function CarnivalAfterDarkPage() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 cursor-pointer"
+        >
+          <motion.div
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-7xl max-h-[90vh] w-full cursor-default"
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-roseGold transition-colors text-sm uppercase tracking-[0.3em]"
+            >
+              Close ✕
+            </button>
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                width={1200}
+                height={800}
+                className="object-contain max-h-[85vh] w-auto rounded-2xl"
+              />
+            </div>
+            <p className="mt-4 text-center text-sm uppercase tracking-[0.3em] text-emerald">
+              {selectedImage.label}
+            </p>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }
