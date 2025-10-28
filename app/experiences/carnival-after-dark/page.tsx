@@ -503,10 +503,7 @@ export default function CarnivalAfterDarkPage() {
               <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
-          <div className="rounded-3xl border border-roseGold/40 bg-gradient-to-r from-emerald/10 via-graphite/85 to-roseGold/15 p-6 shadow-neon space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-emerald">
-              Upload final cocktail & food photography to <code className="text-roseGold">public/brand/carnival/</code> using the filenames above and the galleries will refresh instantly.
-            </p>
+          <div className="rounded-3xl border border-roseGold/40 bg-gradient-to-r from-emerald/10 via-graphite/85 to-roseGold/15 p-6 shadow-neon text-center">
             <p className="text-sm text-gray-300 leading-relaxed">
               Want to sponsor a cocktail station or collaborate on the menu (e.g., dessert cart, infused rum tasting)? Email{" "}
               <a href="mailto:hello@teaserscle.com" className="text-emerald underline">
