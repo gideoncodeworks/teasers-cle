@@ -550,12 +550,12 @@ export default function CarnivalAfterDarkPage() {
               Applications reviewed on a rolling basis. Spots are limited and curated for vibe.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
-              <a
-                href="mailto:hello@teaserscle.com?subject=Carnival After Dark - Collaboration Inquiry"
+              <Link
+                href="/contact?interest=Collaboration%20or%20Partnership"
                 className="neon-btn px-8 py-4 text-base"
               >
                 Submit Your Pitch
-              </a>
+              </Link>
               <Link href="/collective" className="neon-btn px-8 py-4 text-base">
                 Join Talent Roster
               </Link>
