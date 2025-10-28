@@ -15,7 +15,7 @@ const ticketTiers = [
   {
     title: "Early Bird",
     price: "$50",
-    availability: "Limited to 50 tickets",
+    availability: "Limit 50",
     perks: [
       "Welcome champagne on arrival",
       "Free cocktails 9-11pm (The Mas, Port of Spain Sunset, rum punch)",
@@ -31,12 +31,11 @@ const ticketTiers = [
   {
     title: "General Admission",
     price: "$65",
-    availability: "Standard entry at 9pm",
+    availability: "Standard entry 9pm",
     perks: [
       "Everything in Early Bird",
-      "Standard entry at 9pm",
       "Prime dance floor access",
-      "Unlimited body paint designs",
+      "Unlimited body paint looks",
       "Photo booth access",
     ],
     cta: "Buy GA",
@@ -125,6 +124,34 @@ const experienceHighlights = [
   { icon: "🔒", title: "Secret Location", detail: "Address drops 48 hours before doors with concierge support." },
 ];
 
+const menuSections = [
+  {
+    title: "Passed Bites (9–11PM)",
+    description: "Circulated while the party ramps up.",
+    items: [
+      "Doubles shooters with tamarind chutney",
+      "Jerk chicken lollipops with mango glaze",
+      "Plantain chips with pepper sauce pearls",
+      "Coconut rum shrimp on sugarcane",
+    ],
+  },
+  {
+    title: "Signature Cocktails (9–11PM)",
+    description: "Complimentary for every ticket holder.",
+    items: [
+      "The Mas — Spiced rum, passionfruit, lime",
+      "Port of Spain Sunset — Coconut rum, mango, grenadine",
+      "Caribbean rum punch shots",
+      "Sorrel mimosa with champagne",
+    ],
+  },
+  {
+    title: "VIP Late-Night Snacks (11PM–1AM)",
+    description: "Delivered to VIP lounges only.",
+    items: ["Mini beef patties", "Plantain sliders", "Spicy wings"],
+  },
+];
+
 const faq = [
   {
     q: "What should I wear?",
@@ -143,6 +170,34 @@ const faq = [
     a: "Absolutely. Buy your tickets individually, then email hello@teaserscle.com with your order numbers and we'll coordinate group seating.",
   },
 ];
+
+const MenuAccordion = ({
+  section,
+}: {
+  section: { title: string; description: string; items: string[] };
+}) => (
+  <motion.details
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.6 }}
+    className="group rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon"
+  >
+    <summary className="flex cursor-pointer items-center justify-between gap-4 text-left text-lg font-serif text-roseGold">
+      <span>{section.title}</span>
+      <span className="text-xs uppercase tracking-[0.25em] text-emerald transition-colors group-open:text-roseGold">
+        View
+      </span>
+    </summary>
+    <p className="mt-3 text-sm text-gray-400 leading-relaxed">{section.description}</p>
+    <ul className="mt-4 space-y-2 text-sm text-gray-300 leading-relaxed">
+      {section.items.map((item) => (
+        <li key={item}>• {item}</li>
+      ))}
+    </ul>
+  </motion.details>
+);
 
 const MediaCard = ({
   image,
@@ -378,9 +433,9 @@ export default function CarnivalAfterDarkPage() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className={`rounded-3xl border bg-graphite/85 p-6 shadow-neon ${
+                className={`rounded-3xl border bg-graphite/85 p-6 shadow-neon transition-transform duration-300 ${
                   tier.highlight ? "border-roseGold/60" : "border-emerald/30"
-                }`}
+                } hover:-translate-y-2`}
               >
                 {tier.highlight && (
                   <div className="mb-4 inline-block rounded-full border border-roseGold/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-roseGold">
@@ -418,7 +473,7 @@ export default function CarnivalAfterDarkPage() {
         <div className="mx-auto max-w-6xl space-y-12">
           <header className="text-center space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-emerald">Taste The Tease</p>
-            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Menu & Cocktail Journey</h2>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Menu Preview</h2>
             <p className="mx-auto max-w-3xl text-gray-300 leading-relaxed">
               Every roaming bite + cocktail was designed alongside the Teasers CLE culinary and bar teams. Expect the
               flavors that will anchor the eventual lounge—spiked sorrel, doubles shooters, rum-soaked desserts, and
@@ -428,45 +483,17 @@ export default function CarnivalAfterDarkPage() {
               *Images shown are concept art. Menu options subject to change. Real event photography will be added to the gallery after the experience.
             </p>
           </header>
-          <div className="grid gap-10 md:grid-cols-2">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-4"
-            >
-              <h3 className="text-xl font-serif text-roseGold uppercase tracking-[0.3em]">Roaming Bites</h3>
-              <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
-                {event.passed?.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-              </ul>
-            </motion.div>
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="space-y-4"
-            >
-              <h3 className="text-xl font-serif text-roseGold uppercase tracking-[0.3em]">Signature Cocktails</h3>
-              <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
-                {event.bar?.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-                <li>• VIP open-bar features house spirits, bubbles, and late-night espresso rum tonics</li>
-              </ul>
-            </motion.div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {menuSections.map((section) => (
+              <MenuAccordion key={section.title} section={section} />
+            ))}
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {cocktailImages.map((image) => (
               <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {foodImages.map((image) => (
               <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
@@ -476,7 +503,7 @@ export default function CarnivalAfterDarkPage() {
               <MediaCard key={image.label} image={image} onClick={() => setSelectedImage(image)} />
             ))}
           </div>
-          <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon space-y-4">
+          <div className="rounded-3xl border border-roseGold/40 bg-gradient-to-r from-emerald/10 via-graphite/85 to-roseGold/15 p-6 shadow-neon space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-emerald">
               Upload final cocktail & food photography to <code className="text-roseGold">public/brand/carnival/</code> using the filenames above and the galleries will refresh instantly.
             </p>
@@ -498,7 +525,7 @@ export default function CarnivalAfterDarkPage() {
             <p className="text-sm uppercase tracking-[0.3em] text-emerald">Programming</p>
             <h2 className="text-3xl font-serif text-roseGold md:text-4xl">What’s happening all night</h2>
             <p className="text-xs uppercase tracking-[0.25em] text-gray-500">
-              Performances TBA • Updates incoming as collaborators confirm
+              Performances TBA • Updates incoming as collaborators confirm • No dance lessons—just vibes
             </p>
           </header>
           <div className="grid gap-6 md:grid-cols-2">

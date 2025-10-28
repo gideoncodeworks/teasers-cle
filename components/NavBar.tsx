@@ -36,7 +36,7 @@ export default function NavBar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex items-center justify-between md:grid md:grid-cols-3">
+        <div className="flex items-center justify-between md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6">
           <Link href="/" className="flex items-center group">
             <div className="relative h-10 w-28 md:h-12 md:w-40">
               <Image
@@ -50,7 +50,7 @@ export default function NavBar() {
             </div>
           </Link>
 
-          <div className="hidden items-center justify-center gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
+          <div className="hidden items-center justify-center gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex md:flex-wrap md:justify-center lg:flex-nowrap lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
             {links.map((link) => (
               <Link
                 key={link.href}

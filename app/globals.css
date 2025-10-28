@@ -150,10 +150,9 @@ footer::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   height: 2px;
   background: linear-gradient(90deg, var(--rose-gold), var(--emerald));
   box-shadow: 0 0 10px var(--emerald), 0 0 20px var(--rose-gold);
