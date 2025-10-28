@@ -69,6 +69,10 @@ const programming = [
     description: "Professional body painters, glitter artists, and feather stylists on deck to level up your look.",
   },
   {
+    title: "Carnival Energy Squad",
+    description: "Costumed hype crew roaming with glow accessories, rum shots, and percussion to keep the room lifted.",
+  },
+  {
     title: "Secret Performance Reveals",
     description: "Expect steelpan cameos, carnival costumed cast members, and midnight hype squads.",
   },
@@ -104,6 +108,22 @@ const vipSnackImages = [
   { src: "/brand/carnival/spicy-wings.jpg", label: "Spicy Wings", alt: "Caribbean spicy wings with lime wedges" },
 ];
 
+const conceptArtImages = [
+  { src: "/brand/carnival/concept-venue.jpg", label: "Venue Atmosphere Render", alt: "Render of Carnival After Dark venue staging" },
+  { src: "/brand/carnival/costume-lookbook.jpg", label: "Costume Lookbook", alt: "Carnival costume inspiration board" },
+  { src: "/brand/carnival/cocktail-concepts.jpg", label: "Cocktail Concepts", alt: "Concept illustrations for signature cocktails" },
+];
+
+const experienceHighlights = [
+  { icon: "🍾", title: "Welcome Champagne", detail: "Glass poured the moment you arrive." },
+  { icon: "🍹", title: "Signature Cocktails (9–11PM)", detail: "Sip The Mas, Port of Spain Sunset, and rum punch on us." },
+  { icon: "🍖", title: "Caribbean Bites (9–11PM)", detail: "Doubles, jerk chicken, plantain chips, coconut shrimp." },
+  { icon: "🎵", title: "Live Soca DJ", detail: "Sound system stays lit until 2AM." },
+  { icon: "🎨", title: "Body Paint Station", detail: "Neon pigments, glitter, and glam artists live-brushing looks." },
+  { icon: "✨", title: "Glow Accessories", detail: "LED bracelets and glow kits at the door." },
+  { icon: "🔒", title: "Secret Location", detail: "Address drops 48 hours before doors with concierge support." },
+];
+
 const faq = [
   {
     q: "What should I wear?",
@@ -137,7 +157,7 @@ const MediaCard = ({ image }: { image: { src: string; alt: string; label: string
         src={image.src}
         alt={image.alt}
         fill
-        className="object-contain"
+        className="object-cover"
         sizes="(min-width: 1024px) 25vw, (min-width: 768px) 45vw, 90vw"
       />
     </div>
@@ -251,6 +271,33 @@ export default function CarnivalAfterDarkPage() {
         </div>
       </section>
 
+      {/* Highlights */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <header className="text-center space-y-4">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Experience Highlights</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Here’s what’s included</h2>
+          </header>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {experienceHighlights.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon space-y-3"
+              >
+                <div className="text-3xl">{item.icon}</div>
+                <h3 className="text-lg font-serif text-roseGold">{item.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{item.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="px-4 py-16 sm:px-6 lg:px-10">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
@@ -271,7 +318,7 @@ export default function CarnivalAfterDarkPage() {
             <ul className="space-y-3 text-sm text-gray-300 leading-relaxed">
               <li>• Secret industrial venue reimagined with Emerald Noir staging</li>
               <li>• Professional photo + video capture (content delivered within 72 hours)</li>
-              <li>• Zero standing still—wining workshops, energy squads, percussion breaks</li>
+              <li>• Carnival energy squads, percussion breaks, and surprise performances</li>
               <li>• Complimentary hydration + recovery station on exit</li>
             </ul>
           </motion.div>
@@ -418,14 +465,16 @@ export default function CarnivalAfterDarkPage() {
               <MediaCard key={image.label} image={image} />
             ))}
           </div>
-          <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 text-sm text-gray-300 shadow-neon">
-            <p>
-              Want to sponsor a cocktail station or provide culinary collaboration (e.g., dessert cart, infused rum tasting)?
-              Email{" "}
+          <div className="rounded-3xl border border-emerald/30 bg-graphite/80 p-6 shadow-neon space-y-4">
+            <p className="text-xs uppercase tracking-[0.3em] text-emerald">
+              Upload final cocktail & food photography to <code className="text-roseGold">public/brand/carnival/</code> using the filenames above and the galleries will refresh instantly.
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Want to sponsor a cocktail station or collaborate on the menu (e.g., dessert cart, infused rum tasting)? Email{" "}
               <a href="mailto:hello@teaserscle.com" className="text-emerald underline">
                 hello@teaserscle.com
               </a>{" "}
-              for partnership packets.
+              for partnership packets and availability.
             </p>
           </div>
         </div>
@@ -437,6 +486,9 @@ export default function CarnivalAfterDarkPage() {
           <header className="text-center space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-emerald">Programming</p>
             <h2 className="text-3xl font-serif text-roseGold md:text-4xl">What’s happening all night</h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">
+              Performances TBA • Updates incoming as collaborators confirm
+            </p>
           </header>
           <div className="grid gap-6 md:grid-cols-2">
             {programming.map((item) => (
@@ -454,6 +506,50 @@ export default function CarnivalAfterDarkPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Collaborate / Apply */}
+      <section className="px-4 py-16 sm:px-6 lg:px-10 bg-gradient-to-b from-hunter via-graphite/60 to-hunter">
+        <div className="mx-auto max-w-4xl space-y-8 rounded-3xl border border-roseGold/40 bg-graphite/90 p-10 text-center shadow-neon sm:p-12">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald">Open Call</p>
+            <h2 className="text-3xl font-serif text-roseGold md:text-4xl">
+              Want to be part of the experience?
+            </h2>
+            <p className="mx-auto max-w-2xl text-gray-300 leading-relaxed">
+              We're finalizing the lineup for performers, DJs, mixologists, body paint artists, food vendors, and creative
+              collaborators. If you bring carnival energy, Cleveland roots, or immersive talent—we want to hear from you.
+            </p>
+            <div className="space-y-3 text-sm text-gray-400">
+              <p>✨ Performers, dancers, and live musicians</p>
+              <p>🎧 DJs specializing in Soca, Dancehall, Afrobeats, or Caribbean riddims</p>
+              <p>🍹 Mixologists with signature cocktail concepts</p>
+              <p>🎨 Body paint artists, glam squads, and wardrobe stylists</p>
+              <p>🍴 Caribbean food vendors and pop-up chefs</p>
+            </div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500 italic">
+              Applications reviewed on a rolling basis. Spots are limited and curated for vibe.
+            </p>
+            <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
+              <a
+                href="mailto:hello@teaserscle.com?subject=Carnival After Dark - Collaboration Inquiry"
+                className="neon-btn px-8 py-4 text-base"
+              >
+                Submit Your Pitch
+              </a>
+              <Link href="/collective" className="neon-btn px-8 py-4 text-base">
+                Join Talent Roster
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -483,25 +579,20 @@ export default function CarnivalAfterDarkPage() {
         </div>
       </section>
 
-      {/* Gallery Placeholder */}
+      {/* Concept Art */}
       <section className="px-4 py-16 sm:px-6 lg:px-10">
         <div className="mx-auto max-w-6xl space-y-8">
           <header className="text-center space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-emerald">Visuals Coming Soon</p>
             <h2 className="text-3xl font-serif text-roseGold md:text-4xl">Concept art, cocktails, & wardrobe</h2>
             <p className="mx-auto max-w-3xl text-sm text-gray-300">
-              We’re finalizing the lookbook for Carnival After Dark. Expect renders of the transformed venue, costume
-              inspiration, and cocktail photography. Drop your email on the event page to get first access.
+              The lookbook is underway—venue renders, costume inspiration, and cocktail photography drop next. Upload
+              final artwork into <code className="text-emerald">public/brand/carnival/</code> using the filenames below and they’ll display automatically.
             </p>
           </header>
           <div className="grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((slot) => (
-              <div
-                key={slot}
-                className="flex h-48 items-center justify-center rounded-3xl border border-dashed border-emerald/30 bg-graphite/80 text-sm text-gray-500"
-              >
-                Image Placeholder
-              </div>
+            {conceptArtImages.map((image) => (
+              <MediaCard key={image.label} image={image} />
             ))}
           </div>
         </div>
