@@ -10,13 +10,15 @@ import data from "@/context/teasersCLE.json";
 export default function NavBar() {
   const { brand } = data;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsMoreOpen(false);
   }, [pathname]);
 
-  const links = [
+  const allLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/experiences", label: "Experiences" },
@@ -27,6 +29,9 @@ export default function NavBar() {
     { href: "/collective", label: "Collective" },
     { href: "/contact", label: "Join" }
   ];
+  const primaryLabels = new Set(["Home", "About", "Experiences", "Menu", "Gallery", "Join"]);
+  const primaryLinks = allLinks.filter((link) => primaryLabels.has(link.label));
+  const secondaryLinks = allLinks.filter((link) => !primaryLabels.has(link.label));
 
   return (
     <>
@@ -51,7 +56,7 @@ export default function NavBar() {
           </Link>
 
           <div className="hidden items-center justify-center gap-2 text-[10px] uppercase tracking-[0.15em] text-emerald md:flex md:flex-wrap md:justify-center lg:flex-nowrap lg:gap-3 lg:text-[11px] xl:gap-4 xl:text-sm">
-            {links.map((link) => (
+            {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -60,6 +65,45 @@ export default function NavBar() {
                 {link.label}
               </Link>
             ))}
+            {secondaryLinks.length > 0 && (
+              <div
+                className="relative"
+                onMouseEnter={() => setIsMoreOpen(true)}
+                onMouseLeave={() => setIsMoreOpen(false)}
+                onFocus={() => setIsMoreOpen(true)}
+                onBlur={() => setIsMoreOpen(false)}
+              >
+                <button
+                  type="button"
+                  className="whitespace-nowrap border border-transparent px-3 py-1 transition-colors duration-300 hover:text-roseGold"
+                >
+                  More
+                </button>
+                <AnimatePresence>
+                  {isMoreOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.18 }}
+                      className="absolute left-1/2 z-40 mt-2 w-44 -translate-x-1/2 rounded-xl border border-emerald/30 bg-hunter/95 p-3 text-left shadow-lg backdrop-blur"
+                    >
+                      <div className="flex flex-col gap-2 text-[11px] tracking-[0.2em] text-emerald">
+                        {secondaryLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            className="rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-emerald/10 hover:text-roseGold"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )}
           </div>
 
           <div className="flex justify-end">
@@ -109,10 +153,10 @@ export default function NavBar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -24, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-4 right-4 top-24 space-y-4 rounded-3xl border border-emerald/40 bg-hunter/95 p-6 text-center shadow-neon"
+              className="absolute left-4 right-4 top-24 max-h-[calc(100vh-6rem)] space-y-4 overflow-y-auto rounded-3xl border border-emerald/40 bg-hunter/95 p-6 text-center shadow-neon"
               onClick={(event) => event.stopPropagation()}
             >
-              {links.map((link) => (
+              {allLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

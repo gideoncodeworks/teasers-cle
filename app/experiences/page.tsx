@@ -7,6 +7,15 @@ import data from "@/context/teasersCLE.json";
 export default function ExperiencesPage() {
   const { events, socials } = data;
 
+  const onSaleEvents = events.filter((event) => event.status === "onSale");
+  const otherEvents = events.filter((event) => event.status !== "onSale");
+  const primaryEvents = [...onSaleEvents, ...otherEvents].slice(0, 3);
+  const comingSoonEvents = events.filter(
+    (event) => !primaryEvents.includes(event)
+  );
+  const featuredComingSoon = comingSoonEvents.slice(0, 2);
+  const hasMoreComingSoon = comingSoonEvents.length > featuredComingSoon.length;
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -49,7 +58,7 @@ export default function ExperiencesPage() {
       <section className="relative px-4 py-16 sm:px-6 sm:py-20">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-roseGold/12 via-hunter to-emerald/12 opacity-60" />
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {events.map((event, index) => {
+          {primaryEvents.map((event, index) => {
             const dateLabel =
               event.date && event.date.toUpperCase() !== "TBD" ? event.date : "Date TBD";
             const timeLabel =
@@ -59,7 +68,11 @@ export default function ExperiencesPage() {
             const isOnSale = Boolean(event.ticketUrl && event.status === "onSale");
             const statusLabel = isOnSale ? "On Sale Now" : "Join Waitlist";
             const notifyLink = `/contact?interest=${encodeURIComponent("VIP Invite List")}&event=${encodeURIComponent(event.name)}`;
-            const partnerLink = `/contact?interest=${encodeURIComponent("Teasers Takeover (Venue Inquiry)")}&event=${encodeURIComponent(event.name)}`;
+            const hasDetailContent =
+              (event.passed?.length ?? 0) > 0 ||
+              (event.roaming?.length ?? 0) > 0 ||
+              (event.bar?.length ?? 0) > 0 ||
+              Boolean(event.vibe);
 
             // Check if event has a dedicated page
             const hasEventPage = event.name === "Carnival After Dark";
@@ -98,47 +111,57 @@ export default function ExperiencesPage() {
                   {details}
                 </div>
 
-                <div className="space-y-4 text-sm text-gray-300">
-                  {event.passed?.length ? (
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Passed Bites</p>
-                      <ul className="space-y-1 text-gray-400">
-                        {event.passed.map((item) => (
-                          <li key={item}>• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
+                {hasDetailContent && (
+                  <details className="group rounded-2xl border border-emerald/20 bg-hunter/60 px-4 py-3 text-left text-sm text-gray-300 transition-colors hover:border-emerald/40">
+                    <summary className="flex cursor-pointer items-center justify-between gap-3 text-xs uppercase tracking-[0.3em] text-emerald outline-none transition-colors group-open:text-roseGold [&::-webkit-details-marker]:hidden">
+                      <span>Inside The Night</span>
+                      <span className="text-[11px] text-gray-400 transition-transform group-open:rotate-180">
+                        {"\u25BC"}
+                      </span>
+                    </summary>
+                    <div className="mt-4 space-y-4 text-sm text-gray-300">
+                      {event.passed?.length ? (
+                        <div>
+                          <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Passed Bites</p>
+                          <ul className="space-y-1 text-gray-400">
+                            {event.passed.map((item) => (
+                              <li key={item}>• {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
 
-                  {event.roaming?.length ? (
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Roaming Service</p>
-                      <ul className="space-y-1 text-gray-400">
-                        {event.roaming.map((item) => (
-                          <li key={item}>• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
+                      {event.roaming?.length ? (
+                        <div>
+                          <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Roaming Service</p>
+                          <ul className="space-y-1 text-gray-400">
+                            {event.roaming.map((item) => (
+                              <li key={item}>• {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
 
-                  {event.bar?.length ? (
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Featured Cocktails</p>
-                      <ul className="space-y-1 text-gray-400">
-                        {event.bar.map((item) => (
-                          <li key={item}>• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
+                      {event.bar?.length ? (
+                        <div>
+                          <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Featured Cocktails</p>
+                          <ul className="space-y-1 text-gray-400">
+                            {event.bar.map((item) => (
+                              <li key={item}>• {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
 
-                  {event.vibe ? (
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Vibe</p>
-                      <p className="leading-relaxed text-gray-400">{event.vibe}</p>
+                      {event.vibe ? (
+                        <div>
+                          <p className="mb-2 text-xs uppercase tracking-[0.3em] text-emerald">Vibe</p>
+                          <p className="leading-relaxed text-gray-400">{event.vibe}</p>
+                        </div>
+                      ) : null}
                     </div>
-                  ) : null}
-                </div>
+                  </details>
+                )}
 
                 <div className="flex flex-col gap-3">
                   {hasEventPage && eventPageUrl && (
@@ -169,6 +192,62 @@ export default function ExperiencesPage() {
           Coordinates and arrival instructions released to ticket holders 48 hours prior to each experience.
         </p>
       </section>
+
+      {comingSoonEvents.length > 0 && (
+        <section className="bg-graphite/80 px-4 py-16 text-white sm:px-6">
+          <div className="mx-auto flex max-w-4xl flex-col gap-6 text-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-emerald">
+                Future Drops
+              </p>
+              <h2 className="mt-3 text-3xl font-serif text-roseGold">
+                Concepts In Development
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-gray-300">
+                These experiences are on deck, but final menus and venues are still being locked.
+                Join the invite list and you&apos;ll be first in line when dates go live.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {featuredComingSoon.map((event) => (
+                <div
+                  key={event.name}
+                  className="flex flex-col gap-3 rounded-2xl border border-emerald/30 bg-hunter/70 p-5 text-left"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[11px] uppercase tracking-[0.35em] text-gray-400">
+                      {event.theme}
+                    </span>
+                    <span className="rounded-full border border-roseGold/60 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-roseGold">
+                      Details Coming Soon
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-serif text-roseGold">{event.name}</h3>
+                  <p className="text-sm text-gray-300">{event.tagline}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gray-500">
+                    {event.location || "Location TBD"}
+                  </p>
+                  <Link
+                    href={`/contact?interest=${encodeURIComponent("VIP Invite List")}&event=${encodeURIComponent(event.name)}`}
+                    className="neon-btn text-center text-xs"
+                  >
+                    Join The List
+                  </Link>
+                </div>
+              ))}
+            </div>
+            {hasMoreComingSoon && (
+              <Link
+                href={`/contact?interest=${encodeURIComponent("Future Concepts")}`}
+                className="mx-auto inline-flex items-center justify-center rounded-full border border-emerald/40 px-6 py-3 text-xs uppercase tracking-[0.3em] text-emerald transition-colors hover:border-roseGold/50 hover:text-roseGold"
+              >
+                View All Concepts
+              </Link>
+            )}
+          </div>
+        </section>
+      )}
 
       <motion.div
         className="absolute inset-0 -z-20 bg-gradient-to-b from-hunter via-graphite to-hunter"
